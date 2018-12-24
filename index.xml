@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Norman Liao</title>
-    <link>/</link>
+    <link>https://normanliao.github.io/</link>
     <description>Recent content on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>John Doe - All rights reserved</copyright>
-    <lastBuildDate>Sun, 23 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Dec 2018 11:40:11 +0800</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://normanliao.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>I型聖稜線</title>
-      <link>/travel/fifth/</link>
-      <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
+      <title>Test1</title>
+      <link>https://normanliao.github.io/program/20181224/</link>
+      <pubDate>Mon, 24 Dec 2018 11:40:11 +0800</pubDate>
       
-      <guid>/travel/fifth/</guid>
-      <description>聖稜線 2017年其實就已經挑戰過一次，當時因為低估聖稜線的難度，第二天的時候就走不動了。</description>
+      <guid>https://normanliao.github.io/program/20181224/</guid>
+      <description> Test1 </description>
     </item>
     
     <item>
-      <title>Eighth</title>
-      <link>/program/20181224/</link>
-      <pubDate>Sun, 07 Oct 2018 11:40:11 +0200</pubDate>
+      <title>聖稜線</title>
+      <link>https://normanliao.github.io/travel/20181223/</link>
+      <pubDate>Tue, 23 Oct 2018 11:40:11 +0200</pubDate>
       
-      <guid>/program/20181224/</guid>
-      <description>This is another post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
+      <guid>https://normanliao.github.io/travel/20181223/</guid>
+      <description> 聖稜線 </description>
     </item>
     
     <item>
-      <title>Imprint</title>
-      <link>/static/imprint/</link>
+      <title></title>
+      <link>https://normanliao.github.io/static/aboutme/</link>
       <pubDate>Sun, 07 Oct 2018 11:12:00 +0200</pubDate>
       
-      <guid>/static/imprint/</guid>
-      <description>Imprint Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
+      <guid>https://normanliao.github.io/static/aboutme/</guid>
+      <description> Norman Liao Computer Graphics &amp;amp; Computer Vision Developer </description>
     </item>
     
   </channel>

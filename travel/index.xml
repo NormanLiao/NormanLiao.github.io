@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Travels on Norman Liao</title>
-    <link>/travel/</link>
+    <link>https://normanliao.github.io/travel/</link>
     <description>Recent content in Travels on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>John Doe - All rights reserved</copyright>
-    <lastBuildDate>Sun, 23 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Oct 2018 11:40:11 +0200</lastBuildDate>
     
-	<atom:link href="/travel/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://normanliao.github.io/travel/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>I型聖稜線</title>
-      <link>/travel/fifth/</link>
-      <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
+      <title>聖稜線</title>
+      <link>https://normanliao.github.io/travel/20181223/</link>
+      <pubDate>Tue, 23 Oct 2018 11:40:11 +0200</pubDate>
       
-      <guid>/travel/fifth/</guid>
-      <description>聖稜線 2017年其實就已經挑戰過一次，當時因為低估聖稜線的難度，第二天的時候就走不動了。</description>
+      <guid>https://normanliao.github.io/travel/20181223/</guid>
+      <description> 聖稜線 </description>
     </item>
     
   </channel>
