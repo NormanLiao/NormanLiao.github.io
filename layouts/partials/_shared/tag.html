@@ -1,0 +1,19 @@
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 col-sm-6 text-center text-lg-right">
+					<font size="5">Tags : </font>
+			</div>
+			<div class="col-md-6 col-sm-6 text-center text-lg-left">    
+				{{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+				<font size="5"><a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}"> <{{ $name }}></font>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- End Footer
+================================================== -->

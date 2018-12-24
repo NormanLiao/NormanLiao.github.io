@@ -1,0 +1,44 @@
+baseURL = "https://normanliao.github.io/"
+languageCode = "en-us"
+title = "Norman Liao"
+theme = "mediumish-gohugo-theme"
+summaryLength = 25
+copyright = "John Doe - All rights reserved"
+enableEmoji = true
+publishDir = "docs"
+#disqusShortname = "your-shortname-here"
+#googleAnalytics = "UA-1XXXXXXX1-1"
+
+[params]
+  logo = "/images/logo.png"
+  description ="Code Exprience & Travel Record"
+  #mailchimp = "you can provide a mailchimp-link here"
+
+[params.author]
+  name = "Norman Liao"
+  thumbnail = "/images/logo.png"
+  description = ""
+
+[params.social]
+  github = "<username>"
+  linkedin = "<username>"
+  xing = "<username>"
+  medium = "<username>"
+  twitter = "<username>"
+
+## Main Menu
+[[menu.main]]
+    name = "Program"
+    weight = 100
+    identifier = "program"
+    url = "/program"
+[[menu.main]]
+    name = "Travel"
+    weight = 150
+    identifier = "travel"
+    url = "/travel"
+[[menu.main]]
+    name = "About Me"
+    identifier = "imprint"
+    weight = 200
+    url = "/static/aboutme"
