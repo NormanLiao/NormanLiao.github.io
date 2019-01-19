@@ -6,7 +6,6 @@
     <description>Recent content in Statics on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>John Doe - All rights reserved</copyright>
     <lastBuildDate>Sun, 07 Oct 2018 11:12:00 +0200</lastBuildDate>
     
 	<atom:link href="https://normanliao.github.io/static/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +17,8 @@
       <pubDate>Sun, 07 Oct 2018 11:12:00 +0200</pubDate>
       
       <guid>https://normanliao.github.io/static/aboutme/</guid>
-      <description> Norman Liao Computer Graphics &amp;amp; Computer Vision Developer </description>
+      <description>Norman Liao Computer Graphics &amp;amp; Computer Vision Developer
+Work Experience Style.Me ( 2013.11 ~ Present )  Senior Developer, Computer Graphics Main Project  Fitting Room Render in WebGL  Implemented multi-pass transparency blending by WebGL.</description>
     </item>
     
   </channel>

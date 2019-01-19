@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="generator" content="Hugo 0.52" />
+	
+	<link rel="icon" href="/images/logo.png">
+	
+	<title>淺談ICA ( Independent Component Analysis ) | Norman Liao</title>
+	
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="/css/medium.css" rel="stylesheet">
+	<link href="/css/additional.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a class="navbar-brand" href="https://normanliao.github.io//program">
+
+            
+            <img src="/images/logo.png" alt="logo">
+            
+        </a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+            
+            <ul class="navbar-nav ml-auto">
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="/program">Program</a>
+                </li>
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="/travel">Travel</a>
+                </li>
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="/static/aboutme">About Me</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle">Norman Liao</h1>
+    <p class="lead">
+         Code Exprience &amp; Travel Record
+    </p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0">      
+                    
+                </div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="post-top-meta">
+                            <div>
+                                <img class="author-thumb" src="/images/logo.png" alt="Norman Liao">
+                            </div>
+                            <div >
+                                <a target="_blank" class="link-dark">Norman Liao</a><br>
+                                <span class="author-description">
+                                    <br>
+                                    <i class="far fa-star"></i>
+                                    Dec 26, 2018
+                                    <i class="far fa-clock clock"></i>
+                                    1 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">淺談ICA ( Independent Component Analysis )</h1> 
+                    </div>
+
+                    
+                    
+                        <img class="featured-image img-fluid" src="/images/program/20181226/20181226_1.png" alt="thumbnail for this post">
+                    
+                    
+                    
+                    
+                    <div class="article-post">
+                        
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h3 id="cocktail-party-problem-https-en-wikipedia-org-wiki-cocktail-party-effect"><a href="https://en.wikipedia.org/wiki/Cocktail_party_effect">Cocktail-Party Problem</a></h3>
+
+<p>
+研究ICA前，可以先了解一下這個問題。主要起源於心理學研究，指的是人類在吵嘈的環境中，可以專注於某一個人的談話或專注於某一個聲音而忽略其他背景聲音，用來解釋人類的「聽力選擇能力」。
+</p>
+<p>
+為了讓電腦也有類似「聽力選擇能力」的能力，就有搭配統計學發展出來的獨立成份分析(ICA)。換個方式說，希望能從複雜混合的混音環境，分析出原來的各個獨立聲音。
+</p>
+
+<h3 id="basic-theorem">Basic Theorem</h3>
+
+<p><img src="/images/program/20181226//20181226_1.png" alt="pipeline" title="pipeline" /></p>
+
+<ul>
+<li>假設來源訊號是互相獨立的，就能將原始訊號從混合訊號中良好的分離出來。</li>
+<li>因此必須以輸出訊號之間互為獨立為目標，並且定義出公式化與量化的目標函數(Cost Function)</li>
+<li>ICA的Cost Function是測量獨立成分的指標，為了使得分離效果良好，目標函數必須具備下列性質 :
+
+<ul>
+<li>Consistency : 無論初始值為何，解混合矩陣之逆矩陣W都必須收斂在同一點上。</li>
+<li>Robustness : 解混合矩陣之逆矩陣W不能受到外在因素的干擾，而發生錯誤。</li>
+</ul></li>
+</ul>
+
+<p></p>
+
+<ul>
+<li>有了目標函數後，利用最佳化演算法套用於目標函數上，找出目標函數的最佳解來達成獨立成分的分離，而對於最佳化演算法必須考量下列性質:
+
+<ul>
+<li>收斂的收度(Convergence Speed)</li>
+<li>記憶體的需求(Memory Requirements)</li>
+<li>數值的穩定度(Numerical Stability)
+<p></p></li>
+</ul></li>
+<li>但這演算法必須要下列這些限制:
+
+<ul>
+<li>所有的原始訊號Si必須具備統計上獨立的特性</li>
+<li>所有的原始訊號Si必須為非高斯分佈 (這一項可參考中央極限定理(Central Limit Theorem))</li>
+<li>觀測到的線性混合訊號Xm數量至少要大於或等於獨立成分Sn的數量(m≧n)
+<p></p></li>
+</ul></li>
+<li>解方程重點 : 訊號分離最重要的就是解混合矩陣W要與原來的混合矩陣之逆矩陣A-1的相近程度</li>
+<li>Pre-Processing : 目的是要從混合訊號中找出有用的資訊或將混合訊號轉換成有意義的形式，以取得更多的資訊來估算出獨立的成分，藉由訊號的預處理把盲訊號分離這個複雜的問題變得更簡易些。( 對訊號進行置中化(Centering)與白色化(Whitening) )</li>
+</ul>
+
+<h3 id="implment-method">Implment Method</h3>
+
+<p><img src="/images/program/20181226/20181226_2.png" alt="pipeline" title="pipeline" /></p>
+
+<h4 id="centering">Centering</h4>
+
+<h5 id="目的">目的</h5>
+
+<p>&emsp;&emsp;置中化(Centering)是將混合訊號轉換成零均值(Zero-Mean)的訊號</p>
+
+<h5 id="做法">做法</h5>
+
+<p>&emsp;&emsp;經過置中化處理後的訊號其平均值為零(Zero-Mean)，而處理後的訊號並不會損失其訊號的特性，假設混合訊號為X，則置中化的定義如下所示:
+$$X&rsquo; = X - E[X]$$
+$$E[X]: Mean Value$$</p>
+
+<p>&emsp;&emsp;混合訊號即使在執行置中化後，依然保持不變，在進行演算法之前，對原始信號假設為零均值的訊號，可以<strong>加快獨立成分分析法的執行速度</strong>。</p>
+
+<h4 id="whitening">Whitening</h4>
+
+<h5 id="目的-1">目的</h5>
+
+<p>&emsp;&emsp;白色化(Whitening)是將混合訊號從自相關(Correlated)的特性轉換成非相關(Uncorrelated)的訊號，經由這些處理後，可<strong>使獨立成分分析法的處理複雜度降低不少</strong>。</p>
+
+<p>&emsp;&emsp;以統計學的觀點來看，若隨機向量的隨機變數符合非相關(Uncorrelated)的條件，且其共變異矩陣(Covariance Matrix)為單位矩陣I，則稱白色化(Whitening)。</p>
+
+<h5 id="做法-1">做法</h5>
+
+<p>&emsp;&emsp;接在Centering之後</p>
+
+<ol>
+<li>先定義Cx為Centering後的混合訊號之Covariance Matrix $$ E[X&rsquo;X&rsquo;^T]=C_x $$</li>
+
+<li><p>接著因為要使混合訊號從相關的訊號轉變成非相關的訊號，經常利用主成分分析法(Principal Component Analysis, PCA)進行轉換。為了取得非相關的訊號，因此將主成分分析法對置中化後的混合訊號之Covariance Matrix Cx進行特徵值拆解(Eigenvalue Decomposition, EVD)，以取得其特徵值(Eigenvalue)與特徵向量(Eigenvector)所組成的矩陣。
+$$ C_x=EDE^T $$
+其中E為特徵向量組成的單位正交矩陣(Unit Orthogonal Matrix)。
+$$ E^TE = EE^T = I $$
+D為Cx的特徵值，由d1,d2,…,dn所組成的對角矩陣(Diagonal Matrix)</p></li>
+
+<li><p>利用一個白化矩陣(Whitening Matrix)V與置中化之混和訊號進行線性轉換，得到白色化的特性。
+$$ \bar{X} = VX&rsquo; $$ 其中 $$ \bar{X} $$ 為白色化後的訊號，而白化矩陣V之定義，如下所示 $$ V=ED^{-\frac{1}{2}}E^T$$</p></li>
+</ol>
+
+<h4 id="目標函數-最佳化方法">目標函數 &amp; 最佳化方法</h4>
+
+<p>&emsp;&emsp;在ICA的方法中，通常會先定義一個目標函數(Objective Function)，然後對此目標函數算最大值或最小值。而在目標函數的定義上，我們必須定義一個可以藉由最大值或最小值得到的獨立元素(Independent Component)，因此可以將ICA演算法分成兩部分。
+$$ ICA Method = ObjectFunction + Optimization Algorithm $$
+&emsp;&emsp;其中，<strong>目標函數的選擇決定演算法Robustness</strong>，<strong>最佳化演算法決定了收斂速度</strong>。</p>
+
+<h3 id="reference">Reference</h3>
+
+<ul>
+<li><a href="https://rpubs.com/skydome20/R-Note17-ICA">R筆記 – (17)獨立成份分析(ICA)</a></li>
+<li><a href="http://www.jeremydjacksonphd.com/2016/03/15/independent-component-analysis/">Independent Component Analysis, Jeremy D. Jackson, PhD</a></li>
+<li><a href="https://www.cs.helsinki.fi/u/ahyvarin/papers/NN00new.pdf">英文版教學PDF(一位芬蘭教授的)</a></li>
+</ul>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/algorithm">algorithm</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/computer-graphics">computer graphics</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/computer-vision">computer vision</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                        <a class="prev d-block col-md-6" href="/program/20181228/"> &laquo; Computer Graphics簡介</a>
+                    
+                    
+                        <a class="next d-block col-md-6 text-lg-right" href="/program/20181224/">Color Transfer Between Images &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+            </div>
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 col-sm-6 text-center text-lg-right">
+					<font size="5">Tags : </font>
+			</div>
+			<div class="col-md-6 col-sm-6 text-center text-lg-left">    
+				
+				<font size="5"><a href="/tags/algorithm"> &lt;algorithm></font>
+				
+				<font size="5"><a href="/tags/computer-graphics"> &lt;computer-graphics></font>
+				
+				<font size="5"><a href="/tags/computer-vision"> &lt;computer-vision></font>
+				
+				<font size="5"><a href="/tags/hiking"> &lt;hiking></font>
+				
+				<font size="5"><a href="/tags/image-processing"> &lt;image-processing></font>
+				
+				<font size="5"><a href="/tags/snowboard"> &lt;snowboard></font>
+				
+			</div>
+		</div>
+	</div>
+</footer>
+
+        </div>
+
+    
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+    
+<script src="/js/mediumish.js"></script>
+
+    </body>
+</html>

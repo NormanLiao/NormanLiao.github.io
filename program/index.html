@@ -68,7 +68,8 @@
         
         <section class="recent-posts">            
             <div class="section-title">                
-                <h2><span>All Posts</span></h2>                
+                
+                <h2><span></span></h2>
             </div>            
             <div class="row listrecent">
                 
@@ -76,13 +77,74 @@
 <div class="col-lg-4 col-md-6 mb-30px card-group">
     <div class="card h-100">
         <div class="maxthumb">
-            <a href="/program/20181224/">
+            <a href="/program/20181228/">
+                
+                    <img class="img-fluid" src="/images/program/20181228/20181228_1.jpg" alt="A thumbnail image">
                                 
             </a>
         </div>
         <div class="card-body">
-            <h2 class="card-title"><a class="text-dark" href="/program/20181224/">Test1</a></h2>
-            <h4 class="card-text"> Test1 </h4>            
+            <h2 class="card-title"><a class="text-dark" href="/program/20181228/">Computer Graphics簡介</a></h2>
+            <h4 class="card-text">&emsp;&emsp;有時候都會思考，如何跟其他領域的工程師解釋什麼是Computer Graphics，比較簡單的方式就是會用這句話表示 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ldquo;電腦圖學主要是在研究如何在二維螢幕上描繪三維空間中的物體。&rdquo; &emsp;&emsp;但細部去解釋，總是有很多細節可以講，於是想說就這裡做個整理吧。 
+3D空間座標  一開始接觸Computer Graphics都會聽到 &ldquo;Model, View and Projection Transformation Matrices&rdquo;，因為在3D空間中，一開始的Model都是有XYZ三維資料，但是我們最後看到的畫面都是在2D平面上，於是我們必須先把Model座標轉移到整個3D空間的座標，然後再將3D空間座標轉移到Camera座標，最後再把Camera的座標轉移到2D螢幕上的座標。  
+ 更詳細的細節可參考這裡Opengl-Tutorial-Matrices   
+Geometry</h4>            
+        </div>
+        <div class="card-footer bg-white">
+            <div class="wrapfooter">
+                
+                
+                
+                <span class="post-date">Dec 27, 2018 - 1 min read </span>
+                </span>
+                <span class="post-read-more"><a href="/program/20181228/" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-lg-4 col-md-6 mb-30px card-group">
+    <div class="card h-100">
+        <div class="maxthumb">
+            <a href="/program/20181226/">
+                
+                    <img class="img-fluid" src="/images/program/20181226/20181226_1.png" alt="A thumbnail image">
+                                
+            </a>
+        </div>
+        <div class="card-body">
+            <h2 class="card-title"><a class="text-dark" href="/program/20181226/">淺談ICA ( Independent Component Analysis )</a></h2>
+            <h4 class="card-text">Cocktail-Party Problem  研究ICA前，可以先了解一下這個問題。主要起源於心理學研究，指的是人類在吵嘈的環境中，可以專注於某一個人的談話或專注於某一個聲音而忽略其他背景聲音，用來解釋人類的「聽力選擇能力」。  為了讓電腦也有類似「聽力選擇能力」的能力，就有搭配統計學發展出來的獨立成份分析(ICA)。換個方式說，希望能從複雜混合的混音環境，分析出原來的各個獨立聲音。 Basic Theorem  假設來源訊號是互相獨立的，就能將原始訊號從混合訊號中良好的分離出來。 因此必須以輸出訊號之間互為獨立為目標，並且定義出公式化與量化的目標函數(Cost Function) ICA的Cost Function是測量獨立成分的指標，為了使得分離效果良好，目標函數必須具備下列性質 :  Consistency : 無論初始值為何，解混合矩陣之逆矩陣W都必須收斂在同一點上。 Robustness : 解混合矩陣之逆矩陣W不能受到外在因素的干擾，而發生錯誤。</h4>            
+        </div>
+        <div class="card-footer bg-white">
+            <div class="wrapfooter">
+                
+                
+                
+                <span class="post-date">Dec 26, 2018 - 1 min read </span>
+                </span>
+                <span class="post-read-more"><a href="/program/20181226/" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-lg-4 col-md-6 mb-30px card-group">
+    <div class="card h-100">
+        <div class="maxthumb">
+            <a href="/program/20181224/">
+                
+                    <img class="img-fluid" src="/images/program/20181224/20181224_1.jpg" alt="A thumbnail image">
+                                
+            </a>
+        </div>
+        <div class="card-body">
+            <h2 class="card-title"><a class="text-dark" href="/program/20181224/">Color Transfer Between Images</a></h2>
+            <h4 class="card-text">Source Paper  Color Transfer Between Images, Erik Reinhard, Michael Ashikhmin, Bruce Gooch, and Peter Shirley, University of Utah  Introduction  &emsp;&emsp;這是一個非常實用也非常容易實作的影像處理方法。當有一個Source Image想要轉成Target Image的Color Style的時候，可以先把Source Image和Target Image都轉到LMS Color Space上，然後計算Standard Deviation和Mean Value，利用論文中提到的公式，去得到結果。 Implement  利用OpenCV Library轉換Source Image和Target Image到lab Color Space</h4>            
         </div>
         <div class="card-footer bg-white">
             <div class="wrapfooter">
@@ -118,7 +180,17 @@
 			</div>
 			<div class="col-md-6 col-sm-6 text-center text-lg-left">    
 				
-				<font size="5"><a href="/tags/interesting"> &lt;interesting></font>
+				<font size="5"><a href="/tags/algorithm"> &lt;algorithm></font>
+				
+				<font size="5"><a href="/tags/computer-graphics"> &lt;computer-graphics></font>
+				
+				<font size="5"><a href="/tags/computer-vision"> &lt;computer-vision></font>
+				
+				<font size="5"><a href="/tags/hiking"> &lt;hiking></font>
+				
+				<font size="5"><a href="/tags/image-processing"> &lt;image-processing></font>
+				
+				<font size="5"><a href="/tags/snowboard"> &lt;snowboard></font>
 				
 			</div>
 		</div>

@@ -6,28 +6,57 @@
     <description>Recent content on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>John Doe - All rights reserved</copyright>
-    <lastBuildDate>Mon, 24 Dec 2018 11:40:11 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Jan 2019 11:40:11 +0200</lastBuildDate>
     
 	<atom:link href="https://normanliao.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Test1</title>
+      <title>妙高高原</title>
+      <link>https://normanliao.github.io/travel/20190107/</link>
+      <pubDate>Mon, 07 Jan 2019 11:40:11 +0200</pubDate>
+      
+      <guid>https://normanliao.github.io/travel/20190107/</guid>
+      <description>時間 : 2018.12.29 ~ 2019.01.06 住宿地點 : 妙高高原 赤倉溫泉 
+ &amp;emsp;&amp;emsp;這次滑雪玩法很像是去年去白馬的玩法，每天都會搭公車去選擇一個雪場，然後看地圖去開全山，認真體驗每一個雪場的特色和玩法。而妙高的雪場並沒有讓我們失望，果然真的都很有特色雪質也真的非常好。
+
+
+&amp;emsp;&amp;emsp;當然這次還會有另外一個重點就是，要跟Snowkon的Brian教練學習Carving，畢竟我們已經卡在Carving這個階級太久了，不管怎麼看影片，就是抓不到要點，沒辦法再滑的更好，所以這次就直接請教練教學了。 
+雪場 
+這次主要的幾個雪場
+
+赤倉溫泉 
+&amp;emsp;&amp;emsp;基本上這個雪場的難易度算是最簡單的，也是我們學習Carving的地方，雪道都蠻平易近人的，蠻適合前幾天熱身以及練基本動作。</description>
+    </item>
+    
+    <item>
+      <title>Computer Graphics簡介</title>
+      <link>https://normanliao.github.io/program/20181228/</link>
+      <pubDate>Thu, 27 Dec 2018 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20181228/</guid>
+      <description>&amp;emsp;&amp;emsp;有時候都會思考，如何跟其他領域的工程師解釋什麼是Computer Graphics，比較簡單的方式就是會用這句話表示 &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;ldquo;電腦圖學主要是在研究如何在二維螢幕上描繪三維空間中的物體。&amp;rdquo; &amp;emsp;&amp;emsp;但細部去解釋，總是有很多細節可以講，於是想說就這裡做個整理吧。 
+3D空間座標  一開始接觸Computer Graphics都會聽到 &amp;ldquo;Model, View and Projection Transformation Matrices&amp;rdquo;，因為在3D空間中，一開始的Model都是有XYZ三維資料，但是我們最後看到的畫面都是在2D平面上，於是我們必須先把Model座標轉移到整個3D空間的座標，然後再將3D空間座標轉移到Camera座標，最後再把Camera的座標轉移到2D螢幕上的座標。  
+ 更詳細的細節可參考這裡Opengl-Tutorial-Matrices   
+Geometry</description>
+    </item>
+    
+    <item>
+      <title>淺談ICA ( Independent Component Analysis )</title>
+      <link>https://normanliao.github.io/program/20181226/</link>
+      <pubDate>Wed, 26 Dec 2018 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20181226/</guid>
+      <description>Cocktail-Party Problem  研究ICA前，可以先了解一下這個問題。主要起源於心理學研究，指的是人類在吵嘈的環境中，可以專注於某一個人的談話或專注於某一個聲音而忽略其他背景聲音，用來解釋人類的「聽力選擇能力」。  為了讓電腦也有類似「聽力選擇能力」的能力，就有搭配統計學發展出來的獨立成份分析(ICA)。換個方式說，希望能從複雜混合的混音環境，分析出原來的各個獨立聲音。 Basic Theorem  假設來源訊號是互相獨立的，就能將原始訊號從混合訊號中良好的分離出來。 因此必須以輸出訊號之間互為獨立為目標，並且定義出公式化與量化的目標函數(Cost Function) ICA的Cost Function是測量獨立成分的指標，為了使得分離效果良好，目標函數必須具備下列性質 :  Consistency : 無論初始值為何，解混合矩陣之逆矩陣W都必須收斂在同一點上。 Robustness : 解混合矩陣之逆矩陣W不能受到外在因素的干擾，而發生錯誤。</description>
+    </item>
+    
+    <item>
+      <title>Color Transfer Between Images</title>
       <link>https://normanliao.github.io/program/20181224/</link>
       <pubDate>Mon, 24 Dec 2018 11:40:11 +0800</pubDate>
       
       <guid>https://normanliao.github.io/program/20181224/</guid>
-      <description> Test1 </description>
-    </item>
-    
-    <item>
-      <title>聖稜線</title>
-      <link>https://normanliao.github.io/travel/20181223/</link>
-      <pubDate>Tue, 23 Oct 2018 11:40:11 +0200</pubDate>
-      
-      <guid>https://normanliao.github.io/travel/20181223/</guid>
-      <description> 聖稜線 </description>
+      <description>Source Paper  Color Transfer Between Images, Erik Reinhard, Michael Ashikhmin, Bruce Gooch, and Peter Shirley, University of Utah  Introduction  &amp;emsp;&amp;emsp;這是一個非常實用也非常容易實作的影像處理方法。當有一個Source Image想要轉成Target Image的Color Style的時候，可以先把Source Image和Target Image都轉到LMS Color Space上，然後計算Standard Deviation和Mean Value，利用論文中提到的公式，去得到結果。 Implement  利用OpenCV Library轉換Source Image和Target Image到lab Color Space</description>
     </item>
     
     <item>
@@ -36,7 +65,21 @@
       <pubDate>Sun, 07 Oct 2018 11:12:00 +0200</pubDate>
       
       <guid>https://normanliao.github.io/static/aboutme/</guid>
-      <description> Norman Liao Computer Graphics &amp;amp; Computer Vision Developer </description>
+      <description>Norman Liao Computer Graphics &amp;amp; Computer Vision Developer
+Work Experience Style.Me ( 2013.11 ~ Present )  Senior Developer, Computer Graphics Main Project  Fitting Room Render in WebGL  Implemented multi-pass transparency blending by WebGL.</description>
+    </item>
+    
+    <item>
+      <title>聖稜線</title>
+      <link>https://normanliao.github.io/travel/20180523/</link>
+      <pubDate>Wed, 23 May 2018 11:40:11 +0200</pubDate>
+      
+      <guid>https://normanliao.github.io/travel/20180523/</guid>
+      <description>隊員 : &amp;emsp;Norman, Bella, Lisa, Kent
+路線  Day 1 : 鹿林道東線0K→馬達拉溪登山口→馬達拉溪登山口宿營地
+Day 2 : 馬達拉溪登山口宿營地→九九山莊→加利山→伊澤山→中霸山屋→大霸尖山→小霸尖山→大霸尖山→霸南山屋
+Day 3 : 霸南山屋→巴紗拉雲山→布秀蘭山→素密達山→素密達山屋
+Day 4 : 素密達山屋→雪山北峰→雪北山屋→鞍部叉路→凱蘭特崑山→北稜角→雪山主峰→三六九山莊</description>
     </item>
     
   </channel>

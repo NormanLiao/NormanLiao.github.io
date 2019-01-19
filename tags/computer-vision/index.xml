@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programs on Norman Liao</title>
-    <link>https://normanliao.github.io/program/</link>
-    <description>Recent content in Programs on Norman Liao</description>
+    <title>Computer Vision on Norman Liao</title>
+    <link>https://normanliao.github.io/tags/computer-vision/</link>
+    <description>Recent content in Computer Vision on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Dec 2018 11:40:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 26 Dec 2018 11:40:11 +0800</lastBuildDate>
     
-	<atom:link href="https://normanliao.github.io/program/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://normanliao.github.io/tags/computer-vision/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Computer Graphics簡介</title>
-      <link>https://normanliao.github.io/program/20181228/</link>
-      <pubDate>Thu, 27 Dec 2018 11:40:11 +0800</pubDate>
-      
-      <guid>https://normanliao.github.io/program/20181228/</guid>
-      <description>&amp;emsp;&amp;emsp;有時候都會思考，如何跟其他領域的工程師解釋什麼是Computer Graphics，比較簡單的方式就是會用這句話表示 &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;ldquo;電腦圖學主要是在研究如何在二維螢幕上描繪三維空間中的物體。&amp;rdquo; &amp;emsp;&amp;emsp;但細部去解釋，總是有很多細節可以講，於是想說就這裡做個整理吧。 
-3D空間座標  一開始接觸Computer Graphics都會聽到 &amp;ldquo;Model, View and Projection Transformation Matrices&amp;rdquo;，因為在3D空間中，一開始的Model都是有XYZ三維資料，但是我們最後看到的畫面都是在2D平面上，於是我們必須先把Model座標轉移到整個3D空間的座標，然後再將3D空間座標轉移到Camera座標，最後再把Camera的座標轉移到2D螢幕上的座標。  
- 更詳細的細節可參考這裡Opengl-Tutorial-Matrices   
-Geometry</description>
-    </item>
     
     <item>
       <title>淺談ICA ( Independent Component Analysis )</title>

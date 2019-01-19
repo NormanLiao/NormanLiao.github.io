@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image Processing on Norman Liao</title>
+    <link>https://normanliao.github.io/tags/image-processing/</link>
+    <description>Recent content in Image Processing on Norman Liao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Dec 2018 11:40:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://normanliao.github.io/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Color Transfer Between Images</title>
+      <link>https://normanliao.github.io/program/20181224/</link>
+      <pubDate>Mon, 24 Dec 2018 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20181224/</guid>
+      <description>Source Paper  Color Transfer Between Images, Erik Reinhard, Michael Ashikhmin, Bruce Gooch, and Peter Shirley, University of Utah  Introduction  &amp;emsp;&amp;emsp;這是一個非常實用也非常容易實作的影像處理方法。當有一個Source Image想要轉成Target Image的Color Style的時候，可以先把Source Image和Target Image都轉到LMS Color Space上，然後計算Standard Deviation和Mean Value，利用論文中提到的公式，去得到結果。 Implement  利用OpenCV Library轉換Source Image和Target Image到lab Color Space</description>
+    </item>
+    
+  </channel>
+</rss>
