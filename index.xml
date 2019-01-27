@@ -17,16 +17,13 @@
       <pubDate>Mon, 07 Jan 2019 11:40:11 +0200</pubDate>
       
       <guid>https://normanliao.github.io/travel/20190107/</guid>
-      <description>時間 : 2018.12.29 ~ 2019.01.06 住宿地點 : 妙高高原 赤倉溫泉 
- &amp;emsp;&amp;emsp;這次滑雪玩法很像是去年去白馬的玩法，每天都會搭公車去選擇一個雪場，然後看地圖去開全山，認真體驗每一個雪場的特色和玩法。而妙高的雪場並沒有讓我們失望，果然真的都很有特色雪質也真的非常好。
+      <description>時間 : 2018.12.29 ~ 2019.01.06  住宿地點 : 妙高高原 赤倉溫泉 
+   &amp;emsp;&amp;emsp;這次滑雪玩法很像是去年去白馬的玩法，每天都會搭公車去選擇一個雪場，然後看地圖去開全山，認真體驗每一個雪場的特色和玩法。而妙高的雪場並沒有讓我們失望，果然真的都很有特色雪質也真的非常好。
 
 
 &amp;emsp;&amp;emsp;當然這次還會有另外一個重點就是，要跟Snowkon的Brian教練學習Carving，畢竟我們已經卡在Carving這個階級太久了，不管怎麼看影片，就是抓不到要點，沒辦法再滑的更好，所以這次就直接請教練教學了。 
 雪場 
-這次主要的幾個雪場
-
-赤倉溫泉 
-&amp;emsp;&amp;emsp;基本上這個雪場的難易度算是最簡單的，也是我們學習Carving的地方，雪道都蠻平易近人的，蠻適合前幾天熱身以及練基本動作。</description>
+這次主要的幾個雪場</description>
     </item>
     
     <item>
@@ -47,7 +44,7 @@ Geometry</description>
       <pubDate>Wed, 26 Dec 2018 11:40:11 +0800</pubDate>
       
       <guid>https://normanliao.github.io/program/20181226/</guid>
-      <description>Cocktail-Party Problem  研究ICA前，可以先了解一下這個問題。主要起源於心理學研究，指的是人類在吵嘈的環境中，可以專注於某一個人的談話或專注於某一個聲音而忽略其他背景聲音，用來解釋人類的「聽力選擇能力」。  為了讓電腦也有類似「聽力選擇能力」的能力，就有搭配統計學發展出來的獨立成份分析(ICA)。換個方式說，希望能從複雜混合的混音環境，分析出原來的各個獨立聲音。 Basic Theorem  假設來源訊號是互相獨立的，就能將原始訊號從混合訊號中良好的分離出來。 因此必須以輸出訊號之間互為獨立為目標，並且定義出公式化與量化的目標函數(Cost Function) ICA的Cost Function是測量獨立成分的指標，為了使得分離效果良好，目標函數必須具備下列性質 :  Consistency : 無論初始值為何，解混合矩陣之逆矩陣W都必須收斂在同一點上。 Robustness : 解混合矩陣之逆矩陣W不能受到外在因素的干擾，而發生錯誤。</description>
+      <description>Cocktail-Party Problem  研究ICA前，可以先了解一下這個問題。主要起源於心理學研究，指的是人類在吵嘈的環境中，可以專注於某一個人的談話或專注於某一個聲音而忽略其他背景聲音，用來解釋人類的「聽力選擇能力」。 為了讓電腦也有類似「聽力選擇能力」的能力，就有搭配統計學發展出來的獨立成份分析(ICA)。換個方式說，希望能從複雜混合的混音環境，分析出原來的各個獨立聲音。  Basic Theorem  假設來源訊號是互相獨立的，就能將原始訊號從混合訊號中良好的分離出來。 因此必須以輸出訊號之間互為獨立為目標，並且定義出公式化與量化的目標函數(Cost Function) ICA的Cost Function是測量獨立成分的指標，為了使得分離效果良好，目標函數必須具備下列性質 :  Consistency : 無論初始值為何，解混合矩陣之逆矩陣W都必須收斂在同一點上。 Robustness : 解混合矩陣之逆矩陣W不能受到外在因素的干擾，而發生錯誤。</description>
     </item>
     
     <item>
@@ -60,13 +57,22 @@ Geometry</description>
     </item>
     
     <item>
+      <title>後立山連峰</title>
+      <link>https://normanliao.github.io/travel/20181101/</link>
+      <pubDate>Thu, 01 Nov 2018 11:40:11 +0200</pubDate>
+      
+      <guid>https://normanliao.github.io/travel/20181101/</guid>
+      <description>時間 : 2018.09.24 ~ 2018.09.27 登山路線 :  Day 1 : 猿倉登山口→白馬尻小屋→白馬岳頂上宿舍→白馬山莊→白馬岳→白馬山莊 Day 2 : 白馬山莊 (下大雨，待在山屋一整天) Day 3 : 白馬山莊→杓子岳→鑓ヶ岳→天狗山莊→不歸險前→唐松岳→唐松岳頂上山莊 Day 4 : 唐松岳頂上山莊→五龍山莊→大遠見山→小遠見山→白馬五龍登山口</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://normanliao.github.io/static/aboutme/</link>
       <pubDate>Sun, 07 Oct 2018 11:12:00 +0200</pubDate>
       
       <guid>https://normanliao.github.io/static/aboutme/</guid>
       <description>Norman Liao Computer Graphics &amp;amp; Computer Vision Developer
-Work Experience Style.Me ( 2013.11 ~ Present )  Senior Developer, Computer Graphics Main Project  Fitting Room Render in WebGL  Implemented multi-pass transparency blending by WebGL.</description>
+About Me   我只是一位靠Computer Graphics &amp;amp; Computer Vision維生的工程師，因為時常會遇到一些新的題目或是發現有興趣的題目，但是如果沒有對這些題目進行一些整理，時間一久了，就會開始遺忘一些技術的細節及當初研究的感覺。所以希望靠著這裡，將有興趣的一些題目去做一些整理的動作，以增進自己的專業。 很多題目第一次進行研究的時候，會有觀念上或是細節上的疏忽或是認知錯誤，可能都是過了一段時間後回來看才發現。如果發現我認知錯誤或是其他事項，都可以直接告知我，我都會謙虛地接受指教。  Work Experience  Style.Me ( 2013.</description>
     </item>
     
     <item>
@@ -76,10 +82,10 @@ Work Experience Style.Me ( 2013.11 ~ Present )  Senior Developer, Computer Graph
       
       <guid>https://normanliao.github.io/travel/20180523/</guid>
       <description>隊員 : &amp;emsp;Norman, Bella, Lisa, Kent
+時間 : &amp;emsp; 2018.05.18 ~ 2018.05.22
 路線  Day 1 : 鹿林道東線0K→馬達拉溪登山口→馬達拉溪登山口宿營地
 Day 2 : 馬達拉溪登山口宿營地→九九山莊→加利山→伊澤山→中霸山屋→大霸尖山→小霸尖山→大霸尖山→霸南山屋
-Day 3 : 霸南山屋→巴紗拉雲山→布秀蘭山→素密達山→素密達山屋
-Day 4 : 素密達山屋→雪山北峰→雪北山屋→鞍部叉路→凱蘭特崑山→北稜角→雪山主峰→三六九山莊</description>
+Day 3 : 霸南山屋→巴紗拉雲山→布秀蘭山→素密達山→素密達山屋</description>
     </item>
     
   </channel>
