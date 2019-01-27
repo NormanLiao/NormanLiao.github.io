@@ -3,12 +3,18 @@ date: 2018-10-07T11:12:00+02:00
 ---
 
 <!-- ![author](/images/author.png "author") -->
-![霸南山屋](/images/logo.png "霸南山屋")
+![logo](/images/logo.png "logo")
 # Norman Liao
 Computer Graphics & Computer Vision Developer
 
-### Work Experience
-#### Style.Me ( 2013.11 ~ Present )
+<font size="4">
+
+#### <font color="#003377"> About Me </font>
+- 我只是一位靠Computer Graphics & Computer Vision維生的工程師，因為時常會遇到一些新的題目或是發現有興趣的題目，但是如果沒有對這些題目進行一些整理，時間一久了，就會開始遺忘一些技術的細節及當初研究的感覺。所以希望靠著這裡，將有興趣的一些題目去做一些整理的動作，以增進自己的專業。
+- 很多題目第一次進行研究的時候，會有觀念上或是細節上的疏忽或是認知錯誤，可能都是過了一段時間後回來看才發現。如果發現我認知錯誤或是其他事項，都可以直接告知我，我都會謙虛地接受指教。
+
+#### <font color="#003377"> Work Experience </font>
+##### <font color="#007799"> Style.Me ( 2013.11 ~ 2019.01 ) </font>
 - Senior Developer, Computer Graphics
 - Main Project
     - **Fitting Room Render in WebGL**
@@ -30,9 +36,17 @@ Computer Graphics & Computer Vision Developer
     - **Bitcoin Transaction**
         - Implemented multi-signature wallets in Trezor device by Python.
 
-### Education
+##### <font color="#007799"> LUCID ( 2019.01 ~ Present ) </font>
+- Computer Vision Engineer
+- Main Project
+    - **3D Photo Development**
+        - Implement 3D render viewer.
+        - Research and develop depth map.
+
+#### <font color="#003377"> Education </font>
 - National Taipei University of Technology , Master of Computer Science
 
-### Contact
+#### <font color="#003377"> Contact </font>
 - siang0820@gmail.com
 
+</font>
