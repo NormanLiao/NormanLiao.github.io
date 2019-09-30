@@ -2,7 +2,7 @@
 <html lang="en-us"><head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="generator" content="Hugo 0.52" />
+        <meta name="generator" content="Hugo 0.58.3" />
 	
 	<link rel="icon" href="/images/logo.png">
 	
@@ -111,7 +111,8 @@
                     <div class="article-post">
                         
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <h4 id="source-paper">Source Paper</h4>
 
@@ -131,16 +132,14 @@
 <li><p>利用OpenCV Library轉換Source Image和Target Image到lab Color Space</p>
 
 <pre><code>    cvtColor(const Mat&amp; src, Mat&amp; dst, int code)
-</code></pre>
-
-<p>對於Color Space用法，可參考<a href="http://monkeycoding.com/?tag=cvtcolor">阿洲的程式教學 cvtColor</a> 講得很清楚</p></li>
-
-<li><p>計算Source Image和Target Image的Mean Value和Standard Deviation</p></li>
-
-<li><p>要把Source轉至Target的色彩，分別在 lab 三個各自的Channel計算
-$$Src&rsquo; = alpha * (Src- SrcMean)+DstMean$$
-where $$alpha = (DstStddev/SrcStddev)$$</p></li>
+</code></pre></li>
 </ol>
+
+<p>對於Color Space用法，可參考<a href="http://monkeycoding.com/?tag=cvtcolor">阿洲的程式教學 cvtColor</a> 講得很清楚
+2. 計算Source Image和Target Image的Mean Value和Standard Deviation
+3. 要把Source轉至Target的色彩，分別在 lab 三個各自的Channel計算
+    $$Src&rsquo; = alpha * (Src- SrcMean)+DstMean$$
+    where $$alpha = (DstStddev/SrcStddev)$$</p>
 
                     </div>
                     
@@ -163,10 +162,10 @@ where $$alpha = (DstStddev/SrcStddev)$$</p></li>
                     
                     <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
                     
-                        <a class="prev d-block col-md-6" href="/program/20181226/"> &laquo; 淺談ICA ( Independent Component Analysis )</a>
+                        <a class="prev d-block col-md-6" href="/travel/20181101/"> &laquo; 後立山連峰</a>
                     
                     
-                        <a class="next d-block col-md-6 text-lg-right" href="/travel/20181101/">後立山連峰 &raquo;</a>
+                        <a class="next d-block col-md-6 text-lg-right" href="/program/20181226/">淺談ICA ( Independent Component Analysis ) &raquo;</a>
                     
                     <div class="clearfix"></div>
                     </div>
