@@ -6,10 +6,21 @@
     <description>Recent content on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Jan 2019 11:40:11 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 11:40:11 +0800</lastBuildDate>
     
 	<atom:link href="https://normanliao.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Orbit Path for Camera</title>
+      <link>https://normanliao.github.io/program/20200402/</link>
+      <pubDate>Thu, 02 Apr 2020 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20200402/</guid>
+      <description>Orbit Camera 顧名思義，就是希望Camera的移動方式像是小行星繞的某個位置進行旋轉(就像地球繞的太陽公轉的概念)，為了達到這個效果，有幾個必須要注意的要點
+ 圓心位置 (類似太陽在3D空間的位置) 旋轉半徑 (類似地球和太陽的距離) 旋轉角度 (每一次位移的角度，這裡可以拆開為x, y, z三個方向表示)  讓Camera移動走Orbit方式有幾個流程
+ 以Look at position當作圓心 進行旋轉矩陣計算 根據旋轉圓心，進一步計算半徑距離&amp;amp;位移量 計算的結果，就是新的Camera位置  旋轉矩陣計算  convert rotation angles (degree) to 4x4 matrix matrix computation.</description>
+    </item>
     
     <item>
       <title>妙高高原</title>
