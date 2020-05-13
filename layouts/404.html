@@ -1,26 +1,18 @@
-{{ define "header"}}
-    {{- partial "_shared/navbar.html" . -}}
-{{ end }}
-
+{{ define "header" }}<!-- No header on 404 pages -->{{ end }}
 {{ define "main" }}
-<div class="main-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10 error">
-                <div class="mainheading">
-                    <h1 class="posttitle">{{ .Title }}</h1> 
-                </div>
-                <div class="article-post">
-                    Oops! This is obviously not what you are looking for.<br>
-                    Click <a href="/">here</a> to start all over again.                
-                </div>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
+  <div role="main" class="container main-content">
+    <div class="text-center">
+      <h1 class="error-emoji"></h1>
+      <p class="error-text">{{ i18n "pageNotFound" }}</p>
     </div>
-</div>
-{{ end }}
-
-{{ define "footer"}}
+  </div>
+<script>
+  var errorEmojiContainer = document.getElementsByClassName('error-emoji')[0];
+  var emojiArray = [
+    '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)',
+    '(=\'X\'=)', '(>_<)', '(;-;)', '\\(^Д^)/',
+  ];
+  var errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
+  errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
+</script>
 {{ end }}

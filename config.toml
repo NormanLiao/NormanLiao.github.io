@@ -1,44 +1,56 @@
-baseURL = "https://normanliao.github.io/"
-languageCode = "en-us"
+baseurl = "https://username.github.io"
+DefaultContentLanguage = "en"
+#DefaultContentLanguage = "ja"
 title = "Norman Liao"
-theme = "mediumish-gohugo-theme"
-summaryLength = 25
-copyright = ""
-enableEmoji = true
-publishDir = "docs"
-#disqusShortname = "your-shortname-here"
-#googleAnalytics = "UA-1XXXXXXX1-1"
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsStyle = "trac"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+#pygmentsUseClassic = true
+#pygmentOptions = "linenos=inline"
+#disqusShortname = "XXX"
+#googleAnalytics = "XXX"
 
-[params]
-  logo = "/images/logo.png"
-  description ="Code Exprience & Travel Record"
-  #mailchimp = "you can provide a mailchimp-link here"
+[Params]
+#  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
+  subtitle = ""
+  mainSections = ["program","program"]
+  logo = "img/logo.png" # Expecting square dimensions
+  favicon = "img/author.png"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = false
+  comments = true
+  readingTime = true
+  wordCount = true
+  useHLJS = true
+  socialShare = true
+  delayDisqus = true
+  showRelatedPosts = true
+#  hideAuthor = true
+#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
-[params.author]
+[Author]
   name = "Norman Liao"
-  thumbnail = "/images/logo.png"
-  description = ""
 
-[params.social]
-  github = "<username>"
-  linkedin = "<username>"
-  xing = "<username>"
-  medium = "<username>"
-  twitter = "<username>"
-
-## Main Menu
-[[menu.main]]
-    name = "Program"
-    weight = 100
-    identifier = "program"
-    url = "/program"
 [[menu.main]]
     name = "Travel"
-    weight = 150
-    identifier = "travel"
-    url = "/travel"
+    url = "travel"
+    weight = 1
+
 [[menu.main]]
-    name = "About Me"
-    identifier = "imprint"
-    weight = 200
-    url = "/static/aboutme"
+    name = "Program"
+    url = "program"
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "page/aboutme/"
+    weight = 3
+
+[[menu.main]]
+    name = "Tags"
+    url = "tags"
+    weight = 3
