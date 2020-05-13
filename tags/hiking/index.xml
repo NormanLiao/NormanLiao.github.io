@@ -2,35 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hiking on Norman Liao</title>
-    <link>https://normanliao.github.io/tags/hiking/</link>
+    <link>https://username.github.io/tags/hiking/</link>
     <description>Recent content in hiking on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Thu, 01 Nov 2018 11:40:11 +0200</lastBuildDate>
     
-	<atom:link href="https://normanliao.github.io/tags/hiking/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://username.github.io/tags/hiking/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>後立山連峰</title>
-      <link>https://normanliao.github.io/travel/20181101/</link>
+      <link>https://username.github.io/travel/20181101/</link>
       <pubDate>Thu, 01 Nov 2018 11:40:11 +0200</pubDate>
       
-      <guid>https://normanliao.github.io/travel/20181101/</guid>
-      <description>時間 : 2018.09.24 ~ 2018.09.27 登山路線 :  Day 1 : 猿倉登山口→白馬尻小屋→白馬岳頂上宿舍→白馬山莊→白馬岳→白馬山莊 Day 2 : 白馬山莊 (下大雨，待在山屋一整天) Day 3 : 白馬山莊→杓子岳→鑓ヶ岳→天狗山莊→不歸險前→唐松岳→唐松岳頂上山莊 Day 4 : 唐松岳頂上山莊→五龍山莊→大遠見山→小遠見山→白馬五龍登山口</description>
+      <guid>https://username.github.io/travel/20181101/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;時間 : 2018.09.24 ~ 2018.09.27&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
       <title>聖稜線</title>
-      <link>https://normanliao.github.io/travel/20180523/</link>
+      <link>https://username.github.io/travel/20180523/</link>
       <pubDate>Wed, 23 May 2018 11:40:11 +0200</pubDate>
       
-      <guid>https://normanliao.github.io/travel/20180523/</guid>
-      <description>隊員 : &amp;emsp;Norman, Bella, Lisa, Kent
-時間 : &amp;emsp; 2018.05.18 ~ 2018.05.22
-路線  Day 1 : 鹿林道東線0K→馬達拉溪登山口→馬達拉溪登山口宿營地
-Day 2 : 馬達拉溪登山口宿營地→九九山莊→加利山→伊澤山→中霸山屋→大霸尖山→小霸尖山→大霸尖山→霸南山屋
-Day 3 : 霸南山屋→巴紗拉雲山→布秀蘭山→素密達山→素密達山屋</description>
+      <guid>https://username.github.io/travel/20180523/</guid>
+      <description>&lt;h3 id=&#34;時間&#34;&gt;時間 :&lt;/h3&gt;
+
+&lt;p&gt;&amp;emsp; 2018.05.18 ~ 2018.05.22&lt;/p&gt;</description>
     </item>
     
   </channel>

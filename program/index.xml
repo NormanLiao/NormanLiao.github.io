@@ -2,54 +2,83 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programs on Norman Liao</title>
-    <link>https://normanliao.github.io/program/</link>
+    <link>https://username.github.io/program/</link>
     <description>Recent content in Programs on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 02 Apr 2020 11:40:11 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2020 11:40:11 +0800</lastBuildDate>
     
-	<atom:link href="https://normanliao.github.io/program/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://username.github.io/program/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>淺談Depth of Field</title>
+      <link>https://username.github.io/program/20200507/</link>
+      <pubDate>Thu, 07 May 2020 11:40:11 +0800</pubDate>
+      
+      <guid>https://username.github.io/program/20200507/</guid>
+      <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;depth-of-field&#34;&gt;Depth of Field&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在光學中，尤其是錄影或是攝影，是一個描述在空間中，可以清楚成像的距離範圍。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>Orbit Path for Camera</title>
-      <link>https://normanliao.github.io/program/20200402/</link>
+      <link>https://username.github.io/program/20200402/</link>
       <pubDate>Thu, 02 Apr 2020 11:40:11 +0800</pubDate>
       
-      <guid>https://normanliao.github.io/program/20200402/</guid>
-      <description>Orbit Camera 顧名思義，就是希望Camera的移動方式像是小行星繞的某個位置進行旋轉(就像地球繞的太陽公轉的概念)，為了達到這個效果，有幾個必須要注意的要點
- 圓心位置 (類似太陽在3D空間的位置) 旋轉半徑 (類似地球和太陽的距離) 旋轉角度 (每一次位移的角度，這裡可以拆開為x, y, z三個方向表示)  讓Camera移動走Orbit方式有幾個流程
- 以Look at position當作圓心 進行旋轉矩陣計算 根據旋轉圓心，進一步計算半徑距離&amp;amp;位移量 計算的結果，就是新的Camera位置  旋轉矩陣計算  convert rotation angles (degree) to 4x4 matrix matrix computation.</description>
+      <guid>https://username.github.io/program/20200402/</guid>
+      <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;orbit-camera&#34;&gt;Orbit Camera&lt;/h2&gt;
+
+&lt;p&gt;顧名思義，就是希望Camera的移動方式像是小行星繞的某個位置進行旋轉(就像地球繞的太陽公轉的概念)，為了達到這個效果，有幾個必須要注意的要點&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Computer Graphics簡介</title>
-      <link>https://normanliao.github.io/program/20181228/</link>
+      <link>https://username.github.io/program/20181228/</link>
       <pubDate>Thu, 27 Dec 2018 11:40:11 +0800</pubDate>
       
-      <guid>https://normanliao.github.io/program/20181228/</guid>
-      <description>&amp;emsp;&amp;emsp;有時候都會思考，如何跟其他領域的工程師解釋什麼是Computer Graphics，比較簡單的方式就是會用這句話表示 &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;ldquo;電腦圖學主要是在研究如何在二維螢幕上描繪三維空間中的物體。&amp;rdquo; &amp;emsp;&amp;emsp;但細部去解釋，總是有很多細節可以講，於是想說就這裡做個整理吧。 
-3D空間座標  一開始接觸Computer Graphics都會聽到 &amp;ldquo;Model, View and Projection Transformation Matrices&amp;rdquo;，因為在3D空間中，一開始的Model都是有XYZ三維資料，但是我們最後看到的畫面都是在2D平面上，於是我們必須先把Model座標轉移到整個3D空間的座標，然後再將3D空間座標轉移到Camera座標，最後再把Camera的座標轉移到2D螢幕上的座標。  
- 更詳細的細節可參考這裡Opengl-Tutorial-Matrices   
-Geometry</description>
+      <guid>https://username.github.io/program/20181228/</guid>
+      <description>&lt;p&gt;&amp;emsp;&amp;emsp;有時候都會思考，如何跟其他領域的工程師解釋什麼是Computer Graphics，比較簡單的方式就是會用這句話表示 &lt;br&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>淺談ICA ( Independent Component Analysis )</title>
-      <link>https://normanliao.github.io/program/20181226/</link>
+      <link>https://username.github.io/program/20181226/</link>
       <pubDate>Wed, 26 Dec 2018 11:40:11 +0800</pubDate>
       
-      <guid>https://normanliao.github.io/program/20181226/</guid>
-      <description>Cocktail-Party Problem  研究ICA前，可以先了解一下這個問題。主要起源於心理學研究，指的是人類在吵嘈的環境中，可以專注於某一個人的談話或專注於某一個聲音而忽略其他背景聲音，用來解釋人類的「聽力選擇能力」。 為了讓電腦也有類似「聽力選擇能力」的能力，就有搭配統計學發展出來的獨立成份分析(ICA)。換個方式說，希望能從複雜混合的混音環境，分析出原來的各個獨立聲音。  Basic Theorem  假設來源訊號是互相獨立的，就能將原始訊號從混合訊號中良好的分離出來。 因此必須以輸出訊號之間互為獨立為目標，並且定義出公式化與量化的目標函數(Cost Function) ICA的Cost Function是測量獨立成分的指標，為了使得分離效果良好，目標函數必須具備下列性質 :  Consistency : 無論初始值為何，解混合矩陣之逆矩陣W都必須收斂在同一點上。 Robustness : 解混合矩陣之逆矩陣W不能受到外在因素的干擾，而發生錯誤。</description>
+      <guid>https://username.github.io/program/20181226/</guid>
+      <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;cocktail-party-problem-https-en-wikipedia-org-wiki-cocktail-party-effect&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Cocktail_party_effect&#34;&gt;Cocktail-Party Problem&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;研究ICA前，可以先了解一下這個問題。主要起源於心理學研究，指的是人類在吵嘈的環境中，可以專注於某一個人的談話或專注於某一個聲音而忽略其他背景聲音，用來解釋人類的「聽力選擇能力」。&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
       <title>Color Transfer Between Images</title>
-      <link>https://normanliao.github.io/program/20181224/</link>
+      <link>https://username.github.io/program/20181224/</link>
       <pubDate>Mon, 24 Dec 2018 11:40:11 +0800</pubDate>
       
-      <guid>https://normanliao.github.io/program/20181224/</guid>
-      <description>Source Paper  Color Transfer Between Images, Erik Reinhard, Michael Ashikhmin, Bruce Gooch, and Peter Shirley, University of Utah  Introduction  &amp;emsp;&amp;emsp;這是一個非常實用也非常容易實作的影像處理方法。當有一個Source Image想要轉成Target Image的Color Style的時候，可以先把Source Image和Target Image都轉到LMS Color Space上，然後計算Standard Deviation和Mean Value，利用論文中提到的公式，去得到結果。 Implement  利用OpenCV Library轉換Source Image和Target Image到lab Color Space</description>
+      <guid>https://username.github.io/program/20181224/</guid>
+      <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;h4 id=&#34;source-paper&#34;&gt;Source Paper&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cs.utah.edu/~shirley/papers/ColorTransfer.pdf&#34;&gt;Color Transfer Between Images&lt;/a&gt;, Erik Reinhard, Michael Ashikhmin, Bruce Gooch, and Peter Shirley, University of Utah&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

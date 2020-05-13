@@ -2,66 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Norman Liao</title>
-    <link>https://normanliao.github.io/tags/</link>
+    <link>https://username.github.io/tags/</link>
     <description>Recent content in Tags on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 02 Apr 2020 11:40:11 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2020 11:40:11 +0800</lastBuildDate>
     
-	<atom:link href="https://normanliao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://username.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>computer graphics</title>
-      <link>https://normanliao.github.io/tags/computer-graphics/</link>
-      <pubDate>Thu, 02 Apr 2020 11:40:11 +0800</pubDate>
+      <link>https://username.github.io/tags/computer-graphics/</link>
+      <pubDate>Thu, 07 May 2020 11:40:11 +0800</pubDate>
       
-      <guid>https://normanliao.github.io/tags/computer-graphics/</guid>
+      <guid>https://username.github.io/tags/computer-graphics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>snowboard</title>
-      <link>https://normanliao.github.io/tags/snowboard/</link>
+      <link>https://username.github.io/tags/snowboard/</link>
       <pubDate>Mon, 07 Jan 2019 11:40:11 +0200</pubDate>
       
-      <guid>https://normanliao.github.io/tags/snowboard/</guid>
+      <guid>https://username.github.io/tags/snowboard/</guid>
       <description></description>
     </item>
     
     <item>
       <title>algorithm</title>
-      <link>https://normanliao.github.io/tags/algorithm/</link>
+      <link>https://username.github.io/tags/algorithm/</link>
       <pubDate>Wed, 26 Dec 2018 11:40:11 +0800</pubDate>
       
-      <guid>https://normanliao.github.io/tags/algorithm/</guid>
+      <guid>https://username.github.io/tags/algorithm/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Computer Vision</title>
-      <link>https://normanliao.github.io/tags/computer-vision/</link>
+      <title>computer vision</title>
+      <link>https://username.github.io/tags/computer-vision/</link>
       <pubDate>Wed, 26 Dec 2018 11:40:11 +0800</pubDate>
       
-      <guid>https://normanliao.github.io/tags/computer-vision/</guid>
+      <guid>https://username.github.io/tags/computer-vision/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Image Processing</title>
-      <link>https://normanliao.github.io/tags/image-processing/</link>
+      <link>https://username.github.io/tags/image-processing/</link>
       <pubDate>Mon, 24 Dec 2018 11:40:11 +0800</pubDate>
       
-      <guid>https://normanliao.github.io/tags/image-processing/</guid>
+      <guid>https://username.github.io/tags/image-processing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hiking</title>
-      <link>https://normanliao.github.io/tags/hiking/</link>
+      <link>https://username.github.io/tags/hiking/</link>
       <pubDate>Thu, 01 Nov 2018 11:40:11 +0200</pubDate>
       
-      <guid>https://normanliao.github.io/tags/hiking/</guid>
+      <guid>https://username.github.io/tags/hiking/</guid>
       <description></description>
     </item>
     
