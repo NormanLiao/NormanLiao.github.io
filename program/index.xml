@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programs on Norman Liao</title>
-    <link>https://username.github.io/program/</link>
+    <link>https://normanliao.github.io/program/</link>
     <description>Recent content in Programs on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 07 May 2020 11:40:11 +0800</lastBuildDate>
     
-	<atom:link href="https://username.github.io/program/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://normanliao.github.io/program/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>淺談Depth of Field</title>
-      <link>https://username.github.io/program/20200507/</link>
+      <link>https://normanliao.github.io/program/20200507/</link>
       <pubDate>Thu, 07 May 2020 11:40:11 +0800</pubDate>
       
-      <guid>https://username.github.io/program/20200507/</guid>
+      <guid>https://normanliao.github.io/program/20200507/</guid>
       <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
 &lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
 
@@ -28,10 +28,10 @@
     
     <item>
       <title>Orbit Path for Camera</title>
-      <link>https://username.github.io/program/20200402/</link>
+      <link>https://normanliao.github.io/program/20200402/</link>
       <pubDate>Thu, 02 Apr 2020 11:40:11 +0800</pubDate>
       
-      <guid>https://username.github.io/program/20200402/</guid>
+      <guid>https://normanliao.github.io/program/20200402/</guid>
       <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
 &lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
 
@@ -42,19 +42,19 @@
     
     <item>
       <title>Computer Graphics簡介</title>
-      <link>https://username.github.io/program/20181228/</link>
+      <link>https://normanliao.github.io/program/20181228/</link>
       <pubDate>Thu, 27 Dec 2018 11:40:11 +0800</pubDate>
       
-      <guid>https://username.github.io/program/20181228/</guid>
+      <guid>https://normanliao.github.io/program/20181228/</guid>
       <description>&lt;p&gt;&amp;emsp;&amp;emsp;有時候都會思考，如何跟其他領域的工程師解釋什麼是Computer Graphics，比較簡單的方式就是會用這句話表示 &lt;br&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>淺談ICA ( Independent Component Analysis )</title>
-      <link>https://username.github.io/program/20181226/</link>
+      <link>https://normanliao.github.io/program/20181226/</link>
       <pubDate>Wed, 26 Dec 2018 11:40:11 +0800</pubDate>
       
-      <guid>https://username.github.io/program/20181226/</guid>
+      <guid>https://normanliao.github.io/program/20181226/</guid>
       <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
 &lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
 
@@ -67,10 +67,10 @@
     
     <item>
       <title>Color Transfer Between Images</title>
-      <link>https://username.github.io/program/20181224/</link>
+      <link>https://normanliao.github.io/program/20181224/</link>
       <pubDate>Mon, 24 Dec 2018 11:40:11 +0800</pubDate>
       
-      <guid>https://username.github.io/program/20181224/</guid>
+      <guid>https://normanliao.github.io/program/20181224/</guid>
       <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
 &lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
 

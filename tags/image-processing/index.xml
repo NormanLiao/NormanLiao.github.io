@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Image Processing on Norman Liao</title>
-    <link>https://username.github.io/tags/image-processing/</link>
+    <link>https://normanliao.github.io/tags/image-processing/</link>
     <description>Recent content in Image Processing on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 24 Dec 2018 11:40:11 +0800</lastBuildDate>
     
-	<atom:link href="https://username.github.io/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://normanliao.github.io/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Color Transfer Between Images</title>
-      <link>https://username.github.io/program/20181224/</link>
+      <link>https://normanliao.github.io/program/20181224/</link>
       <pubDate>Mon, 24 Dec 2018 11:40:11 +0800</pubDate>
       
-      <guid>https://username.github.io/program/20181224/</guid>
+      <guid>https://normanliao.github.io/program/20181224/</guid>
       <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
 &lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
 

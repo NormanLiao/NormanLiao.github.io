@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Norman Liao</title>
-    <link>https://username.github.io/page/</link>
+    <link>https://normanliao.github.io/page/</link>
     <description>Recent content in Pages on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 07 Oct 2018 11:12:00 +0200</lastBuildDate>
     
-	<atom:link href="https://username.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://normanliao.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://username.github.io/page/aboutme/</link>
+      <link>https://normanliao.github.io/page/aboutme/</link>
       <pubDate>Sun, 07 Oct 2018 11:12:00 +0200</pubDate>
       
-      <guid>https://username.github.io/page/aboutme/</guid>
+      <guid>https://normanliao.github.io/page/aboutme/</guid>
       <description>Norman Liao Computer Graphics &amp;amp; Computer Vision Developer
 About Me   我只是一位靠Computer Graphics &amp;amp; Computer Vision維生的工程師，因為時常會遇到一些新的題目或是發現有興趣的題目，但是如果沒有對這些題目進行一些整理，時間一久了，就會開始遺忘一些技術的細節及當初研究的感覺。所以希望靠著這裡，將有興趣的一些題目去做一些整理的動作，以增進自己的專業。 很多題目第一次進行研究的時候，會有觀念上或是細節上的疏忽或是認知錯誤，可能都是過了一段時間後回來看才發現。如果發現我認知錯誤或是其他事項，都可以直接告知我，我都會謙虛地接受指教。  Work Experience  Style.Me ( 2013.11 ~ 2019.01 )   Senior Developer, Computer Graphics Main Project  Fitting Room Render in WebGL  Implemented multi-pass transparency blending by WebGL. Implemented async parallel asset loader by JavaScript Promise.  3D Assets Management Tools  Planned 3D asset management workflow and implement it by Python.</description>
     </item>
