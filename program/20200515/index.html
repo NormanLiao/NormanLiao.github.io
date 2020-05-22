@@ -7,15 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>淺談Depth of Field - Norman Liao</title>
+  <title>實作Depth of Field - Norman Liao</title>
   <meta name="description" content="
 
 
-Depth of Field
+介紹
 
-
-在光學中，尤其是錄影或是攝影，是一個描述在空間中，可以清楚成像的距離範圍。
-">
+這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。">
   <meta name="author" content="Norman Liao"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -51,8 +49,8 @@ Depth of Field
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/normanliao.github.io\/program\/20200507\/",
-          "name": "淺談 depth of field"
+          "@id": "https:\/\/normanliao.github.io\/program\/20200515\/",
+          "name": "實作 depth of field"
         }
     }]
 }
@@ -63,15 +61,15 @@ Depth of Field
   "author": {
     "name" : "Norman Liao"
   },
-  "headline": "淺談Depth of Field",
-  "description" : "  Depth of Field  在光學中，尤其是錄影或是攝影，是一個描述在空間中，可以清楚成像的距離範圍。 ",
+  "headline": "實作Depth of Field",
+  "description" : "  介紹 這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。\n",
   "inLanguage" : "en",
-  "wordCount":  79 ,
-  "datePublished" : "2020-05-07T11:40:11",
-  "dateModified" : "2020-05-07T11:40:11",
+  "wordCount":  299 ,
+  "datePublished" : "2020-05-15T11:40:11",
+  "dateModified" : "2020-05-15T11:40:11",
   "image" : "https:\/\/normanliao.github.io\/img\/logo.png",
   "keywords" : [ "computer graphics, computer vision" ],
-  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20200507\/",
+  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20200515\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/normanliao.github.io\/",
@@ -85,29 +83,25 @@ Depth of Field
 }
 </script>
 
-<meta property="og:title" content="淺談Depth of Field" />
+<meta property="og:title" content="實作Depth of Field" />
 <meta property="og:description" content="
 
 
-Depth of Field
+介紹
 
-
-在光學中，尤其是錄影或是攝影，是一個描述在空間中，可以清楚成像的距離範圍。
-">
+這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。">
 <meta property="og:image" content="https://normanliao.github.io/img/logo.png" />
-<meta property="og:url" content="https://normanliao.github.io/program/20200507/" />
+<meta property="og:url" content="https://normanliao.github.io/program/20200515/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Norman Liao" />
 
-  <meta name="twitter:title" content="淺談Depth of Field" />
+  <meta name="twitter:title" content="實作Depth of Field" />
   <meta name="twitter:description" content="
 
 
-Depth of Field
+介紹
 
-
-在光學中，尤其是錄影或是攝影，是一個描述在空間中，可以清楚成像的距離範圍。
-">
+這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。">
   <meta name="twitter:image" content="https://normanliao.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://normanliao.github.io/img/author.png' rel='icon' type='image/x-icon'/>
@@ -252,7 +246,7 @@ Depth of Field
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="program-heading">
               
-                <h1>淺談Depth of Field</h1>
+                <h1>實作Depth of Field</h1>
               
               
                 <hr class="small">
@@ -275,63 +269,122 @@ Depth of Field
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<h3 id="depth-of-field">Depth of Field</h3>
+<h2 id="介紹">介紹</h2>
+
+<p>這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。</p>
+
+<p>Depth of Field基本上影響的因素有焦距、光圈、CoC(模糊圈) 還有物體與鏡頭距離，但如果要直接利用這些物理光學上的條件模擬出來，可能要直接實作類似Ray Tracing的方法。於是在Computer Graphics領域也是有一些相關的方法，</p>
+
+<hr />
+
+<h3 id="實作概念">實作概念</h3>
+
+<p>如果要快速實作出一個快速的效果，在這個實作中，有幾個重點</p>
 
 <ul>
-<li>在光學中，尤其是錄影或是攝影，是一個描述在空間中，可以清楚成像的距離範圍。</li>
+<li>需要選定一個Focus Field (也就是對焦點的深度)</li>
+<li>計算所有Vertex Z Value與Focus Field的深度差</li>
+<li>利用這個深度差去模擬CoC的值，而用這個值當作Blur強度</li>
+<li>在此方法是把深度值都記錄在Depth Map上，但其實也可以到了Vertex Shader或Fragment Shader再計算也可以</li>
 </ul>
 
+<hr />
+
+<h3 id="fragment-shader-sample-code">Fragment Shader Sample Code</h3>
+
+<p>主要計算都是在Fragment Shader中實作</p>
+<div class="highlight"><pre class="chroma">#version 400
+
+in vec3 Position;
+in vec3 Normal;
+in vec2 TexCoord;
+
+uniform sampler2D tDiffuse;
+uniform vec2 click_coord;
+
+layout( location = 0 ) out vec4 FragColor;
+
+// Normal probability density function, 
+// Reference The Normal Distribution.
+float normpdf(in float x, in float sigma)
+{
+	return 0.39894 * exp( -0.5 * x * x / (sigma*sigma)) / sigma;
+}
+
+vec4 blurImage(vec2 tex_pos, int blur_size)
+{
+	int kSize = (blur_size - 1) / 2;
+	vec3 final_colour = vec3(0.0);
+		
+	//create the 1-D kernel
+	float sigma = 7.0;
+	float Z = 0.0;
+
+	//get the normalization factor (as the gaussian has been clamped)
+	for (int j=-kSize; j &lt;= kSize; ++j)
+	{ 
+		Z += normpdf(float(j), sigma);
+	}
+
+	// read out the texels
+	for (int i = -kSize; i &lt;= kSize; ++i)
+	{
+		for (int j = -kSize; j &lt;= kSize; ++j)
+		{
+			float w = 5.0 / textureSize(tDiffuse, 0).r;
+			float h = 5.0 / textureSize(tDiffuse, 0).g;
+			vec2 A = tex_pos + vec2(i * w , j * h);
+			vec4 packedA = texture( tDiffuse, A );
+			
+			float kernal_i = normpdf(float(i), sigma);
+			float kernal_j = normpdf(float(j), sigma);
+
+			final_colour += kernal_j * kernal_i * packedA.rgb;
+		}
+	}
+	return vec4(final_colour / (Z * Z), 1.0);
+}
+
+int computeBlurSize(vec2 tex_pos)
+{
+	float depth = texture( tDiffuse, tex_pos ).a;
+	float focus_field = texture( tDiffuse, click_coord ).a;
+	const int max_size = 25;
+	const int min_size = 0;
+	int blur_size = int(abs(depth - focus_field) * max_size);
+	return blur_size;
+}
+
+void main() {
+	FragColor = blurImage(TexCoord, computeBlurSize(TexCoord));
+}</pre></div>
+<p><br></p>
+
+<h3 id="講解">講解</h3>
+
 <ul>
-<li>雖然透鏡只能夠將光聚到某一固定的距離，遠離此點則會逐漸模糊，但是在<span style="color: red;">某一段特定的距離內，圖像模糊的程度是肉眼無法察覺的，這段距離稱之為景深</span>。</li>
-<li>景深通常由<span style="color: red;">物距</span>、以及鏡頭的<span style="color: red;"> focal length焦距</span>、<span style="color: red;">aperture光圈</span>和<span style="color: red;">circle of confusion size</span>所決定（相對於焦距的光圈大小）。
-<center><img src="../20200507/20200507_1.png" alt="DoF" title="DoF" /></center></li>
+<li>computeBlurSize function : 是用來計算每一個Pixel的深度值和Focus Field的深度值差距，進而推算Blur的強度。</li>
+<li>blurImage function : 根據Input的Blur強度，來決定每個Pixel的Blur狀況。這裡使用的是Gaussian Blur，事實上這部分應該還好更好的Blur方法。</li>
+<li>把最後的結果帶入 FragColor (Output)</li>
 </ul>
 
-<h4 id="超焦距-hyperfocal-distance">超焦距 (Hyperfocal distance)</h4>
+<hr />
 
-<ul>
-<li>當遠景深被擴大到無窮遠時，從焦點到鏡頭中心的距離即是超焦距</li>
-<li>通過將相機對焦在超焦距上可以獲得給定f值下的最大景深。讓對焦距離超過超焦距並不會使遠景深增加（因為它已經被擴展到了無窮遠）</li>
-<li>超焦距為H可由下式描述
-$$ H = f +  \frac{f^2}{N * c}$$
+<h3 id="result">Result</h3>
 
-<ul>
-<li>H : 超焦距</li>
-<li>f : 焦距 focal length</li>
-<li>N : 光圈大小</li>
-<li>c : Circle of Confusion的直徑</li>
-</ul></li>
-</ul>
-
-<h4 id="光圈和dof的關係">光圈和DoF的關係</h4>
-
-<p>從下圖可以發現一些事情</p>
-
-<ul>
-<li>加入光圈大小，會直接影響模糊圈大小</li>
-<li>物體與鏡頭距離，會直接影響模糊圈大小</li>
-</ul>
-
-<p><center><img src="../20200507/20200507_2.png" alt="DoF" title="DoF" /></center>
-</br></br></br></p>
-
-<h3 id="circle-of-confusion">Circle of Confusion</h3>
-
-<p>&emsp;&emsp;點光源經過鏡頭在焦平面成的像是一個點，保持鏡頭與底片距離不變，沿光軸方向前後移動點光源，像平面上成的像就會成為有一定直徑的圓形，圓形的大小取決於光圈大小和點光源偏離程度，只要這個圓形像的直徑足夠小，相片看去仍然夠清晰，點光源圓形像再大些，相片會顯得模糊，這個臨界點光源圓形像，就叫模糊圈。</p>
-
-<p><center><img src="../20200507/20200507_3.png" alt="DoF" title="DoF" /></center>
+<p><center>原圖RGB &amp; 深度圖DepthMap
+<img src="../20200515/20200515_1.jpg" alt="Result" title="Result" />
 <br>
-&emsp;&emsp;CoC公式其實可以從超焦距公式推導出來
-    $$ c = \frac{f^2}{N * ( H - f ) }$$</p>
+(Left)(Middle)(Right) 分別為不同的對焦點Depth of Field效果
+<img src="../20200515/20200515_2.jpg" alt="Result" title="Result" />
+</center></p>
+
+<hr />
 
 <h3 id="reference">Reference</h3>
 
 <ul>
-<li><a href="https://www.cambridgeincolour.com/tutorials/depth-of-field.htm">Cambridge in Colour : TUTORIALS: DEPTH OF FIELD</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E6%99%AF%E6%B7%B1">Depth of Field Wiki</a></li>
-<li><a href="http://bugworkshop.blogspot.com/2011/05/blog-post_01.html">攝影知識-景深概念及計算</a></li>
-<li><a href="https://cchsiehblog.wordpress.com/2011/01/26/%E6%A8%A1%E7%B3%8A%E5%9C%93-circle-of-confusion-coc-%E8%88%87-%E6%99%AF%E6%B7%B1-dof/">Jonathan Hsieh,模糊圓(Circle of confusion,CoC)與景深(DoF)</a></li>
-<li><a href="https://sites.google.com/site/101leaf/shu-ma-xin-chao/jingshengongshiwanquanjiexi">景深公式完全解析</a></li>
+<li>Shadertoy <a href="https://www.shadertoy.com/view/XdfGDH">https://www.shadertoy.com/view/XdfGDH</a></li>
 </ul>
 
         
@@ -369,7 +422,7 @@ $$ H = f +  \frac{f^2}{N * c}$$
                 
                     <li><a href="/program/20200520/">淺談Mesh Simplification</a></li>
                 
-                    <li><a href="/program/20200515/">實作Depth of Field</a></li>
+                    <li><a href="/program/20200507/">淺談Depth of Field</a></li>
                 
                     <li><a href="/program/20200402/">Orbit Path for Camera</a></li>
                 
@@ -387,12 +440,12 @@ $$ H = f +  \frac{f^2}{N * c}$$
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://normanliao.github.io/program/20200402/" data-toggle="tooltip" data-placement="top" title="Orbit Path for Camera">&larr; Previous Post</a>
+              <a href="https://normanliao.github.io/program/20200507/" data-toggle="tooltip" data-placement="top" title="淺談Depth of Field">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="https://normanliao.github.io/program/20200515/" data-toggle="tooltip" data-placement="top" title="實作Depth of Field">Next Post &rarr;</a>
+              <a href="https://normanliao.github.io/program/20200520/" data-toggle="tooltip" data-placement="top" title="淺談Mesh Simplification">Next Post &rarr;</a>
             </li>
           
         </ul>

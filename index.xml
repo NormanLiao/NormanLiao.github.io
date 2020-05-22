@@ -5,10 +5,38 @@
     <link>https://normanliao.github.io/</link>
     <description>Recent content on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 07 May 2020 11:40:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 11:40:11 +0800</lastBuildDate>
     
 	<atom:link href="https://normanliao.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>淺談Mesh Simplification</title>
+      <link>https://normanliao.github.io/program/20200520/</link>
+      <pubDate>Wed, 20 May 2020 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20200520/</guid>
+      <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
+
+&lt;p&gt;在Computer Graphics的應用中，Render Performance和Render Quality都是要同時注意的，這時候找到平衡點就變成很重要的事。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>實作Depth of Field</title>
+      <link>https://normanliao.github.io/program/20200515/</link>
+      <pubDate>Fri, 15 May 2020 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20200515/</guid>
+      <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
+
+&lt;p&gt;這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>淺談Depth of Field</title>

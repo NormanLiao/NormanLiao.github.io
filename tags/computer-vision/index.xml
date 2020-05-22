@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Computer Vision on Norman Liao</title>
+    <title>computer vision on Norman Liao</title>
     <link>https://normanliao.github.io/tags/computer-vision/</link>
-    <description>Recent content in Computer Vision on Norman Liao</description>
+    <description>Recent content in computer vision on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 26 Dec 2018 11:40:11 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 11:40:11 +0800</lastBuildDate>
     
 	<atom:link href="https://normanliao.github.io/tags/computer-vision/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>實作Depth of Field</title>
+      <link>https://normanliao.github.io/program/20200515/</link>
+      <pubDate>Fri, 15 May 2020 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20200515/</guid>
+      <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
+
+&lt;p&gt;這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>淺談Depth of Field</title>
+      <link>https://normanliao.github.io/program/20200507/</link>
+      <pubDate>Thu, 07 May 2020 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20200507/</guid>
+      <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;depth-of-field&#34;&gt;Depth of Field&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在光學中，尤其是錄影或是攝影，是一個描述在空間中，可以清楚成像的距離範圍。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>淺談ICA ( Independent Component Analysis )</title>

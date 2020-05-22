@@ -7,15 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>淺談Depth of Field - Norman Liao</title>
+  <title>淺談Mesh Simplification - Norman Liao</title>
   <meta name="description" content="
 
 
-Depth of Field
+前言
 
-
-在光學中，尤其是錄影或是攝影，是一個描述在空間中，可以清楚成像的距離範圍。
-">
+在Computer Graphics的應用中，Render Performance和Render Quality都是要同時注意的，這時候找到平衡點就變成很重要的事。">
   <meta name="author" content="Norman Liao"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -51,8 +49,8 @@ Depth of Field
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/normanliao.github.io\/program\/20200507\/",
-          "name": "淺談 depth of field"
+          "@id": "https:\/\/normanliao.github.io\/program\/20200520\/",
+          "name": "淺談 mesh simplification"
         }
     }]
 }
@@ -63,15 +61,15 @@ Depth of Field
   "author": {
     "name" : "Norman Liao"
   },
-  "headline": "淺談Depth of Field",
-  "description" : "  Depth of Field  在光學中，尤其是錄影或是攝影，是一個描述在空間中，可以清楚成像的距離範圍。 ",
+  "headline": "淺談Mesh Simplification",
+  "description" : "  前言 在Computer Graphics的應用中，Render Performance和Render Quality都是要同時注意的，這時候找到平衡點就變成很重要的事。\n",
   "inLanguage" : "en",
-  "wordCount":  79 ,
-  "datePublished" : "2020-05-07T11:40:11",
-  "dateModified" : "2020-05-07T11:40:11",
+  "wordCount":  136 ,
+  "datePublished" : "2020-05-20T11:40:11",
+  "dateModified" : "2020-05-20T11:40:11",
   "image" : "https:\/\/normanliao.github.io\/img\/logo.png",
-  "keywords" : [ "computer graphics, computer vision" ],
-  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20200507\/",
+  "keywords" : [ "computer graphics" ],
+  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20200520\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/normanliao.github.io\/",
@@ -85,29 +83,25 @@ Depth of Field
 }
 </script>
 
-<meta property="og:title" content="淺談Depth of Field" />
+<meta property="og:title" content="淺談Mesh Simplification" />
 <meta property="og:description" content="
 
 
-Depth of Field
+前言
 
-
-在光學中，尤其是錄影或是攝影，是一個描述在空間中，可以清楚成像的距離範圍。
-">
+在Computer Graphics的應用中，Render Performance和Render Quality都是要同時注意的，這時候找到平衡點就變成很重要的事。">
 <meta property="og:image" content="https://normanliao.github.io/img/logo.png" />
-<meta property="og:url" content="https://normanliao.github.io/program/20200507/" />
+<meta property="og:url" content="https://normanliao.github.io/program/20200520/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Norman Liao" />
 
-  <meta name="twitter:title" content="淺談Depth of Field" />
+  <meta name="twitter:title" content="淺談Mesh Simplification" />
   <meta name="twitter:description" content="
 
 
-Depth of Field
+前言
 
-
-在光學中，尤其是錄影或是攝影，是一個描述在空間中，可以清楚成像的距離範圍。
-">
+在Computer Graphics的應用中，Render Performance和Render Quality都是要同時注意的，這時候找到平衡點就變成很重要的事。">
   <meta name="twitter:image" content="https://normanliao.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://normanliao.github.io/img/author.png' rel='icon' type='image/x-icon'/>
@@ -252,7 +246,7 @@ Depth of Field
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="program-heading">
               
-                <h1>淺談Depth of Field</h1>
+                <h1>淺談Mesh Simplification</h1>
               
               
                 <hr class="small">
@@ -275,71 +269,86 @@ Depth of Field
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<h3 id="depth-of-field">Depth of Field</h3>
+<h3 id="前言">前言</h3>
+
+<p>在Computer Graphics的應用中，Render Performance和Render Quality都是要同時注意的，這時候找到平衡點就變成很重要的事。</p>
+
+<p>有時候網格作太細，或是Render的Device Resolution限制，並無法造成Render Quality提升，還讓Render Performance下降，這時候就會考慮使用Mesh Simplification方法，進一步生成不同細節層次(LOD, Level of Details)的模型，降低Mesh Size，取得平衡。
+網格簡化一般分成</p>
 
 <ul>
-<li>在光學中，尤其是錄影或是攝影，是一個描述在空間中，可以清楚成像的距離範圍。</li>
+<li>靜態簡化 : 靜態簡化就是預先計算好一系列不同簡化率的模型，在實時運行的程序中可以按照模型View Point的距離選擇不同版本的模型進行渲染。</li>
+<li>動態簡化 : 一般使用局部的幾何變換來實現，生成具有連續的具有不同分辨率的近似模型。</li>
 </ul>
 
+<h3 id="lod-level-of-details">LOD (Level of Details)</h3>
+
+<p>LOD是Level Of Details的縮寫即多層次細節。在計算機圖形學中，LOD就是為了支持當物體遠離觀察者或者物體的重要程度不同，位置不同，速度不同或者視角相關的參數不同需要減少渲染3D模型的複雜度。</p>
+
+<p>Example : <br>
+一個非常漂亮的建築，頂點數和面數一定很多，玩家在遊戲中控制人物相機視角離建築很近時，看起來非常好看，當玩家走遠的時候，這座建築還在相機視線內，但距離已經很遠了，看起來不是那麼清晰了，但由於建築的模型精度太高，無論遠近模型的頂點和面數都不變，性能開銷不變，當你的遊戲裡面有很多這樣的建築時，這時就需要使用LOD技術來節省性能開銷了。</p>
+
+<h3 id="靜態簡化">靜態簡化</h3>
+
+<h4 id="vertex-clustering">Vertex Clustering</h4>
+
+<p>這方法最早是1993年在<a href="https://www.cc.gatech.edu/~jarek/papers/VertexClustering.pdf">Rossignac J, Borrel P. Multi-resolution 3D approximations for rendering complex scenes</a>這一篇提出。</p>
+
+<p>這方法思路比較簡單，就是用一個Bounding Box包住整個模型，然後裡面分成許多小的立方體區域，最後落在同一個立方體區域的Vertex會被處理或是合併
+優點 : 速度很快
+缺點 : 容易造成三角形退化，網格的Topology結構容易被破壞。
+<img src="../20200520/20200520_1.jpg" alt="Vertex Clustering" title="Vertex Clustering" /></p>
+
+<h4 id="re-tiling-重新佈點法">Re-tiling 重新佈點法</h4>
+
+<p>最早是1995年<a href="https://www.cs.umd.edu/~varshney/papers/he_voxel.pdf">He T, Hong L, Kaufman A, et al. Voxel based object simplification</a>這一篇提出。</p>
+
+<p>重新佈點的意思是，在原模型表面上重新分佈頂點以改變頂點在空間中的分佈密度，然後再對這些頂點進行三角化。是一種基於體素(voxel)的網格簡化方法，也就是先對原模型進行Voxelization，然後對體素模型進行不同分辨率的降採樣（也就是不同帶寬的低通濾波），然後再用MarchingCubes移動立方體算法重構出三角形網格。</p>
+
+<hr />
+
+<h3 id="動態簡化">動態簡化</h3>
+
+<p><br></p>
+
+<h4 id="層次表示法">層次表示法</h4>
+
+<p>用靜態化簡的方法預先生成一系列的LOD模型，然後再實時地選擇對應的模型，實時地按&rdquo;對外觀的貢獻程度&rdquo;刪除三角形，直至精度達到給定要求時停止，並且渲染出來。</p>
+
+<p><br></p>
+
+<h4 id="漸進網格法-progressive-mesh">漸進網格法(Progressive Mesh)</h4>
+
+<p>這個方法以邊坍縮(edge collapse，之前提到的幾何元素刪除方法之一)與點分裂(Vertex Splitting)為基本操作，記錄了模型在連續的簡化過程中的拓補變動信息，於是就可以做到基於視點的(view-dependent)、無損的(lossless)、可複原的連續簡化，這樣子在攝像機靠近模型的過程中，就不會出現切換LOD模型產生的視覺突變的狀況。</p>
+
+<p><br></p>
+
+<h4 id="real-time-optimally-adapting-mesh-roam">Real-time optimally adapting mesh (ROAM)</h4>
+
 <ul>
-<li>雖然透鏡只能夠將光聚到某一固定的距離，遠離此點則會逐漸模糊，但是在<span style="color: red;">某一段特定的距離內，圖像模糊的程度是肉眼無法察覺的，這段距離稱之為景深</span>。</li>
-<li>景深通常由<span style="color: red;">物距</span>、以及鏡頭的<span style="color: red;"> focal length焦距</span>、<span style="color: red;">aperture光圈</span>和<span style="color: red;">circle of confusion size</span>所決定（相對於焦距的光圈大小）。
-<center><img src="../20200507/20200507_1.png" alt="DoF" title="DoF" /></center></li>
+<li>ROAM是一種Real Time優化地形網格的方法。</li>
+<li>在現代計算機上，有時將少量不需要的多邊形發送給GPU更為有效，而不是給CPU負擔LOD(Level of Details)計算，這使諸如geomipmapping之類的算法比ROAM更有效。
+使用此技術以產生高質量的顯示，同時又能夠保持實時幀速率。 存在諸如ROAM之類的算法來提供對場景質量與性能之間的控制，以便提供HQ場景，同時在硬件上保留實時幀速率。</li>
+<li>ROAM主要針對地形可視化，但是ROAM中的各種元素很難放在遊戲系統中。
+<br></li>
 </ul>
-
-<h4 id="超焦距-hyperfocal-distance">超焦距 (Hyperfocal distance)</h4>
-
-<ul>
-<li>當遠景深被擴大到無窮遠時，從焦點到鏡頭中心的距離即是超焦距</li>
-<li>通過將相機對焦在超焦距上可以獲得給定f值下的最大景深。讓對焦距離超過超焦距並不會使遠景深增加（因為它已經被擴展到了無窮遠）</li>
-<li>超焦距為H可由下式描述
-$$ H = f +  \frac{f^2}{N * c}$$
-
-<ul>
-<li>H : 超焦距</li>
-<li>f : 焦距 focal length</li>
-<li>N : 光圈大小</li>
-<li>c : Circle of Confusion的直徑</li>
-</ul></li>
-</ul>
-
-<h4 id="光圈和dof的關係">光圈和DoF的關係</h4>
-
-<p>從下圖可以發現一些事情</p>
-
-<ul>
-<li>加入光圈大小，會直接影響模糊圈大小</li>
-<li>物體與鏡頭距離，會直接影響模糊圈大小</li>
-</ul>
-
-<p><center><img src="../20200507/20200507_2.png" alt="DoF" title="DoF" /></center>
-</br></br></br></p>
-
-<h3 id="circle-of-confusion">Circle of Confusion</h3>
-
-<p>&emsp;&emsp;點光源經過鏡頭在焦平面成的像是一個點，保持鏡頭與底片距離不變，沿光軸方向前後移動點光源，像平面上成的像就會成為有一定直徑的圓形，圓形的大小取決於光圈大小和點光源偏離程度，只要這個圓形像的直徑足夠小，相片看去仍然夠清晰，點光源圓形像再大些，相片會顯得模糊，這個臨界點光源圓形像，就叫模糊圈。</p>
-
-<p><center><img src="../20200507/20200507_3.png" alt="DoF" title="DoF" /></center>
-<br>
-&emsp;&emsp;CoC公式其實可以從超焦距公式推導出來
-    $$ c = \frac{f^2}{N * ( H - f ) }$$</p>
 
 <h3 id="reference">Reference</h3>
 
 <ul>
-<li><a href="https://www.cambridgeincolour.com/tutorials/depth-of-field.htm">Cambridge in Colour : TUTORIALS: DEPTH OF FIELD</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E6%99%AF%E6%B7%B1">Depth of Field Wiki</a></li>
-<li><a href="http://bugworkshop.blogspot.com/2011/05/blog-post_01.html">攝影知識-景深概念及計算</a></li>
-<li><a href="https://cchsiehblog.wordpress.com/2011/01/26/%E6%A8%A1%E7%B3%8A%E5%9C%93-circle-of-confusion-coc-%E8%88%87-%E6%99%AF%E6%B7%B1-dof/">Jonathan Hsieh,模糊圓(Circle of confusion,CoC)與景深(DoF)</a></li>
-<li><a href="https://sites.google.com/site/101leaf/shu-ma-xin-chao/jingshengongshiwanquanjiexi">景深公式完全解析</a></li>
+<li><a href="http://graphics.stanford.edu/courses/cs468-10-fall/LectureSlides/08_Simplification.pdf">Mesh Simplification CS468課程投影片</a></li>
+<li><a href="https://pages.mtu.edu/~shene/COURSES/cs3621/SLIDES/Simplification.pdf">Mesh Simplification CS3621課程投影片</a></li>
+<li><a href="https://www.cc.gatech.edu/~jarek/papers/VertexClustering.pdf">Rossignac J, Borrel P. Multi-resolution 3D approximations for rendering complex scenes, 1993</a></li>
+<li><a href="https://www.cs.umd.edu/~varshney/papers/he_voxel.pdf">He T, Hong L, Kaufman A, et al. Voxel based object simplification, 1995</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/32700416">网格简化与LOD(Level of Detail)</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/51944864">探索游戏中的LOD技术 - 网格简化</a></li>
+<li><a href="https://lodbook.com/source/">Level of Details for 3D Graphics, Source Code</a></li>
 </ul>
 
         
           <div class="blog-tags">
             
               <a href="https://normanliao.github.io//tags/computer-graphics/">computer graphics</a>&nbsp;
-            
-              <a href="https://normanliao.github.io//tags/computer-vision/">computer vision</a>&nbsp;
             
           </div>
         
@@ -367,9 +376,9 @@ $$ H = f +  \frac{f^2}{N * c}$$
                   <ul>
                 
                 
-                    <li><a href="/program/20200520/">淺談Mesh Simplification</a></li>
-                
                     <li><a href="/program/20200515/">實作Depth of Field</a></li>
+                
+                    <li><a href="/program/20200507/">淺談Depth of Field</a></li>
                 
                     <li><a href="/program/20200402/">Orbit Path for Camera</a></li>
                 
@@ -387,13 +396,9 @@ $$ H = f +  \frac{f^2}{N * c}$$
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://normanliao.github.io/program/20200402/" data-toggle="tooltip" data-placement="top" title="Orbit Path for Camera">&larr; Previous Post</a>
+              <a href="https://normanliao.github.io/program/20200515/" data-toggle="tooltip" data-placement="top" title="實作Depth of Field">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://normanliao.github.io/program/20200515/" data-toggle="tooltip" data-placement="top" title="實作Depth of Field">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
