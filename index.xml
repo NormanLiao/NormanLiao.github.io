@@ -5,10 +5,21 @@
     <link>https://normanliao.github.io/</link>
     <description>Recent content on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 20 May 2020 11:40:11 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2020 11:40:11 +0800</lastBuildDate>
     
 	<atom:link href="https://normanliao.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>用Pybind11來解決Python call C&#43;&#43; function的問題吧!!</title>
+      <link>https://normanliao.github.io/program/20200530/</link>
+      <pubDate>Sat, 30 May 2020 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20200530/</guid>
+      <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
+
+&lt;p&gt;因為C/C++是比偏向電腦計算底層的語言，在比較大型計算的演算法實作通常也會使用C/C++語言進行實作。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>淺談Mesh Simplification</title>

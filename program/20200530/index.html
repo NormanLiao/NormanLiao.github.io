@@ -7,13 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>淺談Mesh Simplification - Norman Liao</title>
-  <meta name="description" content="
+  <title>用Pybind11來解決Python call C&#43;&#43; function的問題吧!! - Norman Liao</title>
+  <meta name="description" content="前言
 
-
-前言
-
-在Computer Graphics的應用中，Render Performance和Render Quality都是要同時注意的，這時候找到平衡點就變成很重要的事。">
+因為C/C&#43;&#43;是比偏向電腦計算底層的語言，在比較大型計算的演算法實作通常也會使用C/C&#43;&#43;語言進行實作。">
   <meta name="author" content="Norman Liao"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -49,8 +46,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/normanliao.github.io\/program\/20200520\/",
-          "name": "淺談 mesh simplification"
+          "@id": "https:\/\/normanliao.github.io\/program\/20200530\/",
+          "name": "用 pybind11來解決 python call c\x2b\x2b function的問題吧!!"
         }
     }]
 }
@@ -61,15 +58,15 @@
   "author": {
     "name" : "Norman Liao"
   },
-  "headline": "淺談Mesh Simplification",
-  "description" : "  前言 在Computer Graphics的應用中，Render Performance和Render Quality都是要同時注意的，這時候找到平衡點就變成很重要的事。\n",
+  "headline": "用Pybind11來解決Python call C\x2b\x2b function的問題吧!!",
+  "description" : "前言 因為C\/C\x2b\x2b是比偏向電腦計算底層的語言，在比較大型計算的演算法實作通常也會使用C\/C\x2b\x2b語言進行實作。\n",
   "inLanguage" : "en",
-  "wordCount":  136 ,
-  "datePublished" : "2020-05-20T11:40:11",
-  "dateModified" : "2020-05-20T11:40:11",
+  "wordCount":  196 ,
+  "datePublished" : "2020-05-30T11:40:11",
+  "dateModified" : "2020-05-30T11:40:11",
   "image" : "https:\/\/normanliao.github.io\/img\/logo.png",
-  "keywords" : [ "computer graphics" ],
-  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20200520\/",
+  "keywords" : [ "python, c\x2b\x2b" ],
+  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20200530\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/normanliao.github.io\/",
@@ -83,25 +80,19 @@
 }
 </script>
 
-<meta property="og:title" content="淺談Mesh Simplification" />
-<meta property="og:description" content="
+<meta property="og:title" content="用Pybind11來解決Python call C&#43;&#43; function的問題吧!!" />
+<meta property="og:description" content="前言
 
-
-前言
-
-在Computer Graphics的應用中，Render Performance和Render Quality都是要同時注意的，這時候找到平衡點就變成很重要的事。">
+因為C/C&#43;&#43;是比偏向電腦計算底層的語言，在比較大型計算的演算法實作通常也會使用C/C&#43;&#43;語言進行實作。">
 <meta property="og:image" content="https://normanliao.github.io/img/logo.png" />
-<meta property="og:url" content="https://normanliao.github.io/program/20200520/" />
+<meta property="og:url" content="https://normanliao.github.io/program/20200530/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Norman Liao" />
 
-  <meta name="twitter:title" content="淺談Mesh Simplification" />
-  <meta name="twitter:description" content="
+  <meta name="twitter:title" content="用Pybind11來解決Python call C&#43;&#43; function的問題吧!!" />
+  <meta name="twitter:description" content="前言
 
-
-前言
-
-在Computer Graphics的應用中，Render Performance和Render Quality都是要同時注意的，這時候找到平衡點就變成很重要的事。">
+因為C/C&#43;&#43;是比偏向電腦計算底層的語言，在比較大型計算的演算法實作通常也會使用C/C&#43;&#43;語言進行實作。">
   <meta name="twitter:image" content="https://normanliao.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://normanliao.github.io/img/author.png' rel='icon' type='image/x-icon'/>
@@ -246,7 +237,7 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="program-heading">
               
-                <h1>淺談Mesh Simplification</h1>
+                <h1>用Pybind11來解決Python call C&#43;&#43; function的問題吧!!</h1>
               
               
                 <hr class="small">
@@ -266,89 +257,149 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <h3 id="前言">前言</h3>
 
-<h3 id="前言">前言</h3>
+<p>因為C/C++是比偏向電腦計算底層的語言，在比較大型計算的演算法實作通常也會使用C/C++語言進行實作。</p>
 
-<p>在Computer Graphics的應用中，Render Performance和Render Quality都是要同時注意的，這時候找到平衡點就變成很重要的事。</p>
+<p>但是有時候，實作出來的演算法核心需要變成網路應用API的一部分時候，就另外進行處理了。
+遇到這個問題的時候，就冒出了兩種想法</p>
 
-<p>有時候網格作太細，或是Render的Device Resolution限制，並無法造成Render Quality提升，還讓Render Performance下降，這時候就會考慮使用Mesh Simplification方法，進一步生成不同細節層次(LOD, Level of Details)的模型，降低Mesh Size，取得平衡。
-網格簡化一般分成</p>
+<ol>
+<li><p>第一個方法，將C++ Code Build出來變成一包執行檔，然後利用Python直接Call執行檔</p>
 
 <ul>
-<li>靜態簡化 : 靜態簡化就是預先計算好一系列不同簡化率的模型，在實時運行的程序中可以按照模型View Point的距離選擇不同版本的模型進行渲染。</li>
-<li>動態簡化 : 一般使用局部的幾何變換來實現，生成具有連續的具有不同分辨率的近似模型。</li>
+<li>這個方法的好處是，可以不用對C++執行檔事先進行處理，直接Compile Build出來執行檔就可以了</li>
+<li>缺點是，因為要另外執行C++檔案，如果Input &amp; Output有扯到File IO的問題，或是分開執行檔案，可能會有執行效率還有系統穩定性的問題。</li>
+</ul></li>
+
+<li><p>第二個方法，也就是本篇會提到的方式，直接用Python Call C/C++ Function。</p></li>
+</ol>
+
+<p><br></p>
+
+<h3 id="pybind11">Pybind11</h3>
+
+<p>在找尋解決之道的時候，發現其實已經有不少方法，都有實作這件事。包括</p>
+
+<ul>
+<li><a href="https://docs.python.org/2/extending/extending.html">直接用Python官方library</a></li>
+<li><a href="https://www.boost.org/doc/libs/1_70_0/libs/python/doc/html/index.html">Boost Python</a></li>
+<li><a href="https://pybind11.readthedocs.io/en/stable/index.html">Pybind11</a></li>
 </ul>
 
-<h3 id="lod-level-of-details">LOD (Level of Details)</h3>
+<p>但後來選擇使用，幾個考慮的因素下</p>
 
-<p>LOD是Level Of Details的縮寫即多層次細節。在計算機圖形學中，LOD就是為了支持當物體遠離觀察者或者物體的重要程度不同，位置不同，速度不同或者視角相關的參數不同需要減少渲染3D模型的複雜度。</p>
+<ul>
+<li>希望可以輕量化專案</li>
+<li>Library盡可能簡化中間麻煩的工作</li>
+</ul>
 
-<p>Example : <br>
-一個非常漂亮的建築，頂點數和面數一定很多，玩家在遊戲中控制人物相機視角離建築很近時，看起來非常好看，當玩家走遠的時候，這座建築還在相機視線內，但距離已經很遠了，看起來不是那麼清晰了，但由於建築的模型精度太高，無論遠近模型的頂點和面數都不變，性能開銷不變，當你的遊戲裡面有很多這樣的建築時，這時就需要使用LOD技術來節省性能開銷了。</p>
+<p>這次最後決定嘗試使用Pybind11，單純因為覺得Boost Python環境配置較為繁瑣。
+使用Pybind11主要就是到官網下載Source Code，並且將include資料夾配置進專案中。</p>
 
-<h3 id="靜態簡化">靜態簡化</h3>
+<p><br></p>
 
-<h4 id="vertex-clustering">Vertex Clustering</h4>
+<h3 id="實作步驟">實作步驟</h3>
 
-<p>這方法最早是1993年在<a href="https://www.cc.gatech.edu/~jarek/papers/VertexClustering.pdf">Rossignac J, Borrel P. Multi-resolution 3D approximations for rendering complex scenes</a>這一篇提出。</p>
+<ol>
+<li>官方網站下載<a href="https://github.com/pybind/pybind11">Github Source Code</a></li>
+<li>新建一個CMakeLists.txt，並將pybind11/include 和 Python/include加進專案中
 
-<p>這方法思路比較簡單，就是用一個Bounding Box包住整個模型，然後裡面分成許多小的立方體區域，最後落在同一個立方體區域的Vertex會被處理或是合併
-優點 : 速度很快
-缺點 : 容易造成三角形退化，網格的Topology結構容易被破壞。
-<img src="../20200520/20200520_1.jpg" alt="Vertex Clustering" title="Vertex Clustering" /></p>
+<ul>
+<li>Create New CMakeLists.txt</li>
+<li>Add <span style="color: red;">include_directories(&ldquo;Python Project Folder/include&rdquo;)</span></li>
+<li>Add <span style="color: red;">include_directories(&ldquo;pybind11/include&rdquo;)</span></li>
+<li>Add <span style="color: red;">target_link_libraries(Project &ldquo;Python Project Folder/libs/python3x.lib&rdquo;)</span></li>
+</ul></li>
+<li>接者使用CMake build 專案</li>
+<li>使用<span style="color: red;">PYBIND11_MODULE</span>當作Python wrappers for C++</li>
+<li>並執行產生，主要是要產生Dynamic Library，在Windows上會製造.dll</li>
+<li>但是Python吃的Dynamic Library副檔名是.pyd，所以要把.dll改成.pyd(或是在輸出副檔名的地方就直接改了)</li>
+<li>利用Python直接Call .pyd檔裡面的Function</li>
+</ol>
 
-<h4 id="re-tiling-重新佈點法">Re-tiling 重新佈點法</h4>
+<p><br></p>
 
-<p>最早是1995年<a href="https://www.cs.umd.edu/~varshney/papers/he_voxel.pdf">He T, Hong L, Kaufman A, et al. Voxel based object simplification</a>這一篇提出。</p>
+<h3 id="sample-code">Sample Code</h3>
 
-<p>重新佈點的意思是，在原模型表面上重新分佈頂點以改變頂點在空間中的分佈密度，然後再對這些頂點進行三角化。是一種基於體素(voxel)的網格簡化方法，也就是先對原模型進行Voxelization，然後對體素模型進行不同分辨率的降採樣（也就是不同帶寬的低通濾波），然後再用MarchingCubes移動立方體算法重構出三角形網格。</p>
+<p>目前測試在Windows平台</p>
+
+<h4 id="entry-cpp">entry.cpp</h4>
+<div class="highlight"><pre class="chroma">#include &lt;iostream&gt;
+#include &lt;pybind11/pybind11.h&gt;
+
+using namespace std;
+
+namespace py = pybind11;
+int add(int i, int j) {
+	return i + j;
+}
+
+PYBIND11_MODULE(entry, m) {
+	m.doc() = &#34;entry example plugin&#34;;      // module doc string
+	m.def(&#34;add&#34;,                              // function name
+		&amp;add,                               // function pointer
+		&#34;A function which adds two numbers&#34; //function doc string
+	);
+}</pre></div>
+<ul>
+<li>.cpp的檔名要跟PYBIND11_MODULE(<span style="color: red;">entry</span>, m) 一樣</li>
+</ul>
+
+<h4 id="cmakelists-txt">CMakeLists.txt</h4>
+<div class="highlight"><pre class="chroma">cmake_minimum_required(VERSION 2.8)
+
+project(entry) 
+
+set(CMAKE_SUPPRESS_REGENERATION true)
+add_library(entry MODULE src/entry.cpp)
+
+include_directories(&#34;D:/Python/Python37/include&#34;)
+include_directories(&#34;./external/pybind11/include&#34;)
+
+# library path setting
+target_link_libraries(entry &#34;D:/Python/Python37/libs/python37.lib&#34;)</pre></div>
+<ul>
+<li>要記得Build Dynamic Library，設定上add_library(entry <span style="color: red;">MODULE</span> src/entry.cpp)</li>
+<li>include的順序，要先include Python，再include pybind11</li>
+<li>要記得link python3x.lib</li>
+<li>Build Code後，要記得Dynamic Library的副檔名為.pyd</li>
+</ul>
+
+<h4 id="test-py">test.py</h4>
+<div class="highlight"><pre class="chroma">import entry
+
+def test():
+    c = entry.add(10, 20)
+    
+    print(&#34;c = \n&#34;, c)
+
+if __name__ == &#34;__main__&#34;:
+    test()</pre></div>
+<ul>
+<li>要先記得build出entry.pyd這個Dynamic Library，然後再用python code去Call Funciton.</li>
+</ul>
+
+<p><br></p>
 
 <hr />
-
-<h3 id="動態簡化">動態簡化</h3>
-
-<p><br></p>
-
-<h4 id="層次表示法">層次表示法</h4>
-
-<p>用靜態化簡的方法預先生成一系列的LOD模型，然後再實時地選擇對應的模型，實時地按&rdquo;對外觀的貢獻程度&rdquo;刪除三角形，直至精度達到給定要求時停止，並且渲染出來。</p>
-
-<p><br></p>
-
-<h4 id="漸進網格法-progressive-mesh">漸進網格法(Progressive Mesh)</h4>
-
-<p>這個方法以邊坍縮(edge collapse，之前提到的幾何元素刪除方法之一)與點分裂(Vertex Splitting)為基本操作，記錄了模型在連續的簡化過程中的拓補變動信息，於是就可以做到基於視點的(view-dependent)、無損的(lossless)、可複原的連續簡化，這樣子在攝像機靠近模型的過程中，就不會出現切換LOD模型產生的視覺突變的狀況。</p>
-
-<p><br></p>
-
-<h4 id="real-time-optimally-adapting-mesh-roam">Real-time optimally adapting mesh (ROAM)</h4>
-
-<ul>
-<li>ROAM是一種Real Time優化地形網格的方法。</li>
-<li>在現代計算機上，有時將少量不需要的多邊形發送給GPU更為有效，而不是給CPU負擔LOD(Level of Details)計算，這使諸如geomipmapping之類的算法比ROAM更有效。
-使用此技術以產生高質量的顯示，同時又能夠保持實時幀速率。 存在諸如ROAM之類的算法來提供對場景質量與性能之間的控制，以便提供HQ場景，同時在硬件上保留實時幀速率。</li>
-<li>ROAM主要針對地形可視化，但是ROAM中的各種元素很難放在遊戲系統中。
-<br></li>
-</ul>
 
 <h3 id="reference">Reference</h3>
 
 <ul>
-<li><a href="http://graphics.stanford.edu/courses/cs468-10-fall/LectureSlides/08_Simplification.pdf">Mesh Simplification CS468課程投影片</a></li>
-<li><a href="https://pages.mtu.edu/~shene/COURSES/cs3621/SLIDES/Simplification.pdf">Mesh Simplification CS3621課程投影片</a></li>
-<li><a href="https://www.cc.gatech.edu/~jarek/papers/VertexClustering.pdf">Rossignac J, Borrel P. Multi-resolution 3D approximations for rendering complex scenes, 1993</a></li>
-<li><a href="https://www.cs.umd.edu/~varshney/papers/he_voxel.pdf">He T, Hong L, Kaufman A, et al. Voxel based object simplification, 1995</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/32700416">网格简化与LOD(Level of Detail)</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/51944864">探索游戏中的LOD技术 - 网格简化</a></li>
-<li><a href="https://lodbook.com/source/">Level of Details for 3D Graphics, Source Code</a></li>
+<li><a href="https://docs.python.org/2/extending/extending.html">Python Official C/C++ Extending</a></li>
+<li><a href="https://github.com/pybind/pybind11/issues/2004">Create OpenCV library for Python using pybind11</a></li>
+<li><a href="https://pybind11.readthedocs.io/en/stable/index.html">Pybind11 Official Website</a></li>
+<li><a href="https://blog.csdn.net/thisisfangsheng/article/details/75610558">C++与Python的互操作(pybind11): 从零开始</a></li>
+<li><a href="https://medium.com/@dboyliao/pybind11-%E5%85%A5%E9%96%80%E7%8E%A9%E6%A8%82%E6%89%8B%E8%A8%98-9da22f6193f2">pybind11 入門玩樂手記 (一)</a></li>
 </ul>
 
         
           <div class="blog-tags">
             
-              <a href="https://normanliao.github.io//tags/computer-graphics/">computer graphics</a>&nbsp;
+              <a href="https://normanliao.github.io//tags/python/">python</a>&nbsp;
+            
+              <a href="https://normanliao.github.io//tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
             
           </div>
         
@@ -368,25 +419,6 @@
 
         
           
-            
-          
-
-          
-                  <h4 class="see-also">See also</h4>
-                  <ul>
-                
-                
-                    <li><a href="/program/20200515/">實作Depth of Field</a></li>
-                
-                    <li><a href="/program/20200507/">淺談Depth of Field</a></li>
-                
-                    <li><a href="/program/20200402/">Orbit Path for Camera</a></li>
-                
-                    <li><a href="/program/20181228/">Computer Graphics簡介</a></li>
-                
-                    <li><a href="/program/20181226/">淺談ICA ( Independent Component Analysis )</a></li>
-                
-              </ul>
 
           
         
@@ -396,13 +428,9 @@
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://normanliao.github.io/program/20200515/" data-toggle="tooltip" data-placement="top" title="實作Depth of Field">&larr; Previous Post</a>
+              <a href="https://normanliao.github.io/program/20200520/" data-toggle="tooltip" data-placement="top" title="淺談Mesh Simplification">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://normanliao.github.io/program/20200530/" data-toggle="tooltip" data-placement="top" title="用Pybind11來解決Python call C&#43;&#43; function的問題吧!!">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
