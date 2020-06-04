@@ -7,10 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>用Pybind11來解決Python call C&#43;&#43; function的問題吧!! - Norman Liao</title>
+  <title>靠Ngrok處理Http vs Https Testing Local Testing問題吧 - Norman Liao</title>
   <meta name="description" content="前言
 
-因為C/C&#43;&#43;是比偏向電腦計算底層的語言，在比較大型計算的演算法實作通常也會使用C/C&#43;&#43;語言進行實作。">
+在JavaScript軟體開發測試上，有時候會需要在Local端先簡單建立環境，然後進行測試。一般來說，在PC端上直接測試可能並沒有太大問題。但是當想要測試在Mobile端上時，這時候就會遇到一個情境">
   <meta name="author" content="Norman Liao"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -46,8 +46,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/normanliao.github.io\/program\/20200530\/",
-          "name": "用 pybind11來解決 python call c\x2b\x2b function的問題吧!!"
+          "@id": "https:\/\/normanliao.github.io\/program\/20200604\/",
+          "name": "靠 ngrok處理 http vs https testing local testing問題吧"
         }
     }]
 }
@@ -58,15 +58,15 @@
   "author": {
     "name" : "Norman Liao"
   },
-  "headline": "用Pybind11來解決Python call C\x2b\x2b function的問題吧!!",
-  "description" : "前言 因為C\/C\x2b\x2b是比偏向電腦計算底層的語言，在比較大型計算的演算法實作通常也會使用C\/C\x2b\x2b語言進行實作。\n",
+  "headline": "靠Ngrok處理Http vs Https Testing Local Testing問題吧",
+  "description" : "前言 在JavaScript軟體開發測試上，有時候會需要在Local端先簡單建立環境，然後進行測試。一般來說，在PC端上直接測試可能並沒有太大問題。但是當想要測試在Mobile端上時，這時候就會遇到一個情境\n",
   "inLanguage" : "en",
-  "wordCount":  196 ,
-  "datePublished" : "2020-05-30T11:40:11",
-  "dateModified" : "2020-05-30T11:40:11",
+  "wordCount":  314 ,
+  "datePublished" : "2020-06-04T11:40:11",
+  "dateModified" : "2020-06-04T11:40:11",
   "image" : "https:\/\/normanliao.github.io\/img\/logo.png",
-  "keywords" : [ "python, c\x2b\x2b" ],
-  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20200530\/",
+  "keywords" : [ "network" ],
+  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20200604\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/normanliao.github.io\/",
@@ -80,19 +80,19 @@
 }
 </script>
 
-<meta property="og:title" content="用Pybind11來解決Python call C&#43;&#43; function的問題吧!!" />
+<meta property="og:title" content="靠Ngrok處理Http vs Https Testing Local Testing問題吧" />
 <meta property="og:description" content="前言
 
-因為C/C&#43;&#43;是比偏向電腦計算底層的語言，在比較大型計算的演算法實作通常也會使用C/C&#43;&#43;語言進行實作。">
+在JavaScript軟體開發測試上，有時候會需要在Local端先簡單建立環境，然後進行測試。一般來說，在PC端上直接測試可能並沒有太大問題。但是當想要測試在Mobile端上時，這時候就會遇到一個情境">
 <meta property="og:image" content="https://normanliao.github.io/img/logo.png" />
-<meta property="og:url" content="https://normanliao.github.io/program/20200530/" />
+<meta property="og:url" content="https://normanliao.github.io/program/20200604/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Norman Liao" />
 
-  <meta name="twitter:title" content="用Pybind11來解決Python call C&#43;&#43; function的問題吧!!" />
+  <meta name="twitter:title" content="靠Ngrok處理Http vs Https Testing Local Testing問題吧" />
   <meta name="twitter:description" content="前言
 
-因為C/C&#43;&#43;是比偏向電腦計算底層的語言，在比較大型計算的演算法實作通常也會使用C/C&#43;&#43;語言進行實作。">
+在JavaScript軟體開發測試上，有時候會需要在Local端先簡單建立環境，然後進行測試。一般來說，在PC端上直接測試可能並沒有太大問題。但是當想要測試在Mobile端上時，這時候就會遇到一個情境">
   <meta name="twitter:image" content="https://normanliao.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://normanliao.github.io/img/author.png' rel='icon' type='image/x-icon'/>
@@ -237,7 +237,7 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="program-heading">
               
-                <h1>用Pybind11來解決Python call C&#43;&#43; function的問題吧!!</h1>
+                <h1>靠Ngrok處理Http vs Https Testing Local Testing問題吧</h1>
               
               
                 <hr class="small">
@@ -259,147 +259,154 @@
       <article role="main" class="blog-post">
         <h3 id="前言">前言</h3>
 
-<p>因為C/C++是比偏向電腦計算底層的語言，在比較大型計算的演算法實作通常也會使用C/C++語言進行實作。</p>
+<p>在JavaScript軟體開發測試上，有時候會需要在Local端先簡單建立環境，然後進行測試。一般來說，在PC端上直接測試可能並沒有太大問題。但是當想要測試在Mobile端上時，這時候就會遇到一個情境</p>
 
-<p>但是有時候，實作出來的演算法核心需要變成網路應用API的一部分時候，就另外進行處理了。
-遇到這個問題的時候，就冒出了兩種想法</p>
+<blockquote>
+<p>在Google Chrome在手機上，很多JavaScript 的 EventListener會吃不到，但是Firefox可以吃到。</p>
+</blockquote>
+
+<p>因為Chrome在Mobile上，不支援Http只支援Https，Firefox則是Http &amp; Https都進行支援。
+進行平台開發需要兩種都測試的時候，面對這種狀況該怎麼辦?
+這時候就可以嘗試使用第三方工具Ngrok幫忙我們了!!</p>
+
+<h3 id="http-vs-https">Http vs Https</h3>
+
+<ul>
+<li>Http (HyperText Transfer Protocol)
+
+<ul>
+<li>HTTP是一個客戶端（用戶）和伺服器端（網站）之間請求和應答的標準，通常使用TCP協定。透過使用網頁瀏覽器、網路爬蟲或者其它的工具，客戶端發起一個HTTP請求到伺服器上指定埠（預設埠為80）。我們稱這個客戶端為用戶代理程式（user agent）。</li>
+</ul></li>
+<li>Https (HyperText Transfer Protocol Secure)
+
+<ul>
+<li>是一種透過計算機網路進行安全通訊的傳輸協定。HTTPS經由HTTP進行通訊，但利用SSL/TLS來加密封包。HTTPS開發的主要目的，是提供對網站伺服器的身分認證，保護交換資料的隱私與完整性。</li>
+</ul></li>
+</ul>
+
+<p><br></p>
+
+<h4 id="comparison">Comparison</h4>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>HTTP</th>
+<th>HTTPS</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Protocol</td>
+<td>It is hypertext transfer protocol.</td>
+<td>It is hypertext transfer protocol with secure.</td>
+</tr>
+
+<tr>
+<td>Security</td>
+<td>It is <span style="color: red;">less secure</span> as the data can be vulnerable to hackers.</td>
+<td>It is designed to <span style="color: red;">prevent hackers</span> from accessing critical information. It is secure against such attacks.</td>
+</tr>
+
+<tr>
+<td>Port</td>
+<td>It uses port <span style="color: red;">80</span> by default</td>
+<td>It was use port <span style="color: red;">443</span> by default.</td>
+</tr>
+
+<tr>
+<td>Starts with</td>
+<td>HTTP URLs begin with http://</td>
+<td>HTTPs URLs begin with https://</td>
+</tr>
+
+<tr>
+<td>Used for</td>
+<td>It&rsquo;s a good fit for websites designed for information consumption like <span style="color: red;">blogs.</span></td>
+<td>If the website needs to collect <span style="color: red;">the private information</span> such as credit card number, then it is a more secure protocol.</td>
+</tr>
+
+<tr>
+<td>Scrambling</td>
+<td>HTTP does not scramble the data to be transmitted. That&rsquo;s why there is a higher chance that transmitted information is available to hackers.</td>
+<td>HTTPS scrambles the data before transmission. At the receiver end, it descrambles to recover the original data. Therefore, the transmitted information is secure which can&rsquo;t be hacked.</td>
+</tr>
+
+<tr>
+<td>Protocol</td>
+<td>It operates at <span style="color: red;">TCP/IP level.</span></td>
+<td>HTTPS does not have any separate protocol. It operates using HTTP but uses <span style="color: red;">encrypted TLS/SSL connection.</span></td>
+</tr>
+
+<tr>
+<td>Domain Name Validation</td>
+<td>HTTP website <span style="color: red;">do not need SSL.</span></td>
+<td>HTTPS <span style="color: red;">requires SSL certificate.</span></td>
+</tr>
+
+<tr>
+<td>Data encryption</td>
+<td>HTTP website <span style="color: red;">doesn&rsquo;t use encryption.</span></td>
+<td>HTTPS websites use <span style="color: red;">data encryption.</span></td>
+</tr>
+
+<tr>
+<td>Search Ranking</td>
+<td>HTTP does not improve search rankings.</td>
+<td>HTTPS helps to improve search ranking.</td>
+</tr>
+
+<tr>
+<td>Speed</td>
+<td><span style="color: red;">Fast</span></td>
+<td><span style="color: red;">Slower than HTTP</span></td>
+</tr>
+
+<tr>
+<td>Vulnerability</td>
+<td>Vulnerable to hackers</td>
+<td>It Is highly secure as the data is encrypted before it is seen across a network.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Table Reference By <a href="https://www.guru99.com/difference-http-vs-https.html">HTTP vs HTTPS: What’s the Difference?</a></p>
+
+<p><br></p>
+
+<h3 id="ngrok">Ngrok</h3>
+
+<p>Ngrok這個第三方工具，看起來會先在遠端Server建立一個Wrapper位置，協助使用者將已經建立起來的localhost位置導向這個接口，然後給予一個Https協定的遠端Server位置。
+使用者可以直接利用這個Ngrok提供的新IP位置進行Https測試了。</p>
+
+<h4 id="操作流程">操作流程</h4>
 
 <ol>
-<li><p>第一個方法，將C++ Code Build出來變成一包執行檔，然後利用Python直接Call執行檔</p>
-
-<ul>
-<li>這個方法的好處是，可以不用對C++執行檔事先進行處理，直接Compile Build出來執行檔就可以了</li>
-<li>缺點是，因為要另外執行C++檔案，如果Input &amp; Output有扯到File IO的問題，或是分開執行檔案，可能會有執行效率還有系統穩定性的問題。</li>
-</ul></li>
-
-<li><p>第二個方法，也就是本篇會提到的方式，直接用Python Call C/C++ Function。</p></li>
+<li>先在Local端建立起localhost:&ldquo;port id&rdquo;，這邊的port id要先記起來</li>
+<li>去<a href="https://ngrok.com/">Ngrok official website</a>下載</li>
+<li>解壓縮後，執行ngrok.exe執行檔</li>
+<li>根據官方教學文件，先註冊一組帳號</li>
+<li>輸入  <span style="color: red;">ngrok http &ldquo;port id&rdquo;</span> 例如 <span style="color: red;">ngrok http 80</span></li>
+<li>然後程式會跑一下，開始建立遠端相對應IP位置，接著會顯示遠端IP位置名稱，如圖
+<img src="../20200604/20200604_1.jpg" alt="Result" title="Result" /></li>
+<li>然後就可以打開瀏覽器，輸入IP位置，進行測試了
+<br></li>
 </ol>
-
-<p><br></p>
-
-<h3 id="pybind11">Pybind11</h3>
-
-<p>在找尋解決之道的時候，發現其實已經有不少方法，都有實作這件事。包括</p>
-
-<ul>
-<li><a href="https://docs.python.org/2/extending/extending.html">直接用Python官方library</a></li>
-<li><a href="https://www.boost.org/doc/libs/1_70_0/libs/python/doc/html/index.html">Boost Python</a></li>
-<li><a href="https://pybind11.readthedocs.io/en/stable/index.html">Pybind11</a></li>
-</ul>
-
-<p>但後來選擇使用，幾個考慮的因素下</p>
-
-<ul>
-<li>希望可以輕量化專案</li>
-<li>Library盡可能簡化中間麻煩的工作</li>
-</ul>
-
-<p>這次最後決定嘗試使用Pybind11，單純因為覺得Boost Python環境配置較為繁瑣。
-使用Pybind11主要就是到官網下載Source Code，並且將include資料夾配置進專案中。</p>
-
-<p><br></p>
-
-<h3 id="實作步驟">實作步驟</h3>
-
-<ol>
-<li>官方網站下載<a href="https://github.com/pybind/pybind11">Github Source Code</a></li>
-<li>新建一個CMakeLists.txt，並將pybind11/include 和 Python/include加進專案中
-
-<ul>
-<li>Create New CMakeLists.txt</li>
-<li>Add <span style="color: red;">include_directories(&ldquo;Python Project Folder/include&rdquo;)</span></li>
-<li>Add <span style="color: red;">include_directories(&ldquo;pybind11/include&rdquo;)</span></li>
-<li>Add <span style="color: red;">target_link_libraries(Project &ldquo;Python Project Folder/libs/python3x.lib&rdquo;)</span></li>
-</ul></li>
-<li>接者使用CMake build 專案</li>
-<li>使用<span style="color: red;">PYBIND11_MODULE</span>當作Python wrappers for C++</li>
-<li>並執行產生，主要是要產生Dynamic Library，在Windows上會製造.dll</li>
-<li>但是Python吃的Dynamic Library副檔名是.pyd，所以要把.dll改成.pyd(或是在輸出副檔名的地方就直接改了)</li>
-<li>利用Python直接Call .pyd檔裡面的Function</li>
-</ol>
-
-<p><br></p>
-
-<h3 id="sample-code">Sample Code</h3>
-
-<p>目前測試在Windows平台</p>
-
-<h4 id="entry-cpp">entry.cpp</h4>
-<div class="highlight"><pre class="chroma">#include &lt;iostream&gt;
-#include &lt;pybind11/pybind11.h&gt;
-
-using namespace std;
-
-namespace py = pybind11;
-int add(int i, int j) {
-	return i + j;
-}
-
-PYBIND11_MODULE(entry, m) {
-	m.doc() = &#34;entry example plugin&#34;;      // module doc string
-	m.def(&#34;add&#34;,                              // function name
-		&amp;add,                               // function pointer
-		&#34;A function which adds two numbers&#34; //function doc string
-	);
-}</pre></div>
-<ul>
-<li>.cpp的檔名要跟PYBIND11_MODULE(<span style="color: red;">entry</span>, m) 一樣</li>
-</ul>
-
-<h4 id="cmakelists-txt">CMakeLists.txt</h4>
-<div class="highlight"><pre class="chroma">cmake_minimum_required(VERSION 2.8)
-
-project(entry) 
-
-set(CMAKE_SUPPRESS_REGENERATION true)
-add_library(entry MODULE src/entry.cpp)
-
-include_directories(&#34;D:/Python/Python37/include&#34;)
-include_directories(&#34;./external/pybind11/include&#34;)
-
-# library path setting
-target_link_libraries(entry &#34;D:/Python/Python37/libs/python37.lib&#34;)</pre></div>
-<ul>
-<li>要記得Build Dynamic Library，設定上add_library(entry <span style="color: red;">MODULE</span> src/entry.cpp)</li>
-<li>include的順序，要先include Python，再include pybind11</li>
-<li>要記得link python3x.lib</li>
-<li>Build Code後，要記得Dynamic Library的副檔名為.pyd</li>
-</ul>
-
-<h4 id="test-py">test.py</h4>
-<div class="highlight"><pre class="chroma">import entry
-
-def test():
-    c = entry.add(10, 20)
-    
-    print(&#34;c = \n&#34;, c)
-
-if __name__ == &#34;__main__&#34;:
-    test()</pre></div>
-<ul>
-<li>要先記得build出entry.pyd這個Dynamic Library，然後再用python code去Call Funciton.</li>
-</ul>
-
-<p><br></p>
-
-<hr />
 
 <h3 id="reference">Reference</h3>
 
 <ul>
-<li><a href="https://docs.python.org/2/extending/extending.html">Python Official C/C++ Extending</a></li>
-<li><a href="https://github.com/pybind/pybind11/issues/2004">Create OpenCV library for Python using pybind11</a></li>
-<li><a href="https://pybind11.readthedocs.io/en/stable/index.html">Pybind11 Official Website</a></li>
-<li><a href="https://blog.csdn.net/thisisfangsheng/article/details/75610558">C++与Python的互操作(pybind11): 从零开始</a></li>
-<li><a href="https://medium.com/@dboyliao/pybind11-%E5%85%A5%E9%96%80%E7%8E%A9%E6%A8%82%E6%89%8B%E8%A8%98-9da22f6193f2">pybind11 入門玩樂手記 (一)</a></li>
+<li><a href="https://www.guru99.com/difference-http-vs-https.html">HTTP vs HTTPS: What’s the Difference?</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE">HTTPS Wiki</a></li>
+<li><a href="https://ngrok.com/">Ngrok official website</a></li>
 </ul>
 
         
           <div class="blog-tags">
             
-              <a href="https://normanliao.github.io//tags/python/">python</a>&nbsp;
-            
-              <a href="https://normanliao.github.io//tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
+              <a href="https://normanliao.github.io//tags/network/">network</a>&nbsp;
             
           </div>
         
@@ -428,13 +435,9 @@ if __name__ == &#34;__main__&#34;:
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://normanliao.github.io/program/20200520/" data-toggle="tooltip" data-placement="top" title="淺談Mesh Simplification">&larr; Previous Post</a>
+              <a href="https://normanliao.github.io/program/20200530/" data-toggle="tooltip" data-placement="top" title="用Pybind11來解決Python call C&#43;&#43; function的問題吧!!">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://normanliao.github.io/program/20200604/" data-toggle="tooltip" data-placement="top" title="靠Ngrok處理Http vs Https Testing Local Testing問題吧">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
