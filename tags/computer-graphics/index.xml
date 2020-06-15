@@ -5,10 +5,19 @@
     <link>https://normanliao.github.io/tags/computer-graphics/</link>
     <description>Recent content in computer graphics on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 20 May 2020 11:40:11 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2020 11:40:11 +0800</lastBuildDate>
     
 	<atom:link href="https://normanliao.github.io/tags/computer-graphics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OpenGL Texture黑邊問題</title>
+      <link>https://normanliao.github.io/program/20200613/</link>
+      <pubDate>Sat, 13 Jun 2020 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20200613/</guid>
+      <description>&lt;p&gt;有時候，在處理OpenGL Texture實作上，會出現Texture黑邊問題，這時候，會有哪些解決方向可以去考慮呢?&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>淺談Mesh Simplification</title>

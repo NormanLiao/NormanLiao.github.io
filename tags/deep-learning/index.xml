@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deep learning on Norman Liao</title>
+    <link>https://normanliao.github.io/tags/deep-learning/</link>
+    <description>Recent content in deep learning on Norman Liao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 22 Aug 2019 11:40:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://normanliao.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>初談Deep Learning(1) - Neural Network</title>
+      <link>https://normanliao.github.io/program/20190822/</link>
+      <pubDate>Thu, 22 Aug 2019 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20190822/</guid>
+      <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;基本介紹&#34;&gt;基本介紹&lt;/h3&gt;
+
+&lt;p&gt;Machine Learning的Training Data主要是由Features, Label組成的&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初談AI, ML &amp; DL (1)</title>
+      <link>https://normanliao.github.io/program/20190809/</link>
+      <pubDate>Fri, 09 Aug 2019 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20190809/</guid>
+      <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
+
+&lt;p&gt;在近幾年，常常聽到業界或學界，很喜歡說，遇到困難的問題可以嘗試用AI解、產品一定要跟AI扯上關係，或是收集資料很重要啊，然後什麼未來是AI的世界阿、產品沒有AI會拿不到投資之類的(尤其非工程領域的專業人士更愛講)。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

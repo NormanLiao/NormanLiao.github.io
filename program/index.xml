@@ -5,13 +5,22 @@
     <link>https://normanliao.github.io/program/</link>
     <description>Recent content in Programs on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Jun 2020 11:40:11 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2020 11:40:11 +0800</lastBuildDate>
     
 	<atom:link href="https://normanliao.github.io/program/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>靠Ngrok處理Http vs Https Testing Local Testing問題吧</title>
+      <title>OpenGL Texture黑邊問題</title>
+      <link>https://normanliao.github.io/program/20200613/</link>
+      <pubDate>Sat, 13 Jun 2020 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20200613/</guid>
+      <description>&lt;p&gt;有時候，在處理OpenGL Texture實作上，會出現Texture黑邊問題，這時候，會有哪些解決方向可以去考慮呢?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>靠Ngrok處理Http vs Https Local Testing問題吧</title>
       <link>https://normanliao.github.io/program/20200604/</link>
       <pubDate>Thu, 04 Jun 2020 11:40:11 +0800</pubDate>
       
@@ -88,6 +97,31 @@
 &lt;h2 id=&#34;orbit-camera&#34;&gt;Orbit Camera&lt;/h2&gt;
 
 &lt;p&gt;顧名思義，就是希望Camera的移動方式像是小行星繞的某個位置進行旋轉(就像地球繞的太陽公轉的概念)，為了達到這個效果，有幾個必須要注意的要點&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初談Deep Learning(1) - Neural Network</title>
+      <link>https://normanliao.github.io/program/20190822/</link>
+      <pubDate>Thu, 22 Aug 2019 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20190822/</guid>
+      <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;基本介紹&#34;&gt;基本介紹&lt;/h3&gt;
+
+&lt;p&gt;Machine Learning的Training Data主要是由Features, Label組成的&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初談AI, ML &amp; DL (1)</title>
+      <link>https://normanliao.github.io/program/20190809/</link>
+      <pubDate>Fri, 09 Aug 2019 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20190809/</guid>
+      <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
+
+&lt;p&gt;在近幾年，常常聽到業界或學界，很喜歡說，遇到困難的問題可以嘗試用AI解、產品一定要跟AI扯上關係，或是收集資料很重要啊，然後什麼未來是AI的世界阿、產品沒有AI會拿不到投資之類的(尤其非工程領域的專業人士更愛講)。&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -7,13 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Orbit Path for Camera - Norman Liao</title>
+  <title>初談Deep Learning(1) - Neural Network - Norman Liao</title>
   <meta name="description" content="
 
 
-Orbit Camera
+基本介紹
 
-顧名思義，就是希望Camera的移動方式像是小行星繞的某個位置進行旋轉(就像地球繞的太陽公轉的概念)，為了達到這個效果，有幾個必須要注意的要點">
+Machine Learning的Training Data主要是由Features, Label組成的">
   <meta name="author" content="Norman Liao"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -49,8 +49,8 @@ Orbit Camera
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/normanliao.github.io\/program\/20200402\/",
-          "name": "Orbit path for camera"
+          "@id": "https:\/\/normanliao.github.io\/program\/20190822\/",
+          "name": "初談 deep learning(1) neural network"
         }
     }]
 }
@@ -61,15 +61,15 @@ Orbit Camera
   "author": {
     "name" : "Norman Liao"
   },
-  "headline": "Orbit Path for Camera",
-  "description" : "  Orbit Camera 顧名思義，就是希望Camera的移動方式像是小行星繞的某個位置進行旋轉(就像地球繞的太陽公轉的概念)，為了達到這個效果，有幾個必須要注意的要點\n",
+  "headline": "初談Deep Learning(1) - Neural Network",
+  "description" : "  基本介紹 Machine Learning的Training Data主要是由Features, Label組成的\n",
   "inLanguage" : "en",
-  "wordCount":  620 ,
-  "datePublished" : "2020-04-02T11:40:11",
-  "dateModified" : "2020-04-02T11:40:11",
+  "wordCount":  101 ,
+  "datePublished" : "2019-08-22T11:40:11",
+  "dateModified" : "2019-08-22T11:40:11",
   "image" : "https:\/\/normanliao.github.io\/img\/logo.png",
-  "keywords" : [ "computer graphics" ],
-  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20200402\/",
+  "keywords" : [ "deep learning" ],
+  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20190822\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/normanliao.github.io\/",
@@ -83,25 +83,25 @@ Orbit Camera
 }
 </script>
 
-<meta property="og:title" content="Orbit Path for Camera" />
+<meta property="og:title" content="初談Deep Learning(1) - Neural Network" />
 <meta property="og:description" content="
 
 
-Orbit Camera
+基本介紹
 
-顧名思義，就是希望Camera的移動方式像是小行星繞的某個位置進行旋轉(就像地球繞的太陽公轉的概念)，為了達到這個效果，有幾個必須要注意的要點">
+Machine Learning的Training Data主要是由Features, Label組成的">
 <meta property="og:image" content="https://normanliao.github.io/img/logo.png" />
-<meta property="og:url" content="https://normanliao.github.io/program/20200402/" />
+<meta property="og:url" content="https://normanliao.github.io/program/20190822/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Norman Liao" />
 
-  <meta name="twitter:title" content="Orbit Path for Camera" />
+  <meta name="twitter:title" content="初談Deep Learning(1) - Neural Network" />
   <meta name="twitter:description" content="
 
 
-Orbit Camera
+基本介紹
 
-顧名思義，就是希望Camera的移動方式像是小行星繞的某個位置進行旋轉(就像地球繞的太陽公轉的概念)，為了達到這個效果，有幾個必須要注意的要點">
+Machine Learning的Training Data主要是由Features, Label組成的">
   <meta name="twitter:image" content="https://normanliao.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://normanliao.github.io/img/author.png' rel='icon' type='image/x-icon'/>
@@ -246,7 +246,7 @@ Orbit Camera
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="program-heading">
               
-                <h1>Orbit Path for Camera</h1>
+                <h1>初談Deep Learning(1) - Neural Network</h1>
               
               
                 <hr class="small">
@@ -269,145 +269,106 @@ Orbit Camera
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<h2 id="orbit-camera">Orbit Camera</h2>
+<h3 id="基本介紹">基本介紹</h3>
 
-<p>顧名思義，就是希望Camera的移動方式像是小行星繞的某個位置進行旋轉(就像地球繞的太陽公轉的概念)，為了達到這個效果，有幾個必須要注意的要點</p>
+<p>Machine Learning的Training Data主要是由Features, Label組成的</p>
 
 <ul>
-<li>圓心位置 (類似太陽在3D空間的位置)</li>
-<li>旋轉半徑 (類似地球和太陽的距離)</li>
-<li>旋轉角度 (每一次位移的角度，這裡可以拆開為x, y, z三個方向表示)</li>
+<li>Feature: 資料的特徵，像是濕度、風速、氣壓…</li>
+<li>Label: 資料的標籤，也就是我們預測的目標。
+基本流程:
+<img src="../20190822/20190822_1.jpg" alt="Pipeline" title="Pipeline" /></li>
 </ul>
-
-<p>讓Camera移動走Orbit方式有幾個流程</p>
-
-<ol>
-<li>以Look at position當作圓心</li>
-<li>進行旋轉矩陣計算</li>
-<li>根據旋轉圓心，進一步計算半徑距離&amp;位移量</li>
-<li>計算的結果，就是新的Camera位置</li>
-</ol>
-
-<p><center><img src="../20200402/20200402_1.jpg" alt="Orbit" title="Orbit" /></center></p>
-
-<hr />
-
-<h3 id="旋轉矩陣計算">旋轉矩陣計算</h3>
-
-<ul>
-<li>convert rotation angles (degree) to 4x4 matrix</li>
-<li>matrix computation.
-
-<ul>
-<li>The order of rotation is Roll-&gt;Yaw-&gt;Pitch (Rx*Ry*Rz)</li>
-<li>Rx: rotation about X-axis, pitch</li>
-<li>Ry: rotation about Y-axis, yaw(heading)</li>
-<li>Rz: rotation about Z-axis, roll</li>
-</ul></li>
-</ul>
-
-<p>Rotation三個方向計算
-$$ Rx * Ry * Rz = Mr $$</p>
-
-<p>$$\begin{bmatrix}1 &amp; 0 &amp; 0\\ 0 &amp; \cos(\theta x) &amp; -\sin(\theta x) \\ 0 &amp; \sin(\theta x) &amp; \cos(\theta x) \end{bmatrix} \begin{bmatrix}\cos(\theta y) &amp; 0 &amp; \sin(\theta y)\\ 0 &amp; 1 &amp; 0 \\ -\sin(\theta y) &amp; 0 &amp; \cos(\theta y) \end{bmatrix} \begin{bmatrix}\cos(\theta z) &amp; -\sin(\theta z) &amp; 0\\ \sin(\theta z) &amp; \cos(\theta z) &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} = \begin{bmatrix}\cos(\theta y)\cos(\theta z) &amp; -\cos(\theta y)\sin(\theta z) &amp; \sin(\theta y)\\ \sin(\theta x) \sin(\theta y) \cos(\theta z) + \cos(\theta x) \sin(\theta z) &amp; -\sin(\theta x)\sin(\theta y) \sin(\theta z) + \cos(\theta x) \cos(\theta z) &amp; -\sin(\theta x) \cos(\theta y) \\ -\cos(\theta x) \sin(\theta y) \cos(\theta z) + \sin(\theta x) \sin(\theta z)  &amp; \cos(\theta x) \sin(\theta y) \sin(\theta z) + \sin(\theta x) \cos(\theta z) &amp; \cos(\theta x)\cos(\theta y) \end{bmatrix}$$</p>
-
-<p></br></p>
-
-<h3 id="建置camera-matrix並計算">建置Camera Matrix並計算</h3>
-
-<p>有了旋轉矩陣後，要加入兩個因素進行計算</p>
-
-<ol>
-<li>旋轉中心(也就是Look At Position or Rotation Target)</li>
-<li>旋轉半徑</li>
-</ol>
-
-<ul>
-<li>construct camera matrix:
-$$ M = Mt2 * Mr&rsquo; * Mt1 $$
-
-<ul>
-<li>Mt1: move scene to target (-x,-y,-z)</li>
-<li>Mr&rsquo; : rotate scene at the target point</li>
-<li>Mt2: move scene away from target with distance -d</li>
-</ul></li>
-</ul>
-
-<p>$$\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; -d \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix} \begin{bmatrix}r0 &amp; r4 &amp; r8 &amp; 0\\ r1 &amp; r5 &amp; r9 &amp; 0 \\ r2 &amp; r6 &amp; r10 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix} \begin{bmatrix}1 &amp; 0 &amp; 0 &amp; -x\\ 0 &amp; 1 &amp; 0 &amp; -y \\ 0 &amp; 0 &amp; 1 &amp; -z \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix} = \begin{bmatrix}r0 &amp; r4 &amp; r8 &amp; r0 *(-x) + r4 *(-y) + r8 *(-z) \\ r1 &amp; r5 &amp; r9 &amp; r1 *(-x) + r5 *(-y) + r9 *(-z) \\ r2 &amp; r6 &amp; r10 &amp; r2 *(-x) + r6 *(-y) + r10 *(-z) -d \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}$$</p>
 
 <p><br></p>
 
-<h3 id="sample-code">Sample Code</h3>
-<div class="highlight"><pre class="chroma">glm::vec3 getOrbitCameraPosition(glm::vec3 angle)
-{
-    const float deg2rad = 3.141593f / 180.0f;
+<hr />
 
-    float sx, sy, sz, cx, cy, cz, theta;
-    glm::vec3 left, up, forward;
-
-    // rotation angle about X-axis (pitch)
-    theta = angle.x * deg2rad;
-    sx = sinf(theta);
-    cx = cosf(theta);
-
-    // rotation angle about Y-axis (yaw)
-    theta = -angle.y * deg2rad;
-    sy = sinf(theta);
-    cy = cosf(theta);
-
-    // rotation angle about Z-axis (roll)
-    theta = angle.z * deg2rad;
-    sz = sinf(theta);
-    cz = cosf(theta);
-
-    // determine left axis
-    left.x = cy*cz;
-    left.y = sx*sy*cz + cx*sz;
-    left.z = -cx*sy*cz + sx*sz;
-
-    // determine up axis
-    up.x = -cy*sz;
-    up.y = -sx*sy*sz + cx*cz;
-    up.z = cx*sy*sz + sx*cz;
-
-    // determine forward axis
-    forward.x = sy;
-    forward.y = -sx*cy;
-    forward.z = cx*cy;
-
-    // compute translation vector
-    glm::vec3 trans;
-    glm::vec3 target = m_lookat_pos;
-    trans.x = left.x * -target.x + up.x * -target.y + forward.x * -target.z;
-    trans.y = left.y * -target.x + up.y * -target.y + forward.y * -target.z;
-    trans.z = left.z * -target.x + up.z * -target.y + forward.z * -target.z - m_distance;
-
-    // construct matrix
-    // construct rotation matrix
-    glm::mat4 matrix;
-    matrix[0] = glm::vec4(left, 0.0f);
-    matrix[1] = glm::vec4(up, 0.0f);
-    matrix[2] = glm::vec4(forward, 0.0f);
-    matrix[3] = glm::vec4(trans, 1.0f);
-
-    // re-compute camera position
-    forward = glm::vec3(-matrix[0][2], -matrix[1][2], -matrix[2][2]);
-    glm::vec3 result_postion = target - (m_distance * forward);
-    return result_postion;
-}</pre></div>
-<h2 id="reference">Reference</h2>
+<h3 id="machine-learning-分類">Machine Learning 分類</h3>
 
 <ul>
-<li><a href="https://www.reallusion.com/iclone/help/iclone3/10_Scene/Camera/Creating_Perfect_Orbit_Path_for_Camera.htm">Creating Perfect Orbit Path for Camera (iClone 3.1)</a></li>
-<li><a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices/">opengl-tutorial Tutorial 3 : Matrices
-</a></li>
-<li><a href="http://www.songho.ca/opengl/gl_camera.html">songho website : Camera</a></li>
+<li>Supervised Learning(監督式學習)</li>
+<li>Unsupervised Learning(非監督式學習)</li>
+<li>Reinforcement Learning(強化學習)
+<img src="../20190822/20190822_4.jpg" alt="Pipeline" title="Pipeline" /></li>
 </ul>
+
+<p><br></p>
+
+<hr />
+
+<h3 id="神經網路-neural-network-nn">神經網路( Neural Network, NN )</h3>
+
+<ul>
+<li>以數學公式模擬神經元的訊息傳導</li>
+<li>Activation Function通常為非線性函數
+<img src="../20190822/20190822_2.jpg" alt="NN" title="NN" />
+$$y=activation function(x1∗w1+x2∗w2+x3∗w3+b1)$$
+<img src="../20190822/20190822_5.jpg" alt="NN" title="NN" /></li>
+</ul>
+
+<p><br></p>
+
+<hr />
+
+<h4 id="neuron-神經元">Neuron (神經元)</h4>
+
+<ul>
+<li>我們可將神經元看為一個複雜的函數，他有能力Fit複雜的數據。</li>
+<li>優勢
+
+<ul>
+<li>擁有極大的參數量，他的容量很大，可避免Under-Fit</li>
+<li>運算速度很快，容易平行化</li>
+<li>訓練過程有快速而有效的方法。Back-propagation(反向傳播) &amp; Stochastic gradient descent(隨機梯度下降)</li>
+<li>傳統觀點是，如果參數量太大，模型就容易出現Over-fit。但目前的Neural Network可以在許多問題上避免Over-Fit</li>
+</ul></li>
+<li>直觀地說，每個神經元是在做加權平均(Weighted Average)
+    $$ out = \sum_{i=0}^n (x_i * w_i) + b $$
+<br></li>
+</ul>
+
+<h4 id="loss-function-optimizer">Loss Function &amp; Optimizer</h4>
+
+<ul>
+<li>神經網路的訓練過程是逐步調整神經網路每層的參數，讓神經網路的輸出Out趨近於期望輸出</li>
+<li>需要衡量甚麼是趨近，可定義Loss Function，代表Out和期望輸出之間的誤差，然後訓練目標是最小化Loss Function的值LOSS</li>
+<li>Optimizer會根據LOSS和神經網路的情況，更新神經網路的參數，使得LOSS縮小</li>
+<li>最原始的方法是隨機微調參數，然後重新計算損失。如果進步了，就保留這個微調。(這個方法效率很低)
+更好的方法是利用梯度下降(gradient descent)，他會通過求偏導數算出往哪個方向調整參數是&rdquo;最能使LOSS縮小的方向&rdquo;，然後將參數朝這個方向移動一小步。</li>
+</ul>
+
+<p><br></p>
+
+<h4 id="梯度下降-gradient-descent">梯度下降(Gradient Descent)</h4>
+
+<ul>
+<li><p>任何參數w, 使用梯度下降訓練的公式都是:
+$$ w^{new} = w - \eta * \frac {∂LOSS}{∂w}$$</p></li>
+
+<li><p>其中 η(eta) 稱為學習速度(learning rate)，是一個我們指定很小正數(例如 : 0.01)，類似於梯度下降的每一步的步長。而 ∂ 是求偏導數，∂LOSS / ∂w 稱為梯度(gradient)。</p></li>
+
+<li><p>如果回想導數的定義，會看出上述公式可將w往最能快速減少LOSS的方向移動。</p></li>
+</ul>
+
+<p><br></p>
+
+<h4 id="其他神經元操作的基本名詞">其他神經元操作的基本名詞</h4>
+
+<ul>
+<li>Batch-Size : 就是每次調整參數前所選取的樣本(稱為mini-batch or batch)數量</li>
+<li>Epoch : 每學一遍數據集，就稱為一個Epoch</li>
+<li>注意每一個epoch都須打亂數據的順序，使網絡受到的調整個具有多樣性。</li>
+</ul>
+
+<p><br></p>
+
+<hr />
 
         
           <div class="blog-tags">
             
-              <a href="https://normanliao.github.io//tags/computer-graphics/">computer graphics</a>&nbsp;
+              <a href="https://normanliao.github.io//tags/deep-learning/">deep learning</a>&nbsp;
             
           </div>
         
@@ -435,15 +396,7 @@ $$ M = Mt2 * Mr&rsquo; * Mt1 $$
                   <ul>
                 
                 
-                    <li><a href="/program/20200613/">OpenGL Texture黑邊問題</a></li>
-                
-                    <li><a href="/program/20200520/">淺談Mesh Simplification</a></li>
-                
-                    <li><a href="/program/20200515/">實作Depth of Field</a></li>
-                
-                    <li><a href="/program/20200507/">淺談Depth of Field</a></li>
-                
-                    <li><a href="/program/20181228/">Computer Graphics簡介</a></li>
+                    <li><a href="/program/20190809/">初談AI, ML &amp; DL (1)</a></li>
                 
               </ul>
 
@@ -455,12 +408,12 @@ $$ M = Mt2 * Mr&rsquo; * Mt1 $$
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://normanliao.github.io/program/20190822/" data-toggle="tooltip" data-placement="top" title="初談Deep Learning(1) - Neural Network">&larr; Previous Post</a>
+              <a href="https://normanliao.github.io/program/20190809/" data-toggle="tooltip" data-placement="top" title="初談AI, ML &amp; DL (1)">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="https://normanliao.github.io/program/20200507/" data-toggle="tooltip" data-placement="top" title="淺談Depth of Field">Next Post &rarr;</a>
+              <a href="https://normanliao.github.io/program/20200402/" data-toggle="tooltip" data-placement="top" title="Orbit Path for Camera">Next Post &rarr;</a>
             </li>
           
         </ul>

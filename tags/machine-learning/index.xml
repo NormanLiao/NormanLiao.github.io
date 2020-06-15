@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine learning on Norman Liao</title>
+    <link>https://normanliao.github.io/tags/machine-learning/</link>
+    <description>Recent content in machine learning on Norman Liao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 09 Aug 2019 11:40:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://normanliao.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>初談AI, ML &amp; DL (1)</title>
+      <link>https://normanliao.github.io/program/20190809/</link>
+      <pubDate>Fri, 09 Aug 2019 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20190809/</guid>
+      <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
+
+&lt;p&gt;在近幾年，常常聽到業界或學界，很喜歡說，遇到困難的問題可以嘗試用AI解、產品一定要跟AI扯上關係，或是收集資料很重要啊，然後什麼未來是AI的世界阿、產品沒有AI會拿不到投資之類的(尤其非工程領域的專業人士更愛講)。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

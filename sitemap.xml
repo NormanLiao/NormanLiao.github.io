@@ -4,22 +4,32 @@
   
   <url>
     <loc>https://normanliao.github.io/</loc>
-    <lastmod>2020-06-04T11:40:11+08:00</lastmod>
+    <lastmod>2020-06-13T11:40:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://normanliao.github.io/tags/network/</loc>
-    <lastmod>2020-06-04T11:40:11+08:00</lastmod>
+    <loc>https://normanliao.github.io/tags/computer-graphics/</loc>
+    <lastmod>2020-06-13T11:40:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://normanliao.github.io/program/20200613/</loc>
+    <lastmod>2020-06-13T11:40:11+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://normanliao.github.io/program/</loc>
-    <lastmod>2020-06-04T11:40:11+08:00</lastmod>
+    <lastmod>2020-06-13T11:40:11+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://normanliao.github.io/tags/</loc>
+    <lastmod>2020-06-13T11:40:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://normanliao.github.io/tags/network/</loc>
     <lastmod>2020-06-04T11:40:11+08:00</lastmod>
   </url>
   
@@ -41,11 +51,6 @@
   <url>
     <loc>https://normanliao.github.io/program/20200530/</loc>
     <lastmod>2020-05-30T11:40:11+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://normanliao.github.io/tags/computer-graphics/</loc>
-    <lastmod>2020-05-20T11:40:11+08:00</lastmod>
   </url>
   
   <url>
@@ -71,6 +76,26 @@
   <url>
     <loc>https://normanliao.github.io/program/20200402/</loc>
     <lastmod>2020-04-02T11:40:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://normanliao.github.io/tags/deep-learning/</loc>
+    <lastmod>2019-08-22T11:40:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://normanliao.github.io/program/20190822/</loc>
+    <lastmod>2019-08-22T11:40:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://normanliao.github.io/tags/machine-learning/</loc>
+    <lastmod>2019-08-09T11:40:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://normanliao.github.io/program/20190809/</loc>
+    <lastmod>2019-08-09T11:40:11+08:00</lastmod>
   </url>
   
   <url>
