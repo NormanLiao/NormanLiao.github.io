@@ -7,13 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>實作Depth of Field - Norman Liao</title>
-  <meta name="description" content="
-
-
-介紹
-
-這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。">
+  <title>[Three.js] Object &amp; Texture Loading 的 Callback &amp; Promise 問題 - Norman Liao</title>
+  <meta name="description" content="Three.js是一個建構在WebGL的Graphics Library，可以快速地讓開發者在網頁上進行3D Render開發">
   <meta name="author" content="Norman Liao"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -49,8 +44,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/normanliao.github.io\/program\/20200515\/",
-          "name": "實作 depth of field"
+          "@id": "https:\/\/normanliao.github.io\/program\/20200618\/",
+          "name": "[ three.js] object \x26 texture loading 的 callback \x26 promise 問題"
         }
     }]
 }
@@ -61,15 +56,15 @@
   "author": {
     "name" : "Norman Liao"
   },
-  "headline": "實作Depth of Field",
-  "description" : "  介紹 這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。\n",
+  "headline": "[Three.js] Object \x26 Texture Loading 的 Callback \x26 Promise 問題",
+  "description" : "Three.js是一個建構在WebGL的Graphics Library，可以快速地讓開發者在網頁上進行3D Render開發\n",
   "inLanguage" : "en",
-  "wordCount":  299 ,
-  "datePublished" : "2020-05-15T11:40:11",
-  "dateModified" : "2020-05-15T11:40:11",
+  "wordCount":  374 ,
+  "datePublished" : "2020-06-18T11:40:11",
+  "dateModified" : "2020-06-18T11:40:11",
   "image" : "https:\/\/normanliao.github.io\/img\/logo.png",
-  "keywords" : [ "computer graphics, computer vision" ],
-  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20200515\/",
+  "keywords" : [ "computer graphics, javascript" ],
+  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20200618\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/normanliao.github.io\/",
@@ -83,25 +78,15 @@
 }
 </script>
 
-<meta property="og:title" content="實作Depth of Field" />
-<meta property="og:description" content="
-
-
-介紹
-
-這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。">
+<meta property="og:title" content="[Three.js] Object &amp; Texture Loading 的 Callback &amp; Promise 問題" />
+<meta property="og:description" content="Three.js是一個建構在WebGL的Graphics Library，可以快速地讓開發者在網頁上進行3D Render開發">
 <meta property="og:image" content="https://normanliao.github.io/img/logo.png" />
-<meta property="og:url" content="https://normanliao.github.io/program/20200515/" />
+<meta property="og:url" content="https://normanliao.github.io/program/20200618/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Norman Liao" />
 
-  <meta name="twitter:title" content="實作Depth of Field" />
-  <meta name="twitter:description" content="
-
-
-介紹
-
-這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。">
+  <meta name="twitter:title" content="[Three.js] Object &amp; Texture Loading 的 Callback &amp; Promise 問題" />
+  <meta name="twitter:description" content="Three.js是一個建構在WebGL的Graphics Library，可以快速地讓開發者在網頁上進行3D Render開發">
   <meta name="twitter:image" content="https://normanliao.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://normanliao.github.io/img/author.png' rel='icon' type='image/x-icon'/>
@@ -246,7 +231,7 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="program-heading">
               
-                <h1>實作Depth of Field</h1>
+                <h1>[Three.js] Object &amp; Texture Loading 的 Callback &amp; Promise 問題</h1>
               
               
                 <hr class="small">
@@ -266,133 +251,177 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <p>Three.js是一個建構在WebGL的Graphics Library，可以快速地讓開發者在網頁上進行3D Render開發</p>
 
-<h2 id="介紹">介紹</h2>
+<p>但是目前了解的Three.js THREE.OBJECTLOADER &amp; THREE.TEXTURE裡面的方法都是用Callback的寫法，也是就會發生下列的狀況。
+根據<a href="https://threejs.org/docs/#examples/en/loaders/OBJLoader">THREE.JS OBJLoader Code Sample</a></p>
+<div class="highlight"><pre class="chroma">// instantiate a loader
+var loader = new OBJLoader();
 
-<p>這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。</p>
+// load a resource
+loader.load(
+	// resource URL
+	&#39;models/monster.obj&#39;,
+	// called when resource is loaded
+	function ( object ) {
 
-<p>Depth of Field基本上影響的因素有焦距、光圈、CoC(模糊圈) 還有物體與鏡頭距離，但如果要直接利用這些物理光學上的條件模擬出來，可能要直接實作類似Ray Tracing的方法。於是在Computer Graphics領域也是有一些相關的方法，</p>
+		scene.add( object );
 
-<hr />
+	},
+	// called when loading is in progresses
+	function ( xhr ) {
 
-<h3 id="實作概念">實作概念</h3>
+		console.log( ( xhr.loaded / xhr.total * 100 ) + &#39;% loaded&#39; );
 
-<p>如果要快速實作出一個快速的效果，在這個實作中，有幾個重點</p>
+	},
+	// called when loading has errors
+	function ( error ) {
 
-<ul>
-<li>需要選定一個Focus Field (也就是對焦點的深度)</li>
-<li>計算所有Vertex Z Value與Focus Field的深度差</li>
-<li>利用這個深度差去模擬CoC的值，而用這個值當作Blur強度</li>
-<li>在此方法是把深度值都記錄在Depth Map上，但其實也可以到了Vertex Shader或Fragment Shader再計算也可以</li>
-</ul>
+		console.log( &#39;An error happened&#39; );
 
-<hr />
-
-<h3 id="fragment-shader-sample-code">Fragment Shader Sample Code</h3>
-
-<p>主要計算都是在Fragment Shader中實作</p>
-<div class="highlight"><pre class="chroma">#version 400
-
-in vec3 Position;
-in vec3 Normal;
-in vec2 TexCoord;
-
-uniform sampler2D tDiffuse;
-uniform vec2 click_coord;
-
-layout( location = 0 ) out vec4 FragColor;
-
-// Normal probability density function, 
-// Reference The Normal Distribution.
-float normpdf(in float x, in float sigma)
-{
-	return 0.39894 * exp( -0.5 * x * x / (sigma*sigma)) / sigma;
-}
-
-vec4 blurImage(vec2 tex_pos, int blur_size)
-{
-	int kSize = (blur_size - 1) / 2;
-	vec3 final_colour = vec3(0.0);
-		
-	//create the 1-D kernel
-	float sigma = 7.0;
-	float Z = 0.0;
-
-	//get the normalization factor (as the gaussian has been clamped)
-	for (int j=-kSize; j &lt;= kSize; ++j)
-	{ 
-		Z += normpdf(float(j), sigma);
 	}
+);</pre></div>
+<p>我們看了一下上面的Sample Code，就會發現object 在Callback裡面load完後才放進scene裡面。
+這時候我們進一步進去看<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/loaders/OBJLoader.js">OBJLoader.js的實作細節</a></p>
+<div class="highlight"><pre class="chroma">load: function ( url, onLoad, onProgress, onError ) {
 
-	// read out the texels
-	for (int i = -kSize; i &lt;= kSize; ++i)
-	{
-		for (int j = -kSize; j &lt;= kSize; ++j)
-		{
-			float w = 5.0 / textureSize(tDiffuse, 0).r;
-			float h = 5.0 / textureSize(tDiffuse, 0).g;
-			vec2 A = tex_pos + vec2(i * w , j * h);
-			vec4 packedA = texture( tDiffuse, A );
-			
-			float kernal_i = normpdf(float(i), sigma);
-			float kernal_j = normpdf(float(j), sigma);
+        var scope = this;
 
-			final_colour += kernal_j * kernal_i * packedA.rgb;
+        var loader = new FileLoader( scope.manager );
+        loader.setPath( this.path );
+        loader.load( url, function ( text ) {
+
+            try {
+
+                onLoad( scope.parse( text ) );
+
+            } catch ( e ) {
+
+                if ( onError ) {
+
+                    onError( e );
+
+                } else {
+
+                    console.error( e );
+
+                }
+
+                scope.manager.itemError( url );
+
+            }
+
+        }, onProgress, onError );
+
+    },</pre></div>
+<p>會發現主要流程是</p>
+
+<ol>
+<li>var loader = new FileLoader( scope.manager );</li>
+<li>loader.load( url, function ( text ) {&hellip;}</li>
+<li>try catch裡面執行Callback  onLoad( scope.parse( text ) );</li>
+</ol>
+
+<p>也就是說，會把.obj當作文字檔放入FileLoader裡面去讀文字檔，接著在Callback裡面放入parse()裡面再組成Object的結構。</p>
+
+<p>這時候就會發生一個問題，當Object or Texture檔案太大，造成遠端網路連線發生傳輸過久等相關問題，也就是所有程式碼都跑完了，還在等Callback，再加上一次同步Load很多檔案，進行非同步處理，這時候就會發生問題了，可能會漏檔或是Object Load好但是Texture還在跑就先Render了，於是Render出黑黑沒有Texture的物件。</p>
+
+<p>我們來看一下下面的例子
+根據<a href="https://github.com/mrdoob/three.js/blob/master/examples/webgl_loader_obj.html">Three.js ObjectLoader Sample</a></p>
+<div class="highlight"><pre class="chroma">var textureLoader = new THREE.TextureLoader( manager );
+
+var texture = textureLoader.load( &#39;textures/uv_grid_opengl.jpg&#39;, function ( tex ) { } );
+
+// model
+var loader = new OBJLoader( manager );
+
+loader.load( &#39;models/obj/male02/male02.obj&#39;, function ( obj ) {
+
+	object = obj;
+	object.traverse( function ( child ) {
+		if ( child.isMesh ) child.material.map = texture;
+	} );
+	scene.add( object );
+
+}, onProgress, onError );</pre></div>
+<p>大概像這樣，TextureLoader有自己的Callback，Load完Texture，才有辦法在Callback做一些Texture Post-Processing動作。 而ObjectLoader也有自己的Callback，Load 完Object才有後續的處理動作。</p>
+
+<p>在這種狀態下，如果想要結合JavaScript Promise相關操作，例如</p>
+<div class="highlight"><pre class="chroma">var loadTexture = function (...) {
+	var textureLoader = new THREE.TextureLoader( manager );
+	var texture = textureLoader.load( &#39;textures/uv_grid_opengl.jpg&#39;, function ( tex ) {
+			......
+			console.log(&#34;Finish Texture Loading&#34;);
 		}
-	}
-	return vec4(final_colour / (Z * Z), 1.0);
+	);
+	return Promise.resolve(...)
 }
 
-int computeBlurSize(vec2 tex_pos)
-{
-	float depth = texture( tDiffuse, tex_pos ).a;
-	float focus_field = texture( tDiffuse, click_coord ).a;
-	const int max_size = 25;
-	const int min_size = 0;
-	int blur_size = int(abs(depth - focus_field) * max_size);
-	return blur_size;
+var loadObect = function (...) {
+	var loader = new OBJLoader( manager );
+	loader.load( &#39;models/obj/male02/male02.obj&#39;, function ( obj ) {
+			......
+			console.log(&#34;Finish Object Loading&#34;);
+		}
+	);
+  return Promise.resolve(...)
 }
 
-void main() {
-	FragColor = blurImage(TexCoord, computeBlurSize(TexCoord));
+var loadData = function () {
+  loadPipeline
+    .then(loadTexture)
+    .then(loadObect)
+    .then(
+		console.log(&#34;post-processing&#34;)
+		...
+    })
 }</pre></div>
+<p>原本以為應該要印出來像是</p>
+<div class="highlight"><pre class="chroma">Finish Texture Loading
+Finish Object Loading
+post-processing</pre></div>
+<p>但當Texture或Object檔案一大或網路太慢，就會變成</p>
+<div class="highlight"><pre class="chroma">post-processing
+Finish Texture Loading
+Finish Object Loading</pre></div>
+<p>完全跟想像不一樣啊</p>
+
+<p>因為Promise在JavaScript上原本是用來解決Callback Hell的問題，結果把Callback放進Promise Function內使用，完全衝突!!</p>
+
 <p><br></p>
 
-<h3 id="講解">講解</h3>
-
-<ul>
-<li>computeBlurSize function : 是用來計算每一個Pixel的深度值和Focus Field的深度值差距，進而推算Blur的強度。</li>
-<li>blurImage function : 根據Input的Blur強度，來決定每個Pixel的Blur狀況。這裡使用的是Gaussian Blur，事實上這部分應該還好更好的Blur方法。</li>
-<li>把最後的結果帶入 FragColor (Output)</li>
-</ul>
-
 <hr />
 
-<h3 id="result">Result</h3>
+<h3 id="歸納心得整理">歸納心得整理</h3>
 
-<p><center>原圖RGB &amp; 深度圖DepthMap
-<img src="../20200515/20200515_1.jpg" alt="Result" title="Result" />
-<br>
-(Left)(Middle)(Right) 分別為不同的對焦點Depth of Field效果
-<img src="../20200515/20200515_2.jpg" alt="Result" title="Result" />
-</center></p>
+<p>或許Three.js當作WebGL Viewer開發會非常快速，但是如果要建立一個穩定的3D Render Platform的話，那就必須認真考慮到Object &amp; Texture File傳輸與管理的問題。</p>
 
-<hr />
+<p>以下有一些可以參考的方向</p>
 
-<h3 id="reference">Reference</h3>
+<p><br></p>
 
-<ul>
-<li>Shadertoy <a href="https://www.shadertoy.com/view/XdfGDH">https://www.shadertoy.com/view/XdfGDH</a></li>
-</ul>
+<h4 id="three-js本身提供的three-loadingmanager">Three.js本身提供的THREE.LoadingManager</h4>
+
+<p>其實這個Library套件本身就有提供THREE.LoadingManager進行偵測Loading相關進度，裡面有類似onProgress這樣的Callback function可以去放進 OBJLoader or TextureLoader中去追蹤loading進度，可以參考使用。</p>
+
+<p><br></p>
+
+<h4 id="自行管理好callback使用">自行管理好Callback使用</h4>
+
+<p>其實也可以自行管理好Callback的使用，這時候，可能在建立Mesh的Struture結構上，要花一點心思，尤其在檔案管理及記憶體管理還有Texture or Object抽換的動作上，要自行寫好註解或特別注意了。因為要盡可能避免Callback Hell的問題了(傳說中的Callback Hell會造成其他一起負責看Code人在Debug超痛苦阿~~)</p>
+
+<p><br></p>
+
+<h4 id="改寫three-js成promise結構">改寫Three.js成Promise結構</h4>
+
+<p>也可以改寫Three.js的Loader結構，把它從Callback結構改成Promise結構，之後整個流程追蹤會好很多。但這有一個很大的問題是，Three.js Repo是一個版號不停更新的Project，可能之後的程式更新和管理都要使用者自行負責了。</p>
 
         
           <div class="blog-tags">
             
               <a href="https://normanliao.github.io//tags/computer-graphics/">computer graphics</a>&nbsp;
             
-              <a href="https://normanliao.github.io//tags/computer-vision/">computer vision</a>&nbsp;
+              <a href="https://normanliao.github.io//tags/javascript/">javascript</a>&nbsp;
             
           </div>
         
@@ -420,11 +449,11 @@ void main() {
                   <ul>
                 
                 
-                    <li><a href="/program/20200618/">[Three.js] Object &amp; Texture Loading 的 Callback &amp; Promise 問題</a></li>
-                
                     <li><a href="/program/20200613/">OpenGL Texture黑邊問題</a></li>
                 
                     <li><a href="/program/20200520/">淺談Mesh Simplification</a></li>
+                
+                    <li><a href="/program/20200515/">實作Depth of Field</a></li>
                 
                     <li><a href="/program/20200507/">淺談Depth of Field</a></li>
                 
@@ -440,13 +469,9 @@ void main() {
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://normanliao.github.io/program/20200507/" data-toggle="tooltip" data-placement="top" title="淺談Depth of Field">&larr; Previous Post</a>
+              <a href="https://normanliao.github.io/program/20200613/" data-toggle="tooltip" data-placement="top" title="OpenGL Texture黑邊問題">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://normanliao.github.io/program/20200520/" data-toggle="tooltip" data-placement="top" title="淺談Mesh Simplification">Next Post &rarr;</a>
-            </li>
           
         </ul>
       

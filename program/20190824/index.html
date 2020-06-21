@@ -7,7 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Norman Liao - Norman Liao</title>
+  <title>初談Deep Learning(3) - Training - Norman Liao</title>
+  <meta name="description" content="
+
+當我們建立模型後，就必續進行訓練。
+
+訓練準備前，除了模型的設計以外，資料集的準備也是非常重要。">
   <meta name="author" content="Norman Liao"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -28,14 +33,72 @@
   
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/normanliao.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/normanliao.github.io\/program\/20190824\/",
+          "name": "初談 deep learning(3) training"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Norman Liao"
+  },
+  "headline": "初談Deep Learning(3) - Training",
+  "description" : " 當我們建立模型後，就必續進行訓練。\n訓練準備前，除了模型的設計以外，資料集的準備也是非常重要。\n",
+  "inLanguage" : "en",
+  "wordCount":  81 ,
+  "datePublished" : "2019-08-24T11:40:11",
+  "dateModified" : "2019-08-24T11:40:11",
+  "image" : "https:\/\/normanliao.github.io\/img\/logo.png",
+  "keywords" : [ "deep learning" ],
+  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20190824\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/normanliao.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/normanliao.github.io\/img\/logo.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta property="og:title" content="Norman Liao" />
+<meta property="og:title" content="初談Deep Learning(3) - Training" />
+<meta property="og:description" content="
+
+當我們建立模型後，就必續進行訓練。
+
+訓練準備前，除了模型的設計以外，資料集的準備也是非常重要。">
 <meta property="og:image" content="https://normanliao.github.io/img/logo.png" />
-<meta property="og:url" content="https://normanliao.github.io/" />
+<meta property="og:url" content="https://normanliao.github.io/program/20190824/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Norman Liao" />
 
-  <meta name="twitter:title" content="Norman Liao" />
+  <meta name="twitter:title" content="初談Deep Learning(3) - Training" />
+  <meta name="twitter:description" content="
+
+當我們建立模型後，就必續進行訓練。
+
+訓練準備前，除了模型的設計以外，資料集的準備也是非常重要。">
   <meta name="twitter:image" content="https://normanliao.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://normanliao.github.io/img/author.png' rel='icon' type='image/x-icon'/>
@@ -178,9 +241,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
+            <div class="program-heading">
               
-                <h1>Norman Liao</h1>
+                <h1>初談Deep Learning(3) - Training</h1>
               
               
                 <hr class="small">
@@ -196,303 +259,206 @@
 
 
     
-  <div role="main" class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-        <div class="posts-list">
-          
-          
-            <article class="post-preview">
-    <a href="https://normanliao.github.io/program/20190822/">
-        <h2 class="post-title">初談Deep Learning(1) - Neural Network</h2>
-        
-        
-        
-    </a>
+<p>當我們建立模型後，就必續進行訓練。</p>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on August 22, 2019
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;101&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Norman Liao
-    
-  
-  
-</span>
+<p>訓練準備前，除了模型的設計以外，資料集的準備也是非常重要。</p>
 
-
-    </p>
-    <div class="post-entry">
-        
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-<h3 id="基本介紹">基本介紹</h3>
-
-<p>Machine Learning的Training Data主要是由Features, Label組成的</p>
-        <a href="https://normanliao.github.io/program/20190822/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://normanliao.github.io//tags/deep-learning/">deep learning</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://normanliao.github.io/program/20190809/">
-        <h2 class="post-title">初談AI, ML &amp; DL (1)</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on August 9, 2019
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;142&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Norman Liao
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        <h3 id="前言">前言</h3>
-
-<p>在近幾年，常常聽到業界或學界，很喜歡說，遇到困難的問題可以嘗試用AI解、產品一定要跟AI扯上關係，或是收集資料很重要啊，然後什麼未來是AI的世界阿、產品沒有AI會拿不到投資之類的(尤其非工程領域的專業人士更愛講)。</p>
-        <a href="https://normanliao.github.io/program/20190809/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://normanliao.github.io//tags/deep-learning/">deep learning</a>&nbsp;
-        
-        <a href="https://normanliao.github.io//tags/machine-learning/">machine learning</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://normanliao.github.io/program/20181228/">
-        <h2 class="post-title">Computer Graphics簡介</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on December 27, 2018
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;41&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Norman Liao
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        <p>&emsp;&emsp;有時候都會思考，如何跟其他領域的工程師解釋什麼是Computer Graphics，比較簡單的方式就是會用這句話表示 <br></p>
-        <a href="https://normanliao.github.io/program/20181228/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://normanliao.github.io//tags/computer-graphics/">computer graphics</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://normanliao.github.io/program/20181226/">
-        <h2 class="post-title">淺談ICA ( Independent Component Analysis )</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on December 26, 2018
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;133&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Norman Liao
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-<h3 id="cocktail-party-problem-https-en-wikipedia-org-wiki-cocktail-party-effect"><a href="https://en.wikipedia.org/wiki/Cocktail_party_effect">Cocktail-Party Problem</a></h3>
+<h3 id="訓練的過程應該分為兩個步驟">訓練的過程應該分為兩個步驟</h3>
 
 <ul>
-<li>研究ICA前，可以先了解一下這個問題。主要起源於心理學研究，指的是人類在吵嘈的環境中，可以專注於某一個人的談話或專注於某一個聲音而忽略其他背景聲音，用來解釋人類的「聽力選擇能力」。</li>
-</ul>
-        <a href="https://normanliao.github.io/program/20181226/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://normanliao.github.io//tags/algorithm/">algorithm</a>&nbsp;
-        
-        <a href="https://normanliao.github.io//tags/computer-graphics/">computer graphics</a>&nbsp;
-        
-        <a href="https://normanliao.github.io//tags/computer-vision/">computer vision</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://normanliao.github.io/program/20181224/">
-        <h2 class="post-title">Color Transfer Between Images</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on December 24, 2018
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;71&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Norman Liao
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-<h4 id="source-paper">Source Paper</h4>
+<li>保證能學好現有的數據
 
 <ul>
-<li><a href="http://www.cs.utah.edu/~shirley/papers/ColorTransfer.pdf">Color Transfer Between Images</a>, Erik Reinhard, Michael Ashikhmin, Bruce Gooch, and Peter Shirley, University of Utah</li>
+<li>這往往需要調整一些超參數(Hyper-Parameters)，如果學得不好，稱作Under-Fitting</li>
+</ul></li>
+<li>檢驗新數據的性能，這個稱為泛化能力
+
+<ul>
+<li>如果在舊數據上性能好，新數據上性能差，說明泛化能力差，稱為Over-Fitting</li>
+<li>如果新數據上性能也好，則泛化能力強，這是我們追求的目標。</li>
+</ul></li>
 </ul>
-        <a href="https://normanliao.github.io/program/20181224/" class="post-read-more">[Read More]</a>
-        
-    </div>
 
-    
-    <div class="blog-tags">
-        
-        <a href="https://normanliao.github.io//tags/image-processing/">Image Processing</a>&nbsp;
-        
-        <a href="https://normanliao.github.io//tags/computer-vision/">Computer Vision</a>&nbsp;
-        
-    </div>
-    
+<p><br></p>
 
-</article>
+<h3 id="傳統嚴格的作法">傳統嚴格的作法</h3>
+
+<ul>
+<li><p>會將資料分為三部分</p>
+
+<ul>
+<li>訓練集Training Set : 訓練網絡</li>
+<li>驗證集Validation Set : 調整網絡的超參數</li>
+<li>測試集Testing Set : 檢測與預測網絡對於未來新數據的效果
+<br /></li>
+</ul></li>
+
+<li><p>傳統Machine Learning方法會取80% 10% 10%</p></li>
+
+<li><p>但Deep Learning往往需要更大的訓練集，所以通常會90% 5% 5%甚至更多</p></li>
+</ul>
+
+<p><br></p>
+
+<h3 id="典型的訓練過程">典型的訓練過程</h3>
+
+<ol>
+<li>選定一組超參數，用訓練集訓練網絡。</li>
+<li>調整超參數，直到可在訓練集上獲得較好的效果。</li>
+<li>在驗證集上運行網絡，看效果如何。</li>
+<li>調整超參數，直到可在訓練集和驗證集上得到較好的效果。</li>
+<li>最後，對於超參數滿意後，在測試集上運行網絡。(但別在這個步驟調整超參數，不然就失去測試集和驗證集之間的意義了。)</li>
+</ol>
+
+<p><br></p>
+
+<h3 id="如果想要更有說服力-可使用交叉驗證-cross-validation">如果想要更有說服力，可使用交叉驗證(Cross Validation)</h3>
+
+<ol>
+<li>將數據分成k份</li>
+<li>初始化網絡。選取數據中的第一份做為測試集，其餘當作訓練集，得到一個結果。</li>
+<li>重新初始化網絡。選取數據中的第二份做為測試集，其餘當作訓練集，得到一個結果。</li>
+<li>…(重複動作)</li>
+<li>重新初始化網絡。選取數據中的第k份做為測試集，其餘當作訓練集，得到一個結果。</li>
+<li>對所有結果取平均，即為一個更有說服力的結果。
+不過，由於深度網絡的訓練往往較慢，因此交叉驗證的過程會更慢。</li>
+</ol>
+
+<p><br></p>
+
+<h3 id="under-fitting-over-fitting">Under-fitting &amp; Over-Fitting</h3>
+
+<ul>
+<li>Under-Fitting
+
+<ul>
+<li>訓練集性能較差</li>
+<li>通常出線的原因
+
+<ul>
+<li>網絡的容量(Capacity)不足</li>
+<li>網絡規模很大，但效果差的話
+
+<ul>
+<li>可能是因為訓練的超參數不夠妥當，如學習速率過大或過小</li>
+<li>也有可能是數據本身問題</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Over-Fitting
+
+<ul>
+<li>訓練集性能好，但是測試集或新數據性能差</li>
+<li>可在網絡中引入正規化(Regularization)，以試圖找到更穩定的參數</li>
+<li>可使用數據增強(Data Augmentation)技術，從現有的樣本生成更多的樣本，改善網絡的訓練。</li>
+</ul></li>
+<li>Early-Stopping
+
+<ul>
+<li>如果發現在測試集的性能越訓練越差，就應該停止訓練。</li>
+</ul></li>
+</ul>
+
+<p><br></p>
+
+<h3 id="訓練的細節-局部極值點-鞍點-梯度下降算法">訓練的細節 : 局部極值點、鞍點、梯度下降算法</h3>
+
+<ul>
+<li>局部極小值點(Local Minimum)
+
+<ul>
+<li>從數學角度而言，梯度下降屬於貪心算法，對於非凸(non-convex)問題，有可能陷入局部極小值點(Local Minimum)，無法保證到達全局極小值點(Global Minimum)，這就屬於under-fitting</li>
+</ul></li>
+<li>鞍點(Saddle Point)
+
+<ul>
+<li>實際訓練過程中，容易造成訓練的障礙</li>
+<li>鞍點附近維度是往下，有些往上</li>
+<li>梯度下降法，最終還是會脫離鞍點，但會停留一段時間，影響訓練速度。</li>
+</ul></li>
+<li>著名定理 &ldquo;沒有免費午餐(No Free Lunch Theorem)&rdquo;
+
+<ul>
+<li>即不會有一種萬能永遠比其他優化算法更好的優化算法，一切都須由實際實驗決定。</li>
+</ul></li>
+</ul>
+
+<p><br></p>
+
+<hr />
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://normanliao.github.io//tags/deep-learning/">deep learning</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+
+  
+
+              </div>
+            </section>
+        
+
+        
           
-        </div>
+            
+          
 
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/program/20190823/">初談Deep Learning(2) - Back Propagation</a></li>
+                
+                    <li><a href="/program/20190822/">初談Deep Learning(1) - Neural Network</a></li>
+                
+                    <li><a href="/program/20190809/">初談AI, ML &amp; DL (1)</a></li>
+                
+              </ul>
+
+          
         
-          <ul class="pager main-pager">
-            
-              <li class="previous">
-                <a href="https://normanliao.github.io/page/1/">&larr; Newer Posts</a>
-              </li>
-            
-            
-          </ul>
-        
-      </div>
-    </div>
-  </div>
+      </article>
 
       
-    <div class="page-meta">
-  
-  
-  
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://normanliao.github.io/program/20190823/" data-toggle="tooltip" data-placement="top" title="初談Deep Learning(2) - Back Propagation">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://normanliao.github.io/program/20200402/" data-toggle="tooltip" data-placement="top" title="Orbit Path for Camera">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
 </div>
 
-
-  
+      
 <footer>
   <div class="container">
     <div class="row">

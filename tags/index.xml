@@ -5,7 +5,7 @@
     <link>https://normanliao.github.io/tags/</link>
     <description>Recent content in Tags on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 13 Jun 2020 11:40:11 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 11:40:11 +0800</lastBuildDate>
     
 	<atom:link href="https://normanliao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,9 +13,18 @@
     <item>
       <title>computer graphics</title>
       <link>https://normanliao.github.io/tags/computer-graphics/</link>
-      <pubDate>Sat, 13 Jun 2020 11:40:11 +0800</pubDate>
+      <pubDate>Thu, 18 Jun 2020 11:40:11 +0800</pubDate>
       
       <guid>https://normanliao.github.io/tags/computer-graphics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://normanliao.github.io/tags/javascript/</link>
+      <pubDate>Thu, 18 Jun 2020 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
@@ -47,7 +56,7 @@
     </item>
     
     <item>
-      <title>computer vision</title>
+      <title>Computer Vision</title>
       <link>https://normanliao.github.io/tags/computer-vision/</link>
       <pubDate>Fri, 15 May 2020 11:40:11 +0800</pubDate>
       
@@ -58,7 +67,7 @@
     <item>
       <title>deep learning</title>
       <link>https://normanliao.github.io/tags/deep-learning/</link>
-      <pubDate>Thu, 22 Aug 2019 11:40:11 +0800</pubDate>
+      <pubDate>Sat, 24 Aug 2019 11:40:11 +0800</pubDate>
       
       <guid>https://normanliao.github.io/tags/deep-learning/</guid>
       <description></description>

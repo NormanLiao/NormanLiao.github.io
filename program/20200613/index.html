@@ -256,19 +256,11 @@
 <h2 id="狀況一">狀況一</h2>
 
 <p>第一種狀況是，OpenGL Blend Parameters參數產生的問題，原本Blend Default參數是這樣設計的。</p>
-
-<blockquote>
-<p>glEnable(GL_BLEND);<br>
-glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);</p>
-</blockquote>
-
+<div class="highlight"><pre class="chroma">glEnable(GL_BLEND);&lt;br&gt;
+glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);</pre></div>
 <p>但這個狀況下，會可能有黑邊狀況產生，如果把參數設定改成如下</p>
-
-<blockquote>
-<p>glEnable(GL_BLEND);<br>
-glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);</p>
-</blockquote>
-
+<div class="highlight"><pre class="chroma">glEnable(GL_BLEND);&lt;br&gt;
+glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);</pre></div>
 <p>即可改善問題</p>
 
 <h3 id="glblendfunc">glBlendFunc</h3>
@@ -355,6 +347,8 @@ $$blend(source, dest) = (source.rgb * source.a) + (dest.rgb * (1 – source.a))$
                   <ul>
                 
                 
+                    <li><a href="/program/20200618/">[Three.js] Object &amp; Texture Loading 的 Callback &amp; Promise 問題</a></li>
+                
                     <li><a href="/program/20200520/">淺談Mesh Simplification</a></li>
                 
                     <li><a href="/program/20200515/">實作Depth of Field</a></li>
@@ -362,8 +356,6 @@ $$blend(source, dest) = (source.rgb * source.a) + (dest.rgb * (1 – source.a))$
                     <li><a href="/program/20200507/">淺談Depth of Field</a></li>
                 
                     <li><a href="/program/20200402/">Orbit Path for Camera</a></li>
-                
-                    <li><a href="/program/20181228/">Computer Graphics簡介</a></li>
                 
               </ul>
 
@@ -378,6 +370,10 @@ $$blend(source, dest) = (source.rgb * source.a) + (dest.rgb * (1 – source.a))$
               <a href="https://normanliao.github.io/program/20200604/" data-toggle="tooltip" data-placement="top" title="靠Ngrok處理Http vs Https Local Testing問題吧">&larr; Previous Post</a>
             </li>
           
+          
+            <li class="next">
+              <a href="https://normanliao.github.io/program/20200618/" data-toggle="tooltip" data-placement="top" title="[Three.js] Object &amp; Texture Loading 的 Callback &amp; Promise 問題">Next Post &rarr;</a>
+            </li>
           
         </ul>
       

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on Norman Liao</title>
+    <link>https://normanliao.github.io/tags/javascript/</link>
+    <description>Recent content in javascript on Norman Liao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 18 Jun 2020 11:40:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://normanliao.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Three.js] Object &amp; Texture Loading 的 Callback &amp; Promise 問題</title>
+      <link>https://normanliao.github.io/program/20200618/</link>
+      <pubDate>Thu, 18 Jun 2020 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20200618/</guid>
+      <description>&lt;p&gt;Three.js是一個建構在WebGL的Graphics Library，可以快速地讓開發者在網頁上進行3D Render開發&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

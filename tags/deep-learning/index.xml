@@ -5,10 +5,36 @@
     <link>https://normanliao.github.io/tags/deep-learning/</link>
     <description>Recent content in deep learning on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 Aug 2019 11:40:11 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 24 Aug 2019 11:40:11 +0800</lastBuildDate>
     
 	<atom:link href="https://normanliao.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>初談Deep Learning(3) - Training</title>
+      <link>https://normanliao.github.io/program/20190824/</link>
+      <pubDate>Sat, 24 Aug 2019 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20190824/</guid>
+      <description>&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;當我們建立模型後，就必續進行訓練。&lt;/p&gt;
+
+&lt;p&gt;訓練準備前，除了模型的設計以外，資料集的準備也是非常重要。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初談Deep Learning(2) - Back Propagation</title>
+      <link>https://normanliao.github.io/program/20190823/</link>
+      <pubDate>Fri, 23 Aug 2019 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20190823/</guid>
+      <description>&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;當我們建立模型後，就必續進行訓練。&lt;/p&gt;
+
+&lt;p&gt;反向傳播法(BackPropagation)，簡單來說就是&amp;rdquo;從錯誤中學習&amp;rdquo;，是訓練人工神經網路的常見手法，並且與最優化方法Optimizer(例如梯度下降法)結合使用。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>初談Deep Learning(1) - Neural Network</title>

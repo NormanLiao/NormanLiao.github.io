@@ -5,10 +5,19 @@
     <link>https://normanliao.github.io/program/</link>
     <description>Recent content in Programs on Norman Liao</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 13 Jun 2020 11:40:11 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 11:40:11 +0800</lastBuildDate>
     
 	<atom:link href="https://normanliao.github.io/program/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Three.js] Object &amp; Texture Loading 的 Callback &amp; Promise 問題</title>
+      <link>https://normanliao.github.io/program/20200618/</link>
+      <pubDate>Thu, 18 Jun 2020 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20200618/</guid>
+      <description>&lt;p&gt;Three.js是一個建構在WebGL的Graphics Library，可以快速地讓開發者在網頁上進行3D Render開發&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>OpenGL Texture黑邊問題</title>
@@ -97,6 +106,32 @@
 &lt;h2 id=&#34;orbit-camera&#34;&gt;Orbit Camera&lt;/h2&gt;
 
 &lt;p&gt;顧名思義，就是希望Camera的移動方式像是小行星繞的某個位置進行旋轉(就像地球繞的太陽公轉的概念)，為了達到這個效果，有幾個必須要注意的要點&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初談Deep Learning(3) - Training</title>
+      <link>https://normanliao.github.io/program/20190824/</link>
+      <pubDate>Sat, 24 Aug 2019 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20190824/</guid>
+      <description>&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;當我們建立模型後，就必續進行訓練。&lt;/p&gt;
+
+&lt;p&gt;訓練準備前，除了模型的設計以外，資料集的準備也是非常重要。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初談Deep Learning(2) - Back Propagation</title>
+      <link>https://normanliao.github.io/program/20190823/</link>
+      <pubDate>Fri, 23 Aug 2019 11:40:11 +0800</pubDate>
+      
+      <guid>https://normanliao.github.io/program/20190823/</guid>
+      <description>&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;當我們建立模型後，就必續進行訓練。&lt;/p&gt;
+
+&lt;p&gt;反向傳播法(BackPropagation)，簡單來說就是&amp;rdquo;從錯誤中學習&amp;rdquo;，是訓練人工神經網路的常見手法，並且與最優化方法Optimizer(例如梯度下降法)結合使用。&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -7,13 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>實作Depth of Field - Norman Liao</title>
+  <title>初談Deep Learning(2) - Back Propagation - Norman Liao</title>
   <meta name="description" content="
 
+當我們建立模型後，就必續進行訓練。
 
-介紹
-
-這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。">
+反向傳播法(BackPropagation)，簡單來說就是&rdquo;從錯誤中學習&rdquo;，是訓練人工神經網路的常見手法，並且與最優化方法Optimizer(例如梯度下降法)結合使用。">
   <meta name="author" content="Norman Liao"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -49,8 +48,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/normanliao.github.io\/program\/20200515\/",
-          "name": "實作 depth of field"
+          "@id": "https:\/\/normanliao.github.io\/program\/20190823\/",
+          "name": "初談 deep learning(2) back propagation"
         }
     }]
 }
@@ -61,15 +60,15 @@
   "author": {
     "name" : "Norman Liao"
   },
-  "headline": "實作Depth of Field",
-  "description" : "  介紹 這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。\n",
+  "headline": "初談Deep Learning(2) - Back Propagation",
+  "description" : " 當我們建立模型後，就必續進行訓練。\n反向傳播法(BackPropagation)，簡單來說就是\x26rdquo;從錯誤中學習\x26rdquo;，是訓練人工神經網路的常見手法，並且與最優化方法Optimizer(例如梯度下降法)結合使用。\n",
   "inLanguage" : "en",
-  "wordCount":  299 ,
-  "datePublished" : "2020-05-15T11:40:11",
-  "dateModified" : "2020-05-15T11:40:11",
+  "wordCount":  117 ,
+  "datePublished" : "2019-08-23T11:40:11",
+  "dateModified" : "2019-08-23T11:40:11",
   "image" : "https:\/\/normanliao.github.io\/img\/logo.png",
-  "keywords" : [ "computer graphics, computer vision" ],
-  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20200515\/",
+  "keywords" : [ "deep learning" ],
+  "mainEntityOfPage" : "https:\/\/normanliao.github.io\/program\/20190823\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/normanliao.github.io\/",
@@ -83,25 +82,23 @@
 }
 </script>
 
-<meta property="og:title" content="實作Depth of Field" />
+<meta property="og:title" content="初談Deep Learning(2) - Back Propagation" />
 <meta property="og:description" content="
 
+當我們建立模型後，就必續進行訓練。
 
-介紹
-
-這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。">
+反向傳播法(BackPropagation)，簡單來說就是&rdquo;從錯誤中學習&rdquo;，是訓練人工神經網路的常見手法，並且與最優化方法Optimizer(例如梯度下降法)結合使用。">
 <meta property="og:image" content="https://normanliao.github.io/img/logo.png" />
-<meta property="og:url" content="https://normanliao.github.io/program/20200515/" />
+<meta property="og:url" content="https://normanliao.github.io/program/20190823/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Norman Liao" />
 
-  <meta name="twitter:title" content="實作Depth of Field" />
+  <meta name="twitter:title" content="初談Deep Learning(2) - Back Propagation" />
   <meta name="twitter:description" content="
 
+當我們建立模型後，就必續進行訓練。
 
-介紹
-
-這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。">
+反向傳播法(BackPropagation)，簡單來說就是&rdquo;從錯誤中學習&rdquo;，是訓練人工神經網路的常見手法，並且與最優化方法Optimizer(例如梯度下降法)結合使用。">
   <meta name="twitter:image" content="https://normanliao.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://normanliao.github.io/img/author.png' rel='icon' type='image/x-icon'/>
@@ -246,7 +243,7 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="program-heading">
               
-                <h1>實作Depth of Field</h1>
+                <h1>初談Deep Learning(2) - Back Propagation</h1>
               
               
                 <hr class="small">
@@ -266,133 +263,122 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<h2 id="介紹">介紹</h2>
+<p>當我們建立模型後，就必續進行訓練。</p>
 
-<p>這裡要介紹的是如何快速實作出類似Depth of Field的效果。在上一篇談到了Depth of Field的一些相關理念，在這裡，可以試著去實作。</p>
+<p>反向傳播法(BackPropagation)，簡單來說就是&rdquo;從錯誤中學習&rdquo;，是訓練人工神經網路的常見手法，並且與最優化方法Optimizer(例如梯度下降法)結合使用。</p>
 
-<p>Depth of Field基本上影響的因素有焦距、光圈、CoC(模糊圈) 還有物體與鏡頭距離，但如果要直接利用這些物理光學上的條件模擬出來，可能要直接實作類似Ray Tracing的方法。於是在Computer Graphics領域也是有一些相關的方法，</p>
+<p>反向傳播是一種監督式學習方法，必須輸入Features和Label。</p>
 
-<hr />
+<h3 id="基本流程">基本流程</h3>
 
-<h3 id="實作概念">實作概念</h3>
+<p><img src="../20190823/20190823_1.jpg" alt="Pipeline" title="Pipeline" /></p>
 
-<p>如果要快速實作出一個快速的效果，在這個實作中，有幾個重點</p>
-
-<ul>
-<li>需要選定一個Focus Field (也就是對焦點的深度)</li>
-<li>計算所有Vertex Z Value與Focus Field的深度差</li>
-<li>利用這個深度差去模擬CoC的值，而用這個值當作Blur強度</li>
-<li>在此方法是把深度值都記錄在Depth Map上，但其實也可以到了Vertex Shader或Fragment Shader再計算也可以</li>
-</ul>
-
-<hr />
-
-<h3 id="fragment-shader-sample-code">Fragment Shader Sample Code</h3>
-
-<p>主要計算都是在Fragment Shader中實作</p>
-<div class="highlight"><pre class="chroma">#version 400
-
-in vec3 Position;
-in vec3 Normal;
-in vec2 TexCoord;
-
-uniform sampler2D tDiffuse;
-uniform vec2 click_coord;
-
-layout( location = 0 ) out vec4 FragColor;
-
-// Normal probability density function, 
-// Reference The Normal Distribution.
-float normpdf(in float x, in float sigma)
-{
-	return 0.39894 * exp( -0.5 * x * x / (sigma*sigma)) / sigma;
-}
-
-vec4 blurImage(vec2 tex_pos, int blur_size)
-{
-	int kSize = (blur_size - 1) / 2;
-	vec3 final_colour = vec3(0.0);
-		
-	//create the 1-D kernel
-	float sigma = 7.0;
-	float Z = 0.0;
-
-	//get the normalization factor (as the gaussian has been clamped)
-	for (int j=-kSize; j &lt;= kSize; ++j)
-	{ 
-		Z += normpdf(float(j), sigma);
-	}
-
-	// read out the texels
-	for (int i = -kSize; i &lt;= kSize; ++i)
-	{
-		for (int j = -kSize; j &lt;= kSize; ++j)
-		{
-			float w = 5.0 / textureSize(tDiffuse, 0).r;
-			float h = 5.0 / textureSize(tDiffuse, 0).g;
-			vec2 A = tex_pos + vec2(i * w , j * h);
-			vec4 packedA = texture( tDiffuse, A );
-			
-			float kernal_i = normpdf(float(i), sigma);
-			float kernal_j = normpdf(float(j), sigma);
-
-			final_colour += kernal_j * kernal_i * packedA.rgb;
-		}
-	}
-	return vec4(final_colour / (Z * Z), 1.0);
-}
-
-int computeBlurSize(vec2 tex_pos)
-{
-	float depth = texture( tDiffuse, tex_pos ).a;
-	float focus_field = texture( tDiffuse, click_coord ).a;
-	const int max_size = 25;
-	const int min_size = 0;
-	int blur_size = int(abs(depth - focus_field) * max_size);
-	return blur_size;
-}
-
-void main() {
-	FragColor = blurImage(TexCoord, computeBlurSize(TexCoord));
-}</pre></div>
 <p><br></p>
 
-<h3 id="講解">講解</h3>
+<h4 id="權重更新weight-update">權重更新Weight Update</h4>
+
+<p>主要分成兩個步驟</p>
 
 <ul>
-<li>computeBlurSize function : 是用來計算每一個Pixel的深度值和Focus Field的深度值差距，進而推算Blur的強度。</li>
-<li>blurImage function : 根據Input的Blur強度，來決定每個Pixel的Blur狀況。這裡使用的是Gaussian Blur，事實上這部分應該還好更好的Blur方法。</li>
-<li>把最後的結果帶入 FragColor (Output)</li>
+<li><font color="#dd0000">Loss Function計算誤差</font> : 使用Loss Function計算，模型輸入(預測的結果)與Labels(影像真實的值)之間的誤差值。</li>
+<li><font color="#dd0000">Optimizer更新權重與偏差</font> : 依照誤差值，更新神經元連結的權重(Weight)與偏差(Bias)，盡量使Loss Function的誤差值最小化。</li>
+<li>關於Loss Function 和 Optimizer介紹，可詳見上一篇<a href="https://normanliao.github.io/program/20190822/">初談Deep Learning(1) - Neural Network</a></li>
 </ul>
 
-<hr />
+<p><br></p>
 
-<h3 id="result">Result</h3>
-
-<p><center>原圖RGB &amp; 深度圖DepthMap
-<img src="../20200515/20200515_1.jpg" alt="Result" title="Result" />
-<br>
-(Left)(Middle)(Right) 分別為不同的對焦點Depth of Field效果
-<img src="../20200515/20200515_2.jpg" alt="Result" title="Result" />
-</center></p>
-
-<hr />
-
-<h3 id="reference">Reference</h3>
+<h4 id="sgd梯度下降法">SGD梯度下降法:</h4>
 
 <ul>
-<li>Shadertoy <a href="https://www.shadertoy.com/view/XdfGDH">https://www.shadertoy.com/view/XdfGDH</a></li>
+<li>通熟的講法 : 一個在山上的人正在找到山谷最低點(即試圖找到Loss Function的極小值)。因為大霧能見度低，所以看不到下山的道路，他必須利用局部信息來找到極小值。他觀察當前位置山的陡峭程度(梯度)，然後沿著最大方向前進。使用此方法找到谷底。</li>
+<li>關於SGD下降訓練公式介紹，可詳見上一篇<a href="https://normanliao.github.io/program/20190822/">初談Deep Learning(1) - Neural Network</a></li>
+</ul>
+
+<p><br></p>
+
+<hr />
+
+<h3 id="理論細節">理論細節</h3>
+
+<p><br></p>
+
+<h4 id="forward-propagation-非線性activation-functions的必要性">Forward-Propagation &amp; 非線性Activation Functions的必要性</h4>
+
+<ul>
+<li>每一層的 output Y 就等於 前一層的 input X 乘以權重(W)， 即 y = sum(w * x)，這個過程就是 <font color="#dd0000">Forward Propagation</font></li>
+<li>簡單來說，如果只是把神經元簡單連接在一起，<font color="#dd0000">不加入非線性處理</font>，那麼最終得到的仍然是線性函數，這就<font color="#dd0000">無法描述各種複雜的現象</font>。</li>
+<li>所以，我們會在其中加入非線性激活函數，讓神經網絡有很強的表達能力，進而Fit複雜的數據。</li>
+<li>通過數學可以證明著名的通用逼近定理(Universal Approximation Theorem)</li>
+</ul>
+
+<p><br></p>
+
+<p><img src="../20190823/20190823_2.png" alt="FP" title="FP" />
+<center>Photo from Python Machine Learning, Packt</center></p>
+
+<p><br></p>
+
+<h4 id="非線性activation-functions">非線性Activation Functions</h4>
+
+<ul>
+<li>一般使用的Activation Functions有很多類別，每一種Activation Function都有自己的數學定義和意義，在選擇上，要根據各自Activation Function的
+
+<ul>
+<li>可以參考<a href="https://zh.wikipedia.org/wiki/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0">激勵函數 Wiki</a></li>
+</ul></li>
+<li>目前最常用的非線性激活函數是ReLU函數，他有幾個優點
+
+<ul>
+<li>ReLU的運算非常簡單、快速</li>
+<li>ReLU可避免&rdquo;梯度消失&rdquo;</li>
+<li>注意ReLU在 x &gt; 0 時才會有非0輸出，而在 x &lt;= 0 時輸出 0，所以ReLU更類似於生物神經元的工作原理，因為生物神經元需要一定的刺激才會被激活。</li>
+<li>使用ReLU往往能帶來比使用Sigmoid和tanh時更加的網絡效能。</li>
+</ul></li>
+</ul>
+
+<p><br></p>
+
+<h4 id="梯度的計算公式">梯度的計算公式</h4>
+
+<ul>
+<li>神經網絡的訓練，需要運用Back-Propagation (BP)</li>
+<li>BP和SGD是不同層面的概念
+
+<ul>
+<li>BP負責計算梯度 ∂LOSS / ∂w</li>
+<li>SGD負責從梯度訓練網絡</li>
+</ul></li>
+</ul>
+
+<p><br></p>
+
+<h4 id="梯度消失-梯度爆炸">梯度消失、梯度爆炸</h4>
+
+<ul>
+<li>梯度消失(gradient vanishing) : 梯度有可能在傳播過程中絕對值越來越小<font color="#dd0000">(直到變成0)</font>，其會使的<font color="#dd0000">網絡的訓練停滯不前</font>。</li>
+<li>梯度爆炸(gradient explosion) : 梯度有可能在傳播過程中絕對值越來越大<font color="#dd0000">(直到發散)</font>，其會使得<font color="#dd0000">網絡不穩定，性能崩潰</font>。</li>
+<li>相關Case
+
+<ul>
+<li>採用sigmoid或tanh非線性，在輸入的絕對值很大的時候，會出現<font color="#dd0000">&ldquo;飽和(saturation)&rdquo;</font>，即導數趨近於0，根據梯度的公式，會造成梯度消失。</li>
+<li>ReLU再輸入為負數的時候，導數為0，這稱為<font color="#dd0000">&ldquo;死ReLU&rdquo;(dying ReLU)</font>，往往是學習速率過大時出現。</li>
+</ul></li>
+<li>如果發現網絡的訓練性能很差，值得做的事情就是觀察網絡內部梯度的流動情況，看是否出現梯度消失或梯度爆炸。</li>
+<li>改善梯度可通過多種技巧
+
+<ul>
+<li>Batch規模化(BN)</li>
+<li>殘差網絡(ResNet)</li>
+<li>梯度截斷(Gradient Clipping)，即人工<font color="#dd0000">將過大的梯度減少</font>，或引入一定的梯度懲罰(gradient penalty)</li>
+</ul></li>
 </ul>
 
         
           <div class="blog-tags">
             
-              <a href="https://normanliao.github.io//tags/computer-graphics/">computer graphics</a>&nbsp;
-            
-              <a href="https://normanliao.github.io//tags/computer-vision/">computer vision</a>&nbsp;
+              <a href="https://normanliao.github.io//tags/deep-learning/">deep learning</a>&nbsp;
             
           </div>
         
@@ -420,15 +406,11 @@ void main() {
                   <ul>
                 
                 
-                    <li><a href="/program/20200618/">[Three.js] Object &amp; Texture Loading 的 Callback &amp; Promise 問題</a></li>
+                    <li><a href="/program/20190824/">初談Deep Learning(3) - Training</a></li>
                 
-                    <li><a href="/program/20200613/">OpenGL Texture黑邊問題</a></li>
+                    <li><a href="/program/20190822/">初談Deep Learning(1) - Neural Network</a></li>
                 
-                    <li><a href="/program/20200520/">淺談Mesh Simplification</a></li>
-                
-                    <li><a href="/program/20200507/">淺談Depth of Field</a></li>
-                
-                    <li><a href="/program/20200402/">Orbit Path for Camera</a></li>
+                    <li><a href="/program/20190809/">初談AI, ML &amp; DL (1)</a></li>
                 
               </ul>
 
@@ -440,12 +422,12 @@ void main() {
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://normanliao.github.io/program/20200507/" data-toggle="tooltip" data-placement="top" title="淺談Depth of Field">&larr; Previous Post</a>
+              <a href="https://normanliao.github.io/program/20190822/" data-toggle="tooltip" data-placement="top" title="初談Deep Learning(1) - Neural Network">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="https://normanliao.github.io/program/20200520/" data-toggle="tooltip" data-placement="top" title="淺談Mesh Simplification">Next Post &rarr;</a>
+              <a href="https://normanliao.github.io/program/20190824/" data-toggle="tooltip" data-placement="top" title="初談Deep Learning(3) - Training">Next Post &rarr;</a>
             </li>
           
         </ul>
